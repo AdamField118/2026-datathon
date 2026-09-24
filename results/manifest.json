@@ -1,0 +1,49 @@
+{
+ "season": "2025-26",
+ "generated_at": "2026-09-23 23:50:48",
+ "k": 8,
+ "k_errors": {
+  "1": 0.9158,
+  "2": 0.7561,
+  "3": 0.7124,
+  "4": 0.6937,
+  "5": 0.6669,
+  "6": 0.6597,
+  "7": 0.6495,
+  "8": 0.6295
+ },
+ "min_mp": 300,
+ "n_players": 435,
+ "features": [
+  "dist",
+  "fga_0-3",
+  "fga_3-10",
+  "fga_10-16",
+  "fga_16-3P",
+  "fga_3P",
+  "dunk_share",
+  "corner3_share",
+  "ast2",
+  "ast3",
+  "AST%",
+  "USG%",
+  "pga",
+  "ORB%",
+  "DRB%",
+  "STL%",
+  "BLK%",
+  "pf100",
+  "charges",
+  "FTr",
+  "shoot_fouls_drawn",
+  "and1",
+  "blkd"
+ ],
+ "stability_runs": 10,
+ "files": [
+  "players.json",
+  "features.json",
+  "teams.json",
+  "analysis.json"
+ ]
+}

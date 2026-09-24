@@ -1,0 +1,716 @@
+{
+ "positions": {
+  "axis_corr": [
+   0.7417030291249251,
+   -0.09924046220957447,
+   -0.31115858952085956,
+   0.22948423122544234,
+   0.12186721928480848,
+   -0.00376675424209765,
+   -0.13325684096683765,
+   -0.12387540975053257
+  ],
+  "loo_r2": 0.7810716670914362,
+  "knn_accuracy": 0.535632183908046,
+  "majority_baseline": 0.21379310344827587,
+  "listed_vs_pbp_agreement": 0.767816091954023,
+  "loo_r2_resampled": [
+   0.7804,
+   0.0013
+  ]
+ },
+ "misfits": [
+  {
+   "pid": "thompam01",
+   "name": "Amen Thompson",
+   "listed": "PG",
+   "pbp": 1.18,
+   "latent": 3.3,
+   "freq": 1.0,
+   "gap_sd": 0.04
+  },
+  {
+   "pid": "camarto01",
+   "name": "Toumani Camara",
+   "listed": "PF",
+   "pbp": 4.12,
+   "latent": 2.22,
+   "freq": 1.0,
+   "gap_sd": 0.05
+  },
+  {
+   "pid": "diengou01",
+   "name": "Ousmane Dieng",
+   "listed": "C",
+   "pbp": 4.25,
+   "latent": 2.39,
+   "freq": 1.0,
+   "gap_sd": 0.02
+  },
+  {
+   "pid": "barneha02",
+   "name": "Harrison Barnes",
+   "listed": "PF",
+   "pbp": 4.04,
+   "latent": 2.29,
+   "freq": 1.0,
+   "gap_sd": 0.04
+  },
+  {
+   "pid": "paytoga02",
+   "name": "Gary Payton II",
+   "listed": "SG",
+   "pbp": 2.04,
+   "latent": 3.72,
+   "freq": 1.0,
+   "gap_sd": 0.06
+  },
+  {
+   "pid": "doncilu01",
+   "name": "Luka Dončić",
+   "listed": "PG",
+   "pbp": 1.14,
+   "latent": 2.78,
+   "freq": 1.0,
+   "gap_sd": 0.11
+  },
+  {
+   "pid": "trentga02",
+   "name": "Gary Trent Jr.",
+   "listed": "SG",
+   "pbp": 2.61,
+   "latent": 1.0,
+   "freq": 1.0,
+   "gap_sd": 0.0
+  },
+  {
+   "pid": "rileywi01",
+   "name": "Will Riley",
+   "listed": "SF",
+   "pbp": 3.93,
+   "latent": 2.39,
+   "freq": 1.0,
+   "gap_sd": 0.02
+  },
+  {
+   "pid": "brookdi01",
+   "name": "Dillon Brooks",
+   "listed": "SF",
+   "pbp": 3.95,
+   "latent": 2.52,
+   "freq": 1.0,
+   "gap_sd": 0.05
+  },
+  {
+   "pid": "dunnkr01",
+   "name": "Kris Dunn",
+   "listed": "PG",
+   "pbp": 1.17,
+   "latent": 2.51,
+   "freq": 1.0,
+   "gap_sd": 0.02
+  },
+  {
+   "pid": "meltode01",
+   "name": "De'Anthony Melton",
+   "listed": "PG",
+   "pbp": 1.24,
+   "latent": 2.49,
+   "freq": 0.8,
+   "gap_sd": 0.03
+  },
+  {
+   "pid": "portecr01",
+   "name": "Craig Porter Jr.",
+   "listed": "PG",
+   "pbp": 1.14,
+   "latent": 2.33,
+   "freq": 0.5,
+   "gap_sd": 0.03
+  }
+ ],
+ "all_defense": {
+  "heldout_ranks": {
+   "wembavi01": 27,
+   "adebaba01": 40,
+   "barnesc01": 4,
+   "whitede01": 255,
+   "holmgch01": 51,
+   "anunoog01": 134,
+   "daniedy01": 172,
+   "goberru01": 321,
+   "thompau01": 43,
+   "wallaca01": 304
+  },
+  "median_heldout_rank": 92.5,
+  "n_players": 435,
+  "random_median_rank": 217.5,
+  "dpoy_vote_spearman": 0.2928221486582098,
+  "latent_top15": [
+   "antetgi01",
+   "barnesc01",
+   "harteis01",
+   "wembavi01",
+   "johnsja05",
+   "thompam01",
+   "jamesle01",
+   "castlst01",
+   "jokicni01",
+   "mobleev01",
+   "sengual01",
+   "cunnica01",
+   "claxtni01",
+   "williro04",
+   "toppiob01"
+  ],
+  "median_heldout_rank_resampled": [
+   94.65,
+   4.2311
+  ],
+  "position_controlled": {
+   "heldout_ranks": {
+    "wembavi01": 86,
+    "adebaba01": 109,
+    "barnesc01": 7,
+    "whitede01": 146,
+    "holmgch01": 134,
+    "anunoog01": 121,
+    "daniedy01": 142,
+    "goberru01": 390,
+    "thompau01": 49,
+    "wallaca01": 168
+   },
+   "median_heldout_rank": 127.5,
+   "n_players": 435,
+   "random_median_rank": 217.5,
+   "dpoy_vote_spearman": 0.20442300944063704,
+   "latent_top15": [
+    "jamesle01",
+    "castlst01",
+    "cunnica01",
+    "antetgi01",
+    "barnesc01",
+    "thompam01",
+    "johnsja05",
+    "porteke02",
+    "moranja01",
+    "willija06",
+    "colliis01",
+    "jokicni01",
+    "sengual01",
+    "harteis01",
+    "mobleev01"
+   ],
+   "median_heldout_rank_resampled": [
+    125.95,
+    4.3786
+   ]
+  },
+  "within_position": {
+   "honoree_pct": {
+    "wembavi01": 98.9,
+    "adebaba01": 90.2,
+    "barnesc01": 98.8,
+    "whitede01": 80.2,
+    "holmgch01": 82.6,
+    "anunoog01": 82.7,
+    "daniedy01": 95.3,
+    "goberru01": 47.8,
+    "thompau01": 98.8,
+    "wallaca01": 70.3
+   },
+   "median_honoree_pct": 86.5,
+   "corr_score_with_position": 0.4429
+  },
+  "defense_only_embedding": {
+   "heldout_ranks": {
+    "wembavi01": 95,
+    "adebaba01": 5,
+    "barnesc01": 199,
+    "whitede01": 120,
+    "holmgch01": 96,
+    "anunoog01": 222,
+    "daniedy01": 179,
+    "goberru01": 105,
+    "thompau01": 421,
+    "wallaca01": 272
+   },
+   "median_heldout_rank": 149.5,
+   "n_players": 435,
+   "random_median_rank": 217.5,
+   "dpoy_vote_spearman": 0.20994795564173535,
+   "k": 2,
+   "features": [
+    "ORB%",
+    "DRB%",
+    "STL%",
+    "BLK%",
+    "pf100",
+    "charges"
+   ],
+   "latent_top15": [
+    "leonaka01",
+    "jamesle01",
+    "banchpa01",
+    "duranke01",
+    "adebaba01",
+    "johnsja05",
+    "chrisma02",
+    "beysa01",
+    "ingrabr01",
+    "giddejo01",
+    "walkeja02",
+    "bridgmi02",
+    "champju02",
+    "tatumja01",
+    "pritcpa01"
+   ]
+  }
+ },
+ "all_nba": {
+  "observed": 3.6651923184054107,
+  "null_mean": 3.7613130519515967,
+  "p_more_spread": 0.616876624675065,
+  "p_more_clustered": 0.3833233353329334,
+  "star_twins": {
+   "doncilu01": "hardeja01",
+   "gilgesh01": "georgke01",
+   "brownja02": "flaggco01",
+   "duranke01": "vassede01",
+   "maxeyty01": "hendesc01",
+   "mitchdo01": "cartede02",
+   "brunsja01": "banede01",
+   "murraja01": "georgky01",
+   "leonaka01": "millebr02",
+   "jokicni01": "giddejo01",
+   "johnsja05": "mobleev01",
+   "wembavi01": "vukcetr01",
+   "cunnica01": "porteke02",
+   "durenja01": "willima07",
+   "holmgch01": "kuminjo01"
+  },
+  "star_twin_freq": {
+   "doncilu01": 0.7,
+   "gilgesh01": 0.8,
+   "brownja02": 1.0,
+   "duranke01": 0.8,
+   "maxeyty01": 0.9,
+   "mitchdo01": 1.0,
+   "brunsja01": 1.0,
+   "murraja01": 0.9,
+   "leonaka01": 0.3,
+   "jokicni01": 1.0,
+   "johnsja05": 1.0,
+   "wembavi01": 0.7,
+   "cunnica01": 1.0,
+   "durenja01": 0.8,
+   "holmgch01": 0.4
+  }
+ },
+ "masked_recovery": {
+  "model_rmse": 0.6506986365933786,
+  "column_mean_rmse": 1.0536298641732573,
+  "by_group": {
+   "contact": {
+    "model": 0.5426218483932851,
+    "column_mean": 1.0093975739080507
+   },
+   "creation": {
+    "model": 0.5143406612252801,
+    "column_mean": 1.002084518272406
+   },
+   "glass_defense": {
+    "model": 0.8166646922449379,
+    "column_mean": 1.0000263129999312
+   },
+   "shot_diet": {
+    "model": 0.638155887809818,
+    "column_mean": 1.1472906674069492
+   }
+  }
+ },
+ "impact": {
+  "style_r2_on_off": 0.0541,
+  "basis": "on-off minus a leave-one-out linear readout of on-off from the style coordinates, shrunk toward the mean by minutes (empirical Bayes)",
+  "shrinkage": {
+   "tau2": 11.3526,
+   "c": 18974.7189,
+   "min_mp": 1500
+  },
+  "top": [
+   {
+    "pid": "leonaka01",
+    "name": "Kawhi Leonard",
+    "team": "LAC",
+    "mp": 2085.0,
+    "on_off": 14.5,
+    "expected": 1.6768,
+    "beyond_style": 7.1193,
+    "beyond_style_raw": 12.8232,
+    "shrink": 0.555
+   },
+   {
+    "pid": "daniedy01",
+    "name": "Dyson Daniels",
+    "team": "ATL",
+    "mp": 2520.0,
+    "on_off": 11.2,
+    "expected": -0.3623,
+    "beyond_style": 6.9532,
+    "beyond_style_raw": 11.5623,
+    "shrink": 0.601
+   },
+   {
+    "pid": "wembavi01",
+    "name": "Victor Wembanyama",
+    "team": "SAS",
+    "mp": 1866.0,
+    "on_off": 16.0,
+    "expected": 4.5433,
+    "beyond_style": 6.0453,
+    "beyond_style_raw": 11.4567,
+    "shrink": 0.528
+   },
+   {
+    "pid": "gilgesh01",
+    "name": "Shai Gilgeous-Alexander",
+    "team": "OKC",
+    "mp": 2259.0,
+    "on_off": 12.3,
+    "expected": 1.8112,
+    "beyond_style": 6.0301,
+    "beyond_style_raw": 10.4888,
+    "shrink": 0.575
+   },
+   {
+    "pid": "rolliry01",
+    "name": "Ryan Rollins",
+    "team": "MIL",
+    "mp": 2376.0,
+    "on_off": 8.5,
+    "expected": -1.3322,
+    "beyond_style": 5.7735,
+    "beyond_style_raw": 9.8322,
+    "shrink": 0.587
+   },
+   {
+    "pid": "cliffni01",
+    "name": "Nique Clifford",
+    "team": "SAC",
+    "mp": 1882.0,
+    "on_off": 9.5,
+    "expected": -1.3588,
+    "beyond_style": 5.753,
+    "beyond_style_raw": 10.8588,
+    "shrink": 0.53
+   },
+   {
+    "pid": "diabamo01",
+    "name": "Moussa Diabaté",
+    "team": "CHO",
+    "mp": 1899.0,
+    "on_off": 10.7,
+    "expected": 0.2559,
+    "beyond_style": 5.5567,
+    "beyond_style_raw": 10.4441,
+    "shrink": 0.532
+   },
+   {
+    "pid": "smartma01",
+    "name": "Marcus Smart",
+    "team": "LAL",
+    "mp": 1769.0,
+    "on_off": 9.9,
+    "expected": -0.8489,
+    "beyond_style": 5.5288,
+    "beyond_style_raw": 10.7489,
+    "shrink": 0.514
+   },
+   {
+    "pid": "whitede01",
+    "name": "Derrick White",
+    "team": "BOS",
+    "mp": 2625.0,
+    "on_off": 9.7,
+    "expected": 0.845,
+    "beyond_style": 5.4117,
+    "beyond_style_raw": 8.855,
+    "shrink": 0.611
+   },
+   {
+    "pid": "champju02",
+    "name": "Julian Champagnie",
+    "team": "SAS",
+    "mp": 2266.0,
+    "on_off": 9.7,
+    "expected": 0.5264,
+    "beyond_style": 5.2811,
+    "beyond_style_raw": 9.1736,
+    "shrink": 0.576
+   },
+   {
+    "pid": "quetane01",
+    "name": "Neemias Queta",
+    "team": "BOS",
+    "mp": 1926.0,
+    "on_off": 9.8,
+    "expected": -0.0136,
+    "beyond_style": 5.2559,
+    "beyond_style_raw": 9.8136,
+    "shrink": 0.535
+   },
+   {
+    "pid": "holidjr01",
+    "name": "Jrue Holiday",
+    "team": "POR",
+    "mp": 1560.0,
+    "on_off": 9.8,
+    "expected": -1.0392,
+    "beyond_style": 5.2348,
+    "beyond_style_raw": 10.8392,
+    "shrink": 0.483
+   }
+  ]
+ },
+ "trades": {
+  "n_players": 43,
+  "median_same_player": 1.5107446296177773,
+  "median_random_pair": 3.1635855747371293
+ },
+ "teams": {
+  "centroid_vs_nrtg_corr": [
+   0.1275,
+   -0.1526,
+   -0.0263,
+   0.0783,
+   0.134,
+   -0.1143,
+   -0.1108,
+   0.1229
+  ],
+  "centroid_vs_nrtg_p": [
+   0.4989,
+   0.4215,
+   0.8872,
+   0.6807,
+   0.4857,
+   0.5461,
+   0.5433,
+   0.5223
+  ],
+  "ball_security_vs_nrtg": {
+   "TOV%": {
+    "r": -0.6077,
+    "p": 0.0004
+   },
+   "bad_pass": {
+    "r": -0.4066,
+    "p": 0.0246
+   },
+   "lost_ball": {
+    "r": -0.4606,
+    "p": 0.0096
+   }
+  },
+  "mean_playoff_shift": [
+   -0.0316,
+   0.1709,
+   -0.0144,
+   -0.0005,
+   0.0141,
+   0.019,
+   -0.0146,
+   0.0068
+  ],
+  "playoff_shift_teams_up": [
+   5,
+   13,
+   8,
+   7,
+   10,
+   7,
+   5,
+   9
+  ]
+ },
+ "age_rookies": {
+  "age_corr": [
+   {
+    "r": -0.1503,
+    "p": 0.0045
+   },
+   {
+    "r": 0.0216,
+    "p": 0.6567
+   },
+   {
+    "r": -0.0035,
+    "p": 0.944
+   },
+   {
+    "r": 0.0484,
+    "p": 0.3008
+   },
+   {
+    "r": 0.0499,
+    "p": 0.3053
+   },
+   {
+    "r": -0.0554,
+    "p": 0.2639
+   },
+   {
+    "r": -0.2882,
+    "p": 0.0005
+   },
+   {
+    "r": -0.2035,
+    "p": 0.0005
+   }
+  ],
+  "all_rookie_mean_diff": [
+   {
+    "diff": 0.1825,
+    "p": 0.5537
+   },
+   {
+    "diff": 0.517,
+    "p": 0.1084
+   },
+   {
+    "diff": -0.0417,
+    "p": 0.8921
+   },
+   {
+    "diff": 0.5748,
+    "p": 0.049
+   },
+   {
+    "diff": 0.1482,
+    "p": 0.6127
+   },
+   {
+    "diff": 0.5745,
+    "p": 0.0395
+   },
+   {
+    "diff": 0.5496,
+    "p": 0.0425
+   },
+   {
+    "diff": 0.1578,
+    "p": 0.5747
+   }
+  ],
+  "all_rookie": [
+   "knuepko01",
+   "flaggco01",
+   "edgecvj01",
+   "fearsje01",
+   "baileac01",
+   "queende01",
+   "raynama01",
+   "cowarce01",
+   "harpedy01",
+   "murraco01"
+  ]
+ },
+ "playoff_style": {
+  "n_players": 102,
+  "min_playoff_mp": 150,
+  "features_used": [
+   "AST%",
+   "USG%",
+   "ORB%",
+   "DRB%",
+   "STL%",
+   "BLK%",
+   "pf100",
+   "FTr"
+  ],
+  "restricted_vs_full_axis_corr": [
+   0.9461,
+   0.9673,
+   0.7906,
+   0.7176,
+   0.805,
+   0.4293,
+   0.6895,
+   0.5198
+  ],
+  "median_distance_same_player": 1.1984255494153764,
+  "median_distance_random_pair": 2.4832415393997653,
+  "axes": [
+   {
+    "mean_shift": 0.0755,
+    "p": 0.048
+   },
+   {
+    "mean_shift": -0.2033,
+    "p": 0.0002
+   },
+   {
+    "mean_shift": -0.0265,
+    "p": 0.6241
+   },
+   {
+    "mean_shift": -0.1074,
+    "p": 0.022
+   },
+   {
+    "mean_shift": -0.1586,
+    "p": 0.0008
+   },
+   {
+    "mean_shift": -0.0178,
+    "p": 0.4637
+   },
+   {
+    "mean_shift": -0.0182,
+    "p": 0.7233
+   },
+   {
+    "mean_shift": -0.0735,
+    "p": 0.0596
+   }
+  ]
+ },
+ "playoff_rotation": {
+  "n_players": 243,
+  "axes": [
+   {
+    "partial_r": -0.0433,
+    "p": 0.5033
+   },
+   {
+    "partial_r": 0.2629,
+    "p": 0.0002
+   },
+   {
+    "partial_r": -0.0058,
+    "p": 0.9258
+   },
+   {
+    "partial_r": -0.0,
+    "p": 0.9994
+   },
+   {
+    "partial_r": 0.0147,
+    "p": 0.8262
+   },
+   {
+    "partial_r": 0.035,
+    "p": 0.5887
+   },
+   {
+    "partial_r": -0.0124,
+    "p": 0.8434
+   },
+   {
+    "partial_r": 0.0053,
+    "p": 0.9342
+   }
+  ],
+  "rs_share_vs_delta_r": 0.1029438526741282
+ }
+}
