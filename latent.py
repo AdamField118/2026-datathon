@@ -147,6 +147,22 @@ def read_bbref_team(path: Path) -> pd.DataFrame:
     return df.set_index("Team").apply(pd.to_numeric, errors="coerce")
 
 
+def load_playoff_results(teams: pd.DataFrame) -> dict:
+    """Per playoff team (by abbreviation): series won/played, games won/lost, playoff ratings."""
+    ser = pd.read_csv(DATA / "team-stats/playoff-series.csv")
+    adv = read_bbref_team(DATA / "playoff-stats/advanced.csv")
+    ab_of = {nm: ab for ab, nm in teams["name"].items()}
+    out = {}
+    for nm in adv.index:
+        won = ser[ser["Winner"] == nm]
+        lost = ser[ser["Loser"] == nm]
+        out[ab_of[nm]] = {"series_won": int(len(won)), "series_played": int(len(won) + len(lost)),
+                          "games_won": int(won["Winner W"].sum() + lost["Loser W"].sum()),
+                          "games_lost": int(won["Loser W"].sum() + lost["Winner W"].sum()),
+                          **{c: float(adv.loc[nm, c]) for c in ("NRtg", "ORtg", "DRtg", "Pace")}}
+    return out
+
+
 def load_playoff_minutes() -> pd.Series:
     po = read_bbref(DATA / "playoff-stats/player-stats/totals.csv")
     return po.groupby("pid")["MP"].sum()
@@ -357,6 +373,17 @@ def encode(fit: Fit, X, M, N):
     b = np.einsum("nd,dk->nk", prec_w * Xs, fit.W)
     cov = np.linalg.inv(A)
     return np.einsum("nkl,nl->nk", cov, b), np.sqrt(np.diagonal(cov, axis1=1, axis2=2))
+
+
+def encode_contributions(fit: Fit, X, M, N):
+    """Per-feature pieces of the posterior mean: C[i, j] (a k-vector) is feature j's share of
+    z_i, so C.sum(1) equals encode()'s mean exactly (the encoder is linear in each row)."""
+    Xs = np.where(M, (X - fit.center) / fit.scale, 0.0) - fit.mu
+    prec_w = _weights(N, M, fit.wref) / fit.s2              # 0 where missing
+    k = fit.W.shape[1]
+    A = np.einsum("nd,dk,dl->nkl", prec_w, fit.W, fit.W) + np.eye(k)
+    cov = np.linalg.inv(A)
+    return np.einsum("nkl,dl,nd->ndk", cov, fit.W, prec_w * Xs)
 
 
 def decode(fit: Fit, Z):
@@ -581,25 +608,30 @@ def playoff_rotation(Z, pid_to_i, all_reg, po_tot, per_game=True, n_perm=5000, s
             "rs_share_vs_delta_r": float(np.corrcoef(rs_share, delta)[0, 1])}, idx, delta
 
 
-def playoff_style(fit, season, pids, feats, min_po_mp=150, n_perm=5000, seed=0):
+def playoff_style(fit, season, pids, feats, min_po_mp=150, drop=(), match_sample=True, n_perm=5000, seed=0):
     """Place playoff players with the fitted model and compare with their regular season,
     re-encoded from the same restricted feature set so the comparison is like for like.
-    Returns (summary, per-player dict pid -> (z_playoff, z_sd))."""
+    drop: feature keys left out of both placements.
+    match_sample: scale each player's regular-season sample sizes down to his playoff minutes,
+    so both placements are pulled toward the prior by the same amount.
+    Returns (summary, per-player dict pid -> (z_playoff, z_sd, z_regular_same_features))."""
     po = load_playoff_players(season.columns)
     po = po[po["t:MP"] >= min_po_mp]
     po = po[po.index.isin(pids)]
     Xp, Np, Mp = build_matrix(po, feats)
-    avail = Mp.any(0)                                        # features the playoff tables supply
+    avail = Mp.any(0) & np.array([f.key not in drop for f in feats])   # features the playoff tables supply
     Mp &= avail
     reg = season.loc[po.index]
     Xr, Nr, Mr = build_matrix(reg, feats)
     Mr &= avail
     Zp, Zp_sd = encode(fit, Xp, Mp, Np)
-    Zr, _ = encode(fit, Xr, Mr, Nr)
+    Zr_full_n, _ = encode(fit, Xr, Mr, Nr)
+    ratio = po["t:MP"].to_numpy(float) / reg["t:MP"].to_numpy(float)
+    Zr = encode(fit, Xr, Mr, Nr * ratio[:, None])[0] if match_sample else Zr_full_n
     # how faithful is the restricted placement? compare restricted vs full regular-season z
     Xf, Nf, Mf = build_matrix(reg, feats)
     Zf, _ = encode(fit, Xf, Mf, Nf)
-    faithful = [float(np.corrcoef(Zr[:, j], Zf[:, j])[0, 1]) for j in range(Zr.shape[1])]
+    faithful = [float(np.corrcoef(Zr_full_n[:, j], Zf[:, j])[0, 1]) for j in range(Zr.shape[1])]
     diff = Zp - Zr
     same = np.linalg.norm(diff, axis=1)
     rng = np.random.default_rng(seed)
@@ -614,6 +646,10 @@ def playoff_style(fit, season, pids, feats, min_po_mp=150, n_perm=5000, seed=0):
         axes.append({"mean_shift": float(obs), "p": float((1 + (null >= abs(obs)).sum()) / (n_perm + 1))})
     summary = {"n_players": len(po), "min_playoff_mp": min_po_mp,
                "features_used": [f.key for f, a in zip(feats, avail) if a],
+               "sample_size_matched": match_sample,
+               "median_playoff_to_regular_minutes": float(np.median(ratio)),
+               "corr_shift_with_regular_z": [float(np.corrcoef(diff[:, j], Zr[:, j])[0, 1])
+                                             for j in range(Zr.shape[1])],
                "restricted_vs_full_axis_corr": faithful,
                "median_distance_same_player": float(np.median(same)),
                "median_distance_random_pair": float(np.median(rand)),
@@ -786,6 +822,17 @@ def main(argv=None):
         Z_pcc = remove_direction(Z_pcc, v)
     def_pcc_res, def_pcc_score, _ = analyze_all_defense(Z_pcc, is_def, dpoy)
     def_pcc_pct = percentile_within(def_pcc_score, primary_pos)
+    # per-feature breakdown of each defence score. Each score is linear in Z (score = Z e + c),
+    # so with the per-feature pieces of Z it splits exactly into one number per feature.
+    C = encode_contributions(fit, X, M, N)                       # (n, features, k)
+    def_breakdown = {}
+    for name, sc in [("raw", def_score), ("position_controlled", def_pc_score),
+                     ("position_and_creation_controlled", def_pcc_score)]:
+        coef = np.linalg.lstsq(np.c_[Z, np.ones(n)], sc, rcond=None)[0]
+        per_player = C @ coef[:k]                                # (n, features)
+        def_breakdown[name] = {"offset": float(coef[k]), "direction_z": coef[:k],
+                               "feature_direction": fit.W @ coef[:k], "per_player": per_player,
+                               "max_abs_residual": float(np.abs(per_player.sum(1) + coef[k] - sc).max())}
     is_nba = np.array([a["all_nba"] is not None for a in awards])
     nba_idx = np.where(is_nba)[0]
     pool = np.where(mp >= mp[nba_idx].min())[0]
@@ -823,6 +870,7 @@ def main(argv=None):
         misfit_count = np.zeros(n)
         gaps = []
         twin_hit = np.zeros(n)
+        twin_top1_hit = np.zeros(n)
         star_hit = {i: 0 for i in star_twin}
         run_r2, run_def, run_def_pc = [], [], []
         for Zb in boots:
@@ -832,6 +880,7 @@ def main(argv=None):
             tw, sb = twins_of(Zb)
             for i in range(n):
                 twin_hit[i] += twins[i][0] in tw[i]
+                twin_top1_hit[i] += twins[i][0] == tw[i][0]
             for i in star_twin:
                 star_hit[i] += sb[i] == star_twin[i]
             run_r2.append(analyze_positions(Zb, pos_pct, listed)[0]["loo_r2"])
@@ -843,6 +892,7 @@ def main(argv=None):
                 "misfit_freq": misfit_count / R,
                 "gap_mean": np.mean(gaps, axis=0), "gap_sd": np.std(gaps, axis=0),
                 "twin_freq": twin_hit / R,
+                "twin_top1_freq": twin_top1_hit / R,
                 "star_twin_freq": {i: c / R for i, c in star_hit.items()},
                 "pos_r2": (float(np.mean(run_r2)), float(np.std(run_r2))),
                 "def_rank": (float(np.mean(run_def)), float(np.std(run_def))),
@@ -915,25 +965,56 @@ def main(argv=None):
     rot_tot_res, _, _ = playoff_rotation(Z, pid_to_i, all_reg, po_tot, per_game=False, seed=args.seed)
     po_share_delta = np.full(n, np.nan)
     po_share_delta[rot_idx] = rot_delta
-    pstyle_res, pstyle = playoff_style(fit, season, pids, feats, seed=args.seed)
+    # playoff style: default = sample-size matched; variants = not matched, and without the
+    # team-share stats (usage and assist % are shares of the team's possessions)
+    pstyle_variants = {"default": {}, "not_sample_matched": {"match_sample": False},
+                       "without_usg_ast": {"drop": ("USG%", "AST%")}}
+    pstyle_all = {name: playoff_style(fit, season, pids, feats, seed=args.seed, **kw)
+                  for name, kw in pstyle_variants.items()}
+    pstyle_res, pstyle = pstyle_all["default"]
     # playoff shift of each team = who plays (playoff minutes on regular-season z, i.e.
     # playoff_centroid - centroid) + how they play (playoff-minute-weighted change in each
-    # player's own z, like-for-like features; players without a playoff placement count as 0)
+    # player's own z, like-for-like features; players without a playoff placement count as 0).
+    # Interval: bootstrap over the team's playoff players (weights renormalised each draw).
+    po_results = load_playoff_results(teams)
+    rng_b = np.random.default_rng(args.seed + 7)
+    B = 1000
     decomp = []
     for t in team_json:
         if "playoff_centroid" not in t:
             continue
         pr = po_tot[(po_tot["Team"] == t["team"]) & po_tot["pid"].isin(pids)]
-        pw = pr["MP"].to_numpy(float) / pr["MP"].sum()
-        who = np.array(t["playoff_centroid"]) - np.array(t["centroid"])
-        how = np.zeros(k)
-        cov = 0.0
-        for p, w_ in zip(pr["pid"], pw):
-            if p in pstyle:
-                how += w_ * (pstyle[p][0] - pstyle[p][2])
-                cov += w_
+        m = pr["MP"].to_numpy(float)
+        zreg = np.array([Z[pid_to_i[p]] for p in pr["pid"]])
+        cen = np.array(t["centroid"])
+
+        def parts(ps, rows=None):
+            rows = np.arange(len(pr)) if rows is None else rows
+            w_ = m[rows] / m[rows].sum()
+            who_ = w_ @ zreg[rows] - cen
+            how_ = np.zeros(k)
+            cov_ = 0.0
+            for wi, p in zip(w_, pr["pid"].to_numpy()[rows]):
+                if p in ps:
+                    how_ += wi * (ps[p][0] - ps[p][2])
+                    cov_ += wi
+            return who_, how_, cov_
+
+        who, how, cov = parts(pstyle)
+        boots_who, boots_how = [], []
+        for _ in range(B):
+            wb, hb, _ = parts(pstyle, rng_b.integers(0, len(pr), len(pr)))
+            boots_who.append(wb)
+            boots_how.append(hb)
+        ci = lambda a: [r(np.percentile(a, 2.5, axis=0)), r(np.percentile(a, 97.5, axis=0))]  # noqa: E731
         t["playoff_shift"] = {"who_plays": r(who), "how_they_play": r(how), "total": r(who + how),
-                              "coverage": r(cov, 3)}
+                              "coverage": r(cov, 3), "n_playoff_players": len(pr),
+                              "who_plays_ci95": ci(np.array(boots_who)),
+                              "how_they_play_ci95": ci(np.array(boots_how)),
+                              "total_ci95": ci(np.array(boots_who) + np.array(boots_how)),
+                              **{f"how_they_play_{name}": r(parts(ps)[1])
+                                 for name, (_, ps) in pstyle_all.items() if name != "default"}}
+        t["playoff_results"] = po_results.get(t["team"])
         decomp.append((who, how))
     who_all = np.array([a for a, _ in decomp])
     how_all = np.array([b for _, b in decomp])
@@ -942,12 +1023,33 @@ def main(argv=None):
                     "teams_up_who_plays": [int((who_all[:, j] > 0).sum()) for j in range(k)],
                     "teams_up_how_they_play": [int((how_all[:, j] > 0).sum()) for j in range(k)],
                     "median_coverage": r(float(np.median([t["playoff_shift"]["coverage"] for t in team_json
-                                                          if "playoff_shift" in t])), 3)}
+                                                          if "playoff_shift" in t])), 3),
+                    "who_vs_how_corr": add_holm([dict(zip(("r", "p"), corr_with_p(who_all[:, j], how_all[:, j],
+                                                                                 seed=args.seed)))
+                                                 for j in range(k)]),
+                    "bootstrap_draws": B}
+    for name, (_, ps) in pstyle_all.items():
+        if name == "default":
+            continue
+        how_v = np.array([t["playoff_shift"][f"how_they_play_{name}"] for t in team_json if "playoff_shift" in t])
+        shift_decomp[f"mean_how_they_play_{name}"] = r(how_v.mean(0))
+        shift_decomp[f"who_vs_how_corr_{name}"] = [r(float(np.corrcoef(who_all[:, j], how_v[:, j])[0, 1]))
+                                                   for j in range(k)]
+    # team playoff outcomes vs each part of the shift, per axis (16 teams)
+    po_teams = [t for t in team_json if "playoff_shift" in t and t["playoff_results"]]
+    shift_vs_outcomes = {}
+    for outcome in ("series_won", "NRtg"):
+        y = np.array([t["playoff_results"][outcome] for t in po_teams], float)
+        shift_vs_outcomes[outcome] = {
+            part: add_holm([dict(zip(("r", "p"), corr_with_p(
+                np.array([t["playoff_shift"][part][j] for t in po_teams], float), y, seed=args.seed)))
+                for j in range(k)])
+            for part in ("who_plays", "how_they_play", "total")}
     age = season["t:Age"].to_numpy(float)
     is_rookie = np.array([a["all_rookie"] is not None for a in awards])
     age_res = analyze_age(Z, age, is_rookie, n_perm=2000, seed=args.seed)
     # multiple testing: each per-axis test is run k times, so adjust within each family (Holm)
-    for fam in [rot_res["axes"], rot_tot_res["axes"], pstyle_res["axes"],
+    for fam in [rot_res["axes"], rot_tot_res["axes"], *[res["axes"] for res, _ in pstyle_all.values()],
                 age_res["age_corr"], age_res["rookie_mean_diff"]]:
         add_holm(fam)
     team_style_p_holm = holm([p for _, p in team_style])
@@ -975,6 +1077,7 @@ def main(argv=None):
             "def_score": r(def_score[i]), "def_rank": int((def_score > def_score[i]).sum() + 1),
             "def_score_pc": r(def_pc_score[i]), "def_rank_pc": int((def_pc_score > def_pc_score[i]).sum() + 1),
             "def_pct_in_position": r(def_pct_pos[i], 1),
+            "def_contrib": {name: r(b["per_player"][i], 3) for name, b in def_breakdown.items()},
             "twins": [pids[j] for j in twins[i]],
             "impact": {"on_court": r(on_court[i]), "on_off": r(on_off[i]),
                        "on_off_expected_from_style": r(on_off_expected[i]),
@@ -988,7 +1091,8 @@ def main(argv=None):
         if stab:
             players[-1]["stability"] = {"z_sd": r(stab["z_sd"][i]), "twin_freq": r(stab["twin_freq"][i], 2),
                                         "misfit_freq": r(stab["misfit_freq"][i], 2),
-                                        "twin_stable": bool(stab["twin_freq"][i] >= STABLE_FREQ)}
+                                        "twin_top1_freq": r(stab["twin_top1_freq"][i], 2),
+                                        "twin_stable": bool(stab["twin_top1_freq"][i] >= STABLE_FREQ)}
     feature_json = [{"key": f.key, "label": f.label, "group": f.group, "loadings": r(fit.W[j])}
                     for j, f in enumerate(feats)]
     named = (not args.give and not args.hold and set(args.groups) == set(DEFAULT_GROUPS)
@@ -1027,6 +1131,12 @@ def main(argv=None):
                             "heldout_ranks": {pids[i]: v for i, v in def_pc_res["heldout_ranks"].items()},
                             "latent_top15": [pids[i] for i in np.argsort(-def_pc_score)[:15]],
                             **({"median_heldout_rank_resampled": r(stab["def_rank_pc"])} if stab else {})},
+                        "breakdown": {
+                            "feature_order": keys,
+                            **{name: {"offset": r(b["offset"]), "direction_z": r(b["direction_z"]),
+                                      "feature_direction": {kk: r(v) for kk, v in zip(keys, b["feature_direction"])},
+                                      "max_abs_residual": b["max_abs_residual"]}
+                               for name, b in def_breakdown.items()}},
                         "within_position": {
                             "honoree_pct": {pids[i]: r(def_pct_pos[i], 1) for i in np.where(is_def)[0]},
                             "median_honoree_pct": r(float(np.median(def_pct_pos[is_def])), 1),
@@ -1069,14 +1179,19 @@ def main(argv=None):
                                             for kk, (c, p) in ball_security.items()},
                   "mean_playoff_shift": r(shift.mean(0)) if len(shift) else None,
                   "playoff_shift_teams_up": [int((shift[:, j] > 0).sum()) for j in range(k)] if len(shift) else None,
-                  "playoff_shift_decomposition": shift_decomp},
+                  "playoff_shift_decomposition": shift_decomp,
+                  "playoff_shift_vs_outcomes": {o: {part: [{kk: r(v) for kk, v in a.items()} for a in rows]
+                                                    for part, rows in d.items()}
+                                                for o, d in shift_vs_outcomes.items()}},
         "age_rookies": {"age_corr": [{kk: r(v) for kk, v in a.items()} for a in age_res["age_corr"]],
                         "all_rookie_mean_diff": [{kk: r(v) for kk, v in a.items()}
                                                  for a in age_res["rookie_mean_diff"]],
                         "all_rookie": [pids[i] for i in np.where(is_rookie)[0]]},
-        "playoff_style": {**pstyle_res,
-                          "restricted_vs_full_axis_corr": r(pstyle_res["restricted_vs_full_axis_corr"]),
-                          "axes": [{kk: r(v) for kk, v in a.items()} for a in pstyle_res["axes"]]},
+        "playoff_style": {**{kk: r(v) for kk, v in pstyle_res.items()},
+                          "axes": [{kk: r(v) for kk, v in a.items()} for a in pstyle_res["axes"]],
+                          "variants": {name: {**{kk: r(v) for kk, v in res.items()},
+                                              "axes": [{kk: r(v) for kk, v in a.items()} for a in res["axes"]]}
+                                       for name, (res, _) in pstyle_all.items() if name != "default"}},
         "playoff_rotation": {**rot_res, "basis": "minutes per game played / 240 (players who appeared in the playoffs)",
                              "axes": [{kk: r(v) for kk, v in a.items()} for a in rot_res["axes"]],
                              "season_totals_version": {**rot_tot_res, "axes": [{kk: r(v) for kk, v in a.items()}
@@ -1161,6 +1276,15 @@ def main(argv=None):
     print(f"team playoff shift ({shift_decomp['n_teams']} teams, median coverage {shift_decomp['median_coverage']:.0%}): "
           "who plays " + ", ".join(f"ax{j + 1} {v:+.2f}" for j, v in enumerate(shift_decomp["mean_who_plays"]))
           + " | how they play " + ", ".join(f"ax{j + 1} {v:+.2f}" for j, v in enumerate(shift_decomp["mean_how_they_play"])))
+    for name, (res, _) in pstyle_all.items():
+        print(f"  playoff style [{name}] mean shift per axis: "
+              + ", ".join(f"ax{j + 1} {a['mean_shift']:+.2f} (holm {a['p_holm']:.3f})" for j, a in enumerate(res["axes"])))
+    print("  team who vs how corr per axis: "
+          + ", ".join(f"ax{j + 1} {a['r']:+.2f}" for j, a in enumerate(shift_decomp["who_vs_how_corr"])))
+    for o, d in shift_vs_outcomes.items():
+        print(f"  playoff {o} vs " + " | ".join(
+            f"{part}: " + ", ".join(f"ax{j + 1} {a['r']:+.2f} (holm {a['p_holm']:.2f})" for j, a in enumerate(rows))
+            for part, rows in d.items()))
     print("ball security (roster-weighted) vs NRtg: "
           + ", ".join(f"{kk} {c:+.2f} (p={p:.3f})" for kk, (c, p) in ball_security.items()))
     print(f"wrote {out}/ in {time.time() - t0:.1f}s")
