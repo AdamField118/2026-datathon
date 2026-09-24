@@ -1077,7 +1077,6 @@ def main(argv=None):
             "def_score": r(def_score[i]), "def_rank": int((def_score > def_score[i]).sum() + 1),
             "def_score_pc": r(def_pc_score[i]), "def_rank_pc": int((def_pc_score > def_pc_score[i]).sum() + 1),
             "def_pct_in_position": r(def_pct_pos[i], 1),
-            "def_contrib": {name: r(b["per_player"][i], 3) for name, b in def_breakdown.items()},
             "twins": [pids[j] for j in twins[i]],
             "impact": {"on_court": r(on_court[i]), "on_off": r(on_off[i]),
                        "on_off_expected_from_style": r(on_off_expected[i]),
@@ -1131,12 +1130,6 @@ def main(argv=None):
                             "heldout_ranks": {pids[i]: v for i, v in def_pc_res["heldout_ranks"].items()},
                             "latent_top15": [pids[i] for i in np.argsort(-def_pc_score)[:15]],
                             **({"median_heldout_rank_resampled": r(stab["def_rank_pc"])} if stab else {})},
-                        "breakdown": {
-                            "feature_order": keys,
-                            **{name: {"offset": r(b["offset"]), "direction_z": r(b["direction_z"]),
-                                      "feature_direction": {kk: r(v) for kk, v in zip(keys, b["feature_direction"])},
-                                      "max_abs_residual": b["max_abs_residual"]}
-                               for name, b in def_breakdown.items()}},
                         "within_position": {
                             "honoree_pct": {pids[i]: r(def_pct_pos[i], 1) for i in np.where(is_def)[0]},
                             "median_honoree_pct": r(float(np.median(def_pct_pos[is_def])), 1),
@@ -1201,10 +1194,19 @@ def main(argv=None):
                 "k": k, "k_errors": {str(kk): r(e) for kk, e in kerr.items()},
                 "min_mp": args.min_mp, "n_players": n, "features": keys,
                 "stability_runs": stab["runs"] if stab else 0,
-                "files": ["players.json", "features.json", "teams.json", "analysis.json"]}
+                "files": ["players.json", "features.json", "teams.json", "analysis.json", "defense_breakdown.json"]}
+    # per-feature pieces of the three defence scores, kept out of players.json to keep it small
+    defense_breakdown = {
+        "feature_order": keys,
+        "scores": {name: {"offset": r(b["offset"]), "direction_z": r(b["direction_z"]),
+                          "feature_direction": {kk: r(v) for kk, v in zip(keys, b["feature_direction"])},
+                          "max_abs_residual": b["max_abs_residual"]}
+                   for name, b in def_breakdown.items()},
+        "players": {p: {name: r(b["per_player"][i], 3) for name, b in def_breakdown.items()}
+                    for i, p in enumerate(pids)}}
     for name, obj in [("manifest", manifest), ("players", players),
                       ("features", {"features": feature_json, "axes": axes}),
-                      ("teams", team_json), ("analysis", analysis)]:
+                      ("teams", team_json), ("analysis", analysis), ("defense_breakdown", defense_breakdown)]:
         (out / f"{name}.json").write_text(json.dumps(obj, ensure_ascii=False, indent=1, default=r))
 
     # summary
