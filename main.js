@@ -1,147 +1,131 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
 
-function newPoint(scene, x, y, z, color, radius) {
-	if (radius == null) {
-		radius = 0.1
-	}
-	const geo = (new THREE.SphereGeometry(radius, 10, 10)).translate(x, y, z);
-	const material = new THREE.MeshBasicMaterial({ color: color });
-	const point = new THREE.Mesh(geo, material);
-	scene.add(point);
+const AXIS_LEN = 3.5;
+const SLOTS = ['X', 'Y', 'Z'];
+const SLOT_COLORS = ['#ff5555', '#55dd55', '#5599ff'];   // AxesHelper's red / green / blue
+
+// Data
+const [players, features] = await Promise.all([
+	fetch('./results/players.json').then(r => r.json()),
+	fetch('./results/features.json').then(r => r.json()),
+]);
+const axes = features.axes;
+const axisName = a => a.name_neg ? `${a.name_neg} <--> ${a.name_pos}` : `Axis ${a.id + 1}`;
+
+// Scene, camera, renderers
+const stage = document.querySelector('.stage');
+const canvas = document.querySelector('canvas.webgl');
+const scene = new THREE.Scene();
+scene.background = new THREE.Color('#0b0b0b');
+
+const camera = new THREE.PerspectiveCamera(60, 1, 0.1, 100);
+camera.position.set(6, 4, 6);
+
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+const labelRenderer = new CSS2DRenderer();
+labelRenderer.domElement.style.position = 'absolute';
+labelRenderer.domElement.style.top = '0';
+labelRenderer.domElement.style.pointerEvents = 'none';
+stage.appendChild(labelRenderer.domElement);
+
+const controls = new OrbitControls(camera, canvas);
+controls.enableDamping = true;
+
+function resize() {
+	const w = stage.clientWidth, h = stage.clientHeight;
+	camera.aspect = w / h;
+	camera.updateProjectionMatrix();
+	renderer.setSize(w, h, false);
+	labelRenderer.setSize(w, h);
+}
+new ResizeObserver(resize).observe(stage);
+
+// Axes
+const axesPos = new THREE.AxesHelper(AXIS_LEN);
+const axesNeg = new THREE.AxesHelper(AXIS_LEN);
+axesNeg.scale.set(-1, -1, -1);
+axesNeg.material.transparent = true;
+axesNeg.material.opacity = 0.4;
+scene.add(axesPos, axesNeg);
+
+const labels = new THREE.Group();
+scene.add(labels);
+
+function label(text, color, pos) {
+	const div = document.createElement('div');
+	div.className = 'axis-label';
+	div.textContent = text;
+	div.style.color = color;
+	const obj = new CSS2DObject(div);
+	obj.position.copy(pos);
+	labels.add(obj);
 }
 
-function setAxes(scene, x, y, z) {
-	while (scene.children.length > 0) {
-		scene.remove(scene.children[0]);
-	}
+// Players
+const dummy = new THREE.Object3D();
+const dots = new THREE.InstancedMesh(new THREE.SphereGeometry(1, 10, 10),
+	new THREE.MeshBasicMaterial(), players.length);
+scene.add(dots);
 
-	fetch('./results/players.json').then(res => {
-		if (!res.ok) {
-			throw new Error("failed to get player data");
-		} else {
-			console.log(res);
-			return res.json()
-		}
-	}).then(playerdata => {
-		fetch('./results/features.json').then(res => {
-			if (!res.ok) {
-				throw new Error("failed to get features");
+function setAxes(sel) {
+	const extremes = new Set(sel.flatMap(j => [...axes[j].players_neg, ...axes[j].players_pos]));
+	players.forEach((p, i) => {
+		const hot = extremes.has(p.pid);
+		dummy.position.set(p.z[sel[0]], p.z[sel[1]], p.z[sel[2]]);
+		dummy.scale.setScalar(hot ? 0.09 : 0.045);
+		dummy.updateMatrix();
+		dots.setMatrixAt(i, dummy.matrix);
+		dots.setColorAt(i, new THREE.Color(hot ? '#ffcc00' : '#dddddd'));
+	});
+	dots.instanceMatrix.needsUpdate = true;
+	dots.instanceColor.needsUpdate = true;
+
+	labels.clear();
+	sel.forEach((j, s) => {
+		const a = axes[j];
+		const dir = new THREE.Vector3().setComponent(s, 1);
+		label(`${SLOTS[s]}+ ${a.name_pos ?? `axis ${j + 1} +`}`, SLOT_COLORS[s], dir.clone().multiplyScalar(AXIS_LEN + 0.3));
+		label(`${SLOTS[s]}− ${a.name_neg ?? `axis ${j + 1} −`}`, SLOT_COLORS[s], dir.clone().multiplyScalar(-AXIS_LEN - 0.3));
+	});
+}
+
+// Axis picker
+const list = document.getElementById('axis-list');
+let picked = [0, 1, 2];
+
+function renderList() {
+	list.innerHTML = '';
+	axes.forEach((a, j) => {
+		const s = picked.indexOf(j);
+		const li = document.createElement('li');
+		li.innerHTML = `<label>
+			<input type="checkbox" ${s >= 0 ? 'checked' : ''}>
+			<span class="slot" style="color:${SLOT_COLORS[s] ?? 'transparent'}">${SLOTS[s] ?? ''}</span>
+			<span>${axisName(a)} <small>(${Math.round(100 * a.var_share)}%)</small></span></label>`;
+		li.querySelector('input').onchange = e => {
+			if (e.target.checked) {
+				picked.push(j);
+				if (picked.length > 3) picked.shift();
 			} else {
-				console.log(res);
-				return res.json()
+				picked = picked.filter(k => k !== j);
 			}
-		}).then(features => {
-			console.log(features)
-			const players1 = features.axes[x].players_neg + features.axes[x].players_pos;
-			const players2 = features.axes[y].players_neg + features.axes[y].players_pos;
-			const players3 = features.axes[z].players_neg + features.axes[z].players_pos;
-
-			console.log(playerdata);
-			for (let p in playerdata) {
-				const player = playerdata[p];
-				var color;
-				var radius;
-				if (players1.includes(player.pid) || players2.includes(player.pid) || players3.includes(player.pid)) {
-					color = new THREE.Color(1, 0, 0);
-					radius = 0.1;
-				} else {
-					color = new THREE.Color(1, 1, 1);
-					radius = 0.05;
-				}
-				newPoint(scene, player.z[x], player.z[y], player.z[z], color, radius);
-			}
-		}
-		)
-	})
+			renderList();
+			if (picked.length === 3) setAxes(picked);
+		};
+		list.appendChild(li);
+	});
 }
 
-
-// Canvas
-const canvas = document.querySelector('canvas.webgl')
-
-// Scene
-const scene = new THREE.Scene()
-
-//const square = 5;
-//for (let x = 0; x < square; x++) {
-//		for (let y = 0; y < square; y++) {
-//				for (let z = 0; z < square; z++) {
-//						newPoint(scene, x,y,z, new THREE.Color(x/5, y/5, z/5));
-//}}}
-
-// Lights
-
-const pointLight = new THREE.PointLight(0xffffff, 0.1)
-pointLight.position.x = 2
-pointLight.position.y = 3
-pointLight.position.z = 4
-scene.add(pointLight)
-
-// Sizes
-const sizes = {
-	width: window.innerWidth,
-	height: window.innerHeight
-}
-
-window.addEventListener('resize', () => {
-	// Update sizes
-	sizes.width = window.innerWidth
-	sizes.height = window.innerHeight
-
-	// Update camera
-	camera.aspect = sizes.width / sizes.height
-	camera.updateProjectionMatrix()
-
-	// Update renderer
-	renderer.setSize(sizes.width, sizes.height)
-	renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-})
-
-// Camera
-
-// Base camera
-const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
-camera.position.x = -5
-camera.position.y = 2
-camera.position.z = -5
-camera.lookAt(0, 0, 0);
-scene.add(camera)
-
-
-// Controls
-const controls = new OrbitControls(camera, canvas)
-// controls.enableDamping = true
-
-// Renderer
-const renderer = new THREE.WebGLRenderer({
-	canvas: canvas
-})
-renderer.setSize(sizes.width, sizes.height)
-renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+renderList();
+setAxes(picked);
 
 // Animate
-document.getElementById('update').onclick = () => {
-	const axis1 = document.querySelector('input[name="axis1"]:checked').value;
-	const axis2 = document.querySelector('input[name="axis2"]:checked').value;
-	const axis3 = document.querySelector('input[name="axis3"]:checked').value;
-	setAxes(scene, axis1, axis2, axis3);
-}
-
-const timer = new THREE.Timer()
-
-const tick = () => {
-
-	const elapsedTime = timer.getElapsed()
-
-	// Update Orbital Controls
-	controls.update()
-
-	// Render
-	renderer.render(scene, camera)
-
-	// Call tick again on the next frame
-	window.requestAnimationFrame(tick)
-}
-
-tick()
+renderer.setAnimationLoop(() => {
+	controls.update();
+	renderer.render(scene, camera);
+	labelRenderer.render(scene, camera);
+});

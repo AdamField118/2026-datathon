@@ -1,13 +1,87 @@
 * {
-		padding: 0;
-		margin: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
-.webgl {
-		width: 90%;
-		height: 75%;
+html, body {
+	overflow-x: hidden;
+	background: #111;
+	color: #ddd;
+	font-family: system-ui, sans-serif;
 }
 
-div {
-		display:inline-block;
+/* Title card */
+.title-card {
+	margin: 32px 48px 24px;
+	padding: 24px 28px;
+	border: 1px solid #333;
+	border-radius: 8px;
+	background: #181818;
+}
+.title-card h1 { font-size: 1.8rem; margin: 8px 0 4px; }
+.tag {
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	padding: 3px 8px;
+	border-radius: 4px;
+	background: #c8102e;
+	color: #fff;
+}
+.people { color: #999; }
+
+/* Canvas left, axis list right */
+.viewer {
+	display: flex;
+	gap: 24px;
+	margin: 0 48px;
+}
+.stage {
+	position: relative;
+	flex: 1 1 auto;
+	min-width: 0;
+	height: 70vh;
+	border: 1px solid #333;
+	border-radius: 8px;
+	overflow: hidden;
+}
+.webgl { display: block; width: 100%; height: 100%; }
+.controls { flex: 0 0 280px; }
+.controls h2 { font-size: 1rem; margin-bottom: 12px; }
+.hint { font-weight: normal; color: #888; font-size: 0.8rem; }
+#axis-list { list-style: none; }
+#axis-list label {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 6px 8px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 0.9rem;
+}
+#axis-list label:hover { background: #222; }
+.slot { width: 18px; font-weight: bold; }
+
+/* Axis-end labels drawn over the canvas (CSS2DRenderer) */
+.axis-label {
+	font-size: 12px;
+	padding: 2px 6px;
+	border-radius: 3px;
+	background: rgba(0, 0, 0, 0.6);
+	white-space: nowrap;
+}
+
+/* Scrollbar */
+html { scrollbar-color: #333 transparent; }                  /* Firefox */
+::-webkit-scrollbar { width: 10px; background: transparent; }   /* Chrome / Safari / Edge */
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 5px; }
+
+.below { margin: 48px; min-height: 60vh; }
+
+@media (max-width: 800px) {
+	.viewer { flex-direction: column; margin: 0 16px; }
+	.title-card, .below { margin-left: 16px; margin-right: 16px; }
+	.controls { flex-basis: auto; }
 }
