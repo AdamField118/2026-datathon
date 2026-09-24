@@ -1,5 +1,7 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import playerData from './results/players.json' assert { type: 'json' };
+import features from './results/features.json' assert { type: 'json' };
 
 function newPoint(scene, x, y, z, color) {
 		const geo = (new THREE.SphereGeometry(0.1, 10, 10)).translate(x,y,z);
@@ -8,18 +10,24 @@ function newPoint(scene, x, y, z, color) {
 		scene.add(point);
 }
 
+function setAxes(x, y, z) {
+		
+}
+
+const axes = features.axes;
+
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
 
 // Scene
 const scene = new THREE.Scene()
 
-const square = 25;
-for (let x = 0; x < square; x++) {
-		for (let y = 0; y < square; y++) {
-				for (let z = 0; z < square; z++) {
-						newPoint(scene, x,y,z, new THREE.Color(x/5, y/5, z/5));
-}}}
+//const square = 5;
+//for (let x = 0; x < square; x++) {
+//		for (let y = 0; y < square; y++) {
+//				for (let z = 0; z < square; z++) {
+//						newPoint(scene, x,y,z, new THREE.Color(x/5, y/5, z/5));
+//}}}
 
 // Lights
 

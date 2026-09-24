@@ -1,0 +1,2806 @@
+[
+ {
+  "team": "ATL",
+  "name": "Atlanta Hawks",
+  "conference": "East",
+  "division": "Southeast",
+  "W": 46.0,
+  "L": 36.0,
+  "NRtg": 2.4,
+  "SRS": 2.38,
+  "centroid": [
+   -0.0708,
+   0.0574,
+   -0.071,
+   -0.0644,
+   0.5515,
+   0.6125,
+   0.0417,
+   -0.0593
+  ],
+  "roster": [
+   {
+    "pid": "alexani01",
+    "share": 0.1329
+   },
+   {
+    "pid": "johnsja05",
+    "share": 0.1293
+   },
+   {
+    "pid": "mccolcj01",
+    "share": 0.0603
+   },
+   {
+    "pid": "okongon01",
+    "share": 0.1173
+   },
+   {
+    "pid": "daniedy01",
+    "share": 0.1287
+   },
+   {
+    "pid": "landajo01",
+    "share": 0.0228
+   },
+   {
+    "pid": "kennalu01",
+    "share": 0.0482
+   },
+   {
+    "pid": "risacza01",
+    "share": 0.0767
+   },
+   {
+    "pid": "krejcvi01",
+    "share": 0.0525
+   },
+   {
+    "pid": "porzikr01",
+    "share": 0.0211
+   },
+   {
+    "pid": "kispeco01",
+    "share": 0.0362
+   },
+   {
+    "pid": "kuminjo01",
+    "share": 0.0181
+   },
+   {
+    "pid": "hieldbu01",
+    "share": 0.0026
+   },
+   {
+    "pid": "gueyemo02",
+    "share": 0.0602
+   },
+   {
+    "pid": "youngtr01",
+    "share": 0.0143
+   },
+   {
+    "pid": "vincega01",
+    "share": 0.0163
+   },
+   {
+    "pid": "newelas01",
+    "share": 0.0255
+   },
+   {
+    "pid": "wallake01",
+    "share": 0.0274
+   },
+   {
+    "pid": "bradlto01",
+    "share": 0.0017
+   },
+   {
+    "pid": "kolokch01",
+    "share": 0.008
+   }
+  ],
+  "playoff_centroid": [
+   -0.1015,
+   0.3361,
+   -0.1024,
+   -0.0928,
+   0.4532,
+   0.5634,
+   0.1278,
+   -0.143
+  ]
+ },
+ {
+  "team": "BOS",
+  "name": "Boston Celtics",
+  "conference": "East",
+  "division": "Atlantic",
+  "W": 56.0,
+  "L": 26.0,
+  "NRtg": 8.1,
+  "SRS": 7.37,
+  "centroid": [
+   -0.4594,
+   -0.1335,
+   -0.0788,
+   0.7379,
+   0.077,
+   -0.3991,
+   -0.1178,
+   -0.5537
+  ],
+  "roster": [
+   {
+    "pid": "brownja02",
+    "share": 0.127
+   },
+   {
+    "pid": "pritcpa01",
+    "share": 0.1329
+   },
+   {
+    "pid": "whitede01",
+    "share": 0.1365
+   },
+   {
+    "pid": "vucevni01",
+    "share": 0.0176
+   },
+   {
+    "pid": "simonan01",
+    "share": 0.0625
+   },
+   {
+    "pid": "quetane01",
+    "share": 0.1001
+   },
+   {
+    "pid": "hausesa01",
+    "share": 0.1006
+   },
+   {
+    "pid": "garzalu01",
+    "share": 0.0581
+   },
+   {
+    "pid": "scheiba01",
+    "share": 0.0743
+   },
+   {
+    "pid": "walshjo01",
+    "share": 0.063
+   },
+   {
+    "pid": "minotjo01",
+    "share": 0.0273
+   },
+   {
+    "pid": "tatumja01",
+    "share": 0.0271
+   },
+   {
+    "pid": "gonzahu01",
+    "share": 0.0564
+   },
+   {
+    "pid": "harpero02",
+    "share": 0.0165
+   }
+  ],
+  "playoff_centroid": [
+   -0.5391,
+   0.1913,
+   -0.1258,
+   0.8651,
+   0.3083,
+   -0.4611,
+   -0.143,
+   -0.4991
+  ]
+ },
+ {
+  "team": "BRK",
+  "name": "Brooklyn Nets",
+  "conference": "East",
+  "division": "Atlantic",
+  "W": 20.0,
+  "L": 62.0,
+  "NRtg": -10.3,
+  "SRS": -9.7,
+  "centroid": [
+   -0.0313,
+   0.1251,
+   -0.0837,
+   -0.3141,
+   0.1639,
+   -0.0871,
+   0.0783,
+   0.0758
+  ],
+  "roster": [
+   {
+    "pid": "portemi01",
+    "share": 0.0865
+   },
+   {
+    "pid": "claxtni01",
+    "share": 0.0983
+   },
+   {
+    "pid": "clownno01",
+    "share": 0.0911
+   },
+   {
+    "pid": "willizi02",
+    "share": 0.0656
+   },
+   {
+    "pid": "thomaca02",
+    "share": 0.0298
+   },
+   {
+    "pid": "sharpda01",
+    "share": 0.0594
+   },
+   {
+    "pid": "demineg01",
+    "share": 0.0669
+   },
+   {
+    "pid": "wolfda01",
+    "share": 0.0608
+   },
+   {
+    "pid": "traorno01",
+    "share": 0.0636
+   },
+   {
+    "pid": "mannte01",
+    "share": 0.0783
+   },
+   {
+    "pid": "poweldr01",
+    "share": 0.0676
+   },
+   {
+    "pid": "minotjo01",
+    "share": 0.0158
+   },
+   {
+    "pid": "wilsoja03",
+    "share": 0.044
+   },
+   {
+    "pid": "sarafbe01",
+    "share": 0.0469
+   },
+   {
+    "pid": "agbajoc01",
+    "share": 0.0165
+   },
+   {
+    "pid": "martity01",
+    "share": 0.0356
+   },
+   {
+    "pid": "etienty01",
+    "share": 0.0195
+   },
+   {
+    "pid": "liddeej01",
+    "share": 0.0179
+   },
+   {
+    "pid": "johnsch06",
+    "share": 0.0178
+   },
+   {
+    "pid": "smithma02",
+    "share": 0.0184
+   }
+  ]
+ },
+ {
+  "team": "CHI",
+  "name": "Chicago Bulls",
+  "conference": "East",
+  "division": "Central",
+  "W": 31.0,
+  "L": 51.0,
+  "NRtg": -5.1,
+  "SRS": -5.09,
+  "centroid": [
+   0.0661,
+   0.0574,
+   0.1217,
+   -0.6292,
+   0.5405,
+   -0.1869,
+   0.687,
+   -0.5728
+  ],
+  "roster": [
+   {
+    "pid": "buzelma01",
+    "share": 0.1173
+   },
+   {
+    "pid": "sextoco01",
+    "share": 0.0353
+   },
+   {
+    "pid": "dosunay01",
+    "share": 0.0619
+   },
+   {
+    "pid": "vucevni01",
+    "share": 0.0772
+   },
+   {
+    "pid": "giddejo01",
+    "share": 0.0903
+   },
+   {
+    "pid": "jonestr01",
+    "share": 0.0914
+   },
+   {
+    "pid": "whiteco01",
+    "share": 0.044
+   },
+   {
+    "pid": "simonan01",
+    "share": 0.0089
+   },
+   {
+    "pid": "huertke01",
+    "share": 0.0541
+   },
+   {
+    "pid": "okorois01",
+    "share": 0.0884
+   },
+   {
+    "pid": "smithja04",
+    "share": 0.0571
+   },
+   {
+    "pid": "willipa01",
+    "share": 0.0769
+   },
+   {
+    "pid": "dilliro01",
+    "share": 0.0336
+   },
+   {
+    "pid": "yabusgu01",
+    "share": 0.0334
+   },
+   {
+    "pid": "millele01",
+    "share": 0.0326
+   },
+   {
+    "pid": "carteje01",
+    "share": 0.0133
+   },
+   {
+    "pid": "iveyja01",
+    "share": 0.006
+   },
+   {
+    "pid": "richani01",
+    "share": 0.0233
+   },
+   {
+    "pid": "terryda01",
+    "share": 0.0197
+   },
+   {
+    "pid": "phillju01",
+    "share": 0.0174
+   },
+   {
+    "pid": "olbrila01",
+    "share": 0.0179
+   }
+  ]
+ },
+ {
+  "team": "CHO",
+  "name": "Charlotte Hornets",
+  "conference": "East",
+  "division": "Southeast",
+  "W": 44.0,
+  "L": 38.0,
+  "NRtg": 5.0,
+  "SRS": 4.48,
+  "centroid": [
+   0.023,
+   0.033,
+   0.0828,
+   -0.0895,
+   0.2656,
+   -0.5394,
+   0.0401,
+   0.2236
+  ],
+  "roster": [
+   {
+    "pid": "knuepko01",
+    "share": 0.1363
+   },
+   {
+    "pid": "ballla01",
+    "share": 0.1078
+   },
+   {
+    "pid": "bridgmi02",
+    "share": 0.1275
+   },
+   {
+    "pid": "millebr02",
+    "share": 0.1051
+   },
+   {
+    "pid": "sextoco01",
+    "share": 0.0501
+   },
+   {
+    "pid": "whiteco01",
+    "share": 0.0217
+   },
+   {
+    "pid": "diabamo01",
+    "share": 0.1014
+   },
+   {
+    "pid": "kalkbry01",
+    "share": 0.079
+   },
+   {
+    "pid": "jamessi01",
+    "share": 0.0985
+   },
+   {
+    "pid": "manntr01",
+    "share": 0.0357
+   },
+   {
+    "pid": "willigr01",
+    "share": 0.038
+   },
+   {
+    "pid": "greenjo02",
+    "share": 0.0485
+   },
+   {
+    "pid": "salauti01",
+    "share": 0.0307
+   },
+   {
+    "pid": "mcneeli01",
+    "share": 0.0197
+   }
+  ]
+ },
+ {
+  "team": "CLE",
+  "name": "Cleveland Cavaliers",
+  "conference": "East",
+  "division": "Central",
+  "W": 52.0,
+  "L": 30.0,
+  "NRtg": 4.1,
+  "SRS": 3.78,
+  "centroid": [
+   -0.1199,
+   0.1185,
+   -0.0621,
+   -0.0488,
+   0.2112,
+   -0.2361,
+   0.0421,
+   0.089
+  ],
+  "roster": [
+   {
+    "pid": "mitchdo01",
+    "share": 0.1222
+   },
+   {
+    "pid": "hardeja01",
+    "share": 0.0459
+   },
+   {
+    "pid": "mobleev01",
+    "share": 0.1082
+   },
+   {
+    "pid": "tysonja01",
+    "share": 0.0927
+   },
+   {
+    "pid": "allenja01",
+    "share": 0.0792
+   },
+   {
+    "pid": "garlada01",
+    "share": 0.0413
+   },
+   {
+    "pid": "schrode01",
+    "share": 0.0334
+   },
+   {
+    "pid": "merrisa01",
+    "share": 0.0718
+   },
+   {
+    "pid": "huntede01",
+    "share": 0.0587
+   },
+   {
+    "pid": "elliske01",
+    "share": 0.0376
+   },
+   {
+    "pid": "tomlina01",
+    "share": 0.0524
+   },
+   {
+    "pid": "bryanth01",
+    "share": 0.0382
+   },
+   {
+    "pid": "wadede01",
+    "share": 0.0688
+   },
+   {
+    "pid": "portecr01",
+    "share": 0.0599
+   },
+   {
+    "pid": "proctty01",
+    "share": 0.0284
+   },
+   {
+    "pid": "balllo01",
+    "share": 0.038
+   },
+   {
+    "pid": "nancela02",
+    "share": 0.0234
+   }
+  ],
+  "playoff_centroid": [
+   -0.1514,
+   0.6276,
+   -0.2338,
+   -0.2692,
+   0.1192,
+   -0.5149,
+   -0.2611,
+   -0.2154
+  ]
+ },
+ {
+  "team": "DAL",
+  "name": "Dallas Mavericks",
+  "conference": "West",
+  "division": "Southwest",
+  "W": 26.0,
+  "L": 56.0,
+  "NRtg": -5.3,
+  "SRS": -5.33,
+  "centroid": [
+   0.0485,
+   0.3439,
+   0.0136,
+   -0.0173,
+   -0.6327,
+   0.28,
+   -0.1844,
+   -0.2792
+  ],
+  "roster": [
+   {
+    "pid": "flaggco01",
+    "share": 0.1222
+   },
+   {
+    "pid": "marshna01",
+    "share": 0.1138
+   },
+   {
+    "pid": "chrisma02",
+    "share": 0.1169
+   },
+   {
+    "pid": "willibr03",
+    "share": 0.0762
+   },
+   {
+    "pid": "thompkl01",
+    "share": 0.078
+   },
+   {
+    "pid": "washipj01",
+    "share": 0.0905
+   },
+   {
+    "pid": "middlkh01",
+    "share": 0.0319
+   },
+   {
+    "pid": "baglema01",
+    "share": 0.0245
+   },
+   {
+    "pid": "gaffoda01",
+    "share": 0.0623
+   },
+   {
+    "pid": "hardyja02",
+    "share": 0.0223
+   },
+   {
+    "pid": "davisan02",
+    "share": 0.0326
+   },
+   {
+    "pid": "nembhry01",
+    "share": 0.061
+   },
+   {
+    "pid": "russeda01",
+    "share": 0.0258
+   },
+   {
+    "pid": "martica02",
+    "share": 0.0446
+   },
+   {
+    "pid": "poweldw01",
+    "share": 0.0471
+   },
+   {
+    "pid": "jonesty01",
+    "share": 0.0069
+   },
+   {
+    "pid": "cissemo01",
+    "share": 0.0276
+   },
+   {
+    "pid": "johnsaj01",
+    "share": 0.0125
+   },
+   {
+    "pid": "robinje02",
+    "share": 0.0032
+   }
+  ]
+ },
+ {
+  "team": "DEN",
+  "name": "Denver Nuggets",
+  "conference": "West",
+  "division": "Northwest",
+  "W": 54.0,
+  "L": 28.0,
+  "NRtg": 5.2,
+  "SRS": 4.97,
+  "centroid": [
+   -0.1235,
+   0.157,
+   -0.203,
+   -0.0236,
+   -0.1122,
+   -0.014,
+   -0.4386,
+   0.2484
+  ],
+  "roster": [
+   {
+    "pid": "murraja01",
+    "share": 0.1369
+   },
+   {
+    "pid": "jokicni01",
+    "share": 0.117
+   },
+   {
+    "pid": "hardati02",
+    "share": 0.1098
+   },
+   {
+    "pid": "watsope01",
+    "share": 0.0825
+   },
+   {
+    "pid": "johnsca02",
+    "share": 0.0851
+   },
+   {
+    "pid": "brownbr01",
+    "share": 0.1032
+   },
+   {
+    "pid": "gordoaa01",
+    "share": 0.0519
+   },
+   {
+    "pid": "valanjo01",
+    "share": 0.045
+   },
+   {
+    "pid": "braunch01",
+    "share": 0.0722
+   },
+   {
+    "pid": "strawju01",
+    "share": 0.0445
+   },
+   {
+    "pid": "jonessp01",
+    "share": 0.0732
+   },
+   {
+    "pid": "pickeja02",
+    "share": 0.0417
+   },
+   {
+    "pid": "jonesty01",
+    "share": 0.0048
+   },
+   {
+    "pid": "nnajize01",
+    "share": 0.0323
+   }
+  ],
+  "playoff_centroid": [
+   -0.1659,
+   0.2031,
+   -0.078,
+   -0.1582,
+   0.0971,
+   -0.1821,
+   -0.5041,
+   0.3786
+  ]
+ },
+ {
+  "team": "DET",
+  "name": "Detroit Pistons",
+  "conference": "East",
+  "division": "Central",
+  "W": 60.0,
+  "L": 22.0,
+  "NRtg": 8.2,
+  "SRS": 7.53,
+  "centroid": [
+   0.2455,
+   0.3706,
+   -0.0004,
+   0.1521,
+   -0.1264,
+   -0.0974,
+   0.0108,
+   0.2465
+  ],
+  "roster": [
+   {
+    "pid": "cunnica01",
+    "share": 0.1128
+   },
+   {
+    "pid": "durenja01",
+    "share": 0.1026
+   },
+   {
+    "pid": "robindu01",
+    "share": 0.1098
+   },
+   {
+    "pid": "harrito02",
+    "share": 0.0907
+   },
+   {
+    "pid": "thompau01",
+    "share": 0.0985
+   },
+   {
+    "pid": "huertke01",
+    "share": 0.0266
+   },
+   {
+    "pid": "jenkida01",
+    "share": 0.0756
+   },
+   {
+    "pid": "hollaro01",
+    "share": 0.0806
+   },
+   {
+    "pid": "stewais01",
+    "share": 0.0684
+   },
+   {
+    "pid": "greenja02",
+    "share": 0.0751
+   },
+   {
+    "pid": "reedpa01",
+    "share": 0.0468
+   },
+   {
+    "pid": "leverca01",
+    "share": 0.0599
+   },
+   {
+    "pid": "iveyja01",
+    "share": 0.0288
+   },
+   {
+    "pid": "sassema01",
+    "share": 0.0237
+   }
+  ],
+  "playoff_centroid": [
+   0.1862,
+   0.6512,
+   0.1499,
+   0.3275,
+   -0.1116,
+   -0.1109,
+   -0.1046,
+   0.3864
+  ]
+ },
+ {
+  "team": "GSW",
+  "name": "Golden State Warriors",
+  "conference": "West",
+  "division": "Pacific",
+  "W": 37.0,
+  "L": 45.0,
+  "NRtg": -0.6,
+  "SRS": -0.34,
+  "centroid": [
+   -0.2837,
+   -0.0368,
+   -0.0537,
+   -0.1981,
+   0.7757,
+   0.0283,
+   -0.1138,
+   -0.3337
+  ],
+  "roster": [
+   {
+    "pid": "curryst01",
+    "share": 0.0712
+   },
+   {
+    "pid": "podzibr01",
+    "share": 0.125
+   },
+   {
+    "pid": "butleji01",
+    "share": 0.0633
+   },
+   {
+    "pid": "moodymo01",
+    "share": 0.0825
+   },
+   {
+    "pid": "santogu01",
+    "share": 0.0748
+   },
+   {
+    "pid": "meltode01",
+    "share": 0.0603
+   },
+   {
+    "pid": "greendr01",
+    "share": 0.1002
+   },
+   {
+    "pid": "paytoga02",
+    "share": 0.0612
+   },
+   {
+    "pid": "porzikr01",
+    "share": 0.0191
+   },
+   {
+    "pid": "postqu01",
+    "share": 0.0621
+   },
+   {
+    "pid": "spencpa01",
+    "share": 0.0659
+   },
+   {
+    "pid": "richawi02",
+    "share": 0.0738
+   },
+   {
+    "pid": "kuminjo01",
+    "share": 0.0255
+   },
+   {
+    "pid": "hieldbu01",
+    "share": 0.0412
+   },
+   {
+    "pid": "horfoal01",
+    "share": 0.0519
+   },
+   {
+    "pid": "jackstr02",
+    "share": 0.022
+   }
+  ]
+ },
+ {
+  "team": "HOU",
+  "name": "Houston Rockets",
+  "conference": "West",
+  "division": "Southwest",
+  "W": 52.0,
+  "L": 30.0,
+  "NRtg": 5.4,
+  "SRS": 4.87,
+  "centroid": [
+   0.0576,
+   0.1984,
+   -0.1826,
+   0.6993,
+   -0.2259,
+   0.4891,
+   -0.3029,
+   0.5423
+  ],
+  "roster": [
+   {
+    "pid": "duranke01",
+    "share": 0.1463
+   },
+   {
+    "pid": "sengual01",
+    "share": 0.1236
+   },
+   {
+    "pid": "thompam01",
+    "share": 0.1522
+   },
+   {
+    "pid": "smithja05",
+    "share": 0.1394
+   },
+   {
+    "pid": "sheppre01",
+    "share": 0.1106
+   },
+   {
+    "pid": "easonta01",
+    "share": 0.0798
+   },
+   {
+    "pid": "okogijo01",
+    "share": 0.0698
+   },
+   {
+    "pid": "holidaa01",
+    "share": 0.0402
+   },
+   {
+    "pid": "capelca01",
+    "share": 0.0477
+   },
+   {
+    "pid": "adamsst01",
+    "share": 0.0376
+   },
+   {
+    "pid": "tateja01",
+    "share": 0.0209
+   },
+   {
+    "pid": "finnedo01",
+    "share": 0.0319
+   }
+  ],
+  "playoff_centroid": [
+   0.0163,
+   0.082,
+   -0.1749,
+   0.6245,
+   -0.0667,
+   0.7392,
+   0.0116,
+   0.4704
+  ]
+ },
+ {
+  "team": "IND",
+  "name": "Indiana Pacers",
+  "conference": "East",
+  "division": "Central",
+  "W": 19.0,
+  "L": 63.0,
+  "NRtg": -7.9,
+  "SRS": -7.64,
+  "centroid": [
+   -0.1331,
+   0.0875,
+   -0.1906,
+   -0.0672,
+   0.302,
+   0.1319,
+   -0.0958,
+   -0.0978
+  ],
+  "roster": [
+   {
+    "pid": "siakapa01",
+    "share": 0.1073
+   },
+   {
+    "pid": "nembhan01",
+    "share": 0.0931
+   },
+   {
+    "pid": "mathube01",
+    "share": 0.0465
+   },
+   {
+    "pid": "walkeja02",
+    "share": 0.1018
+   },
+   {
+    "pid": "huffja01",
+    "share": 0.0896
+   },
+   {
+    "pid": "zubaciv01",
+    "share": 0.0062
+   },
+   {
+    "pid": "nesmiaa01",
+    "share": 0.0696
+   },
+   {
+    "pid": "mccontj01",
+    "share": 0.0502
+   },
+   {
+    "pid": "sheppbe01",
+    "share": 0.0725
+   },
+   {
+    "pid": "pottemi01",
+    "share": 0.0473
+   },
+   {
+    "pid": "jacksqu01",
+    "share": 0.0468
+   },
+   {
+    "pid": "jacksis01",
+    "share": 0.0333
+   },
+   {
+    "pid": "brownko01",
+    "share": 0.0348
+   },
+   {
+    "pid": "toppiob01",
+    "share": 0.0221
+   },
+   {
+    "pid": "thompet01",
+    "share": 0.034
+   },
+   {
+    "pid": "furphjo01",
+    "share": 0.0335
+   },
+   {
+    "pid": "peterta01",
+    "share": 0.0257
+   },
+   {
+    "pid": "joneska03",
+    "share": 0.0321
+   },
+   {
+    "pid": "bradlto01",
+    "share": 0.0217
+   },
+   {
+    "pid": "robinje02",
+    "share": 0.0156
+   },
+   {
+    "pid": "slawsja01",
+    "share": 0.0162
+   }
+  ]
+ },
+ {
+  "team": "LAC",
+  "name": "Los Angeles Clippers",
+  "conference": "West",
+  "division": "Pacific",
+  "W": 42.0,
+  "L": 40.0,
+  "NRtg": 1.2,
+  "SRS": 0.96,
+  "centroid": [
+   -0.0333,
+   -0.0089,
+   -0.4197,
+   0.1127,
+   -0.1688,
+   0.3678,
+   -0.4018,
+   -0.2149
+  ],
+  "roster": [
+   {
+    "pid": "leonaka01",
+    "share": 0.1084
+   },
+   {
+    "pid": "hardeja01",
+    "share": 0.0811
+   },
+   {
+    "pid": "mathube01",
+    "share": 0.0379
+   },
+   {
+    "pid": "collijo01",
+    "share": 0.0973
+   },
+   {
+    "pid": "garlada01",
+    "share": 0.0287
+   },
+   {
+    "pid": "zubaciv01",
+    "share": 0.0691
+   },
+   {
+    "pid": "lopezbr01",
+    "share": 0.085
+   },
+   {
+    "pid": "millejo02",
+    "share": 0.0689
+   },
+   {
+    "pid": "dunnkr01",
+    "share": 0.116
+   },
+   {
+    "pid": "jonesde02",
+    "share": 0.0702
+   },
+   {
+    "pid": "sandeko01",
+    "share": 0.0702
+   },
+   {
+    "pid": "jacksis01",
+    "share": 0.014
+   },
+   {
+    "pid": "brownko01",
+    "share": 0.0153
+   },
+   {
+    "pid": "batumni01",
+    "share": 0.0673
+   },
+   {
+    "pid": "konanya01",
+    "share": 0.022
+   },
+   {
+    "pid": "bogdabo01",
+    "share": 0.0235
+   },
+   {
+    "pid": "chrisca02",
+    "share": 0.025
+   }
+  ]
+ },
+ {
+  "team": "LAL",
+  "name": "Los Angeles Lakers",
+  "conference": "West",
+  "division": "Pacific",
+  "W": 53.0,
+  "L": 29.0,
+  "NRtg": 1.8,
+  "SRS": 1.68,
+  "centroid": [
+   -0.0241,
+   0.1808,
+   -0.0894,
+   0.2897,
+   -0.5681,
+   -0.3565,
+   -0.6033,
+   0.0171
+  ],
+  "roster": [
+   {
+    "pid": "doncilu01",
+    "share": 0.1195
+   },
+   {
+    "pid": "jamesle01",
+    "share": 0.1038
+   },
+   {
+    "pid": "reaveau01",
+    "share": 0.092
+   },
+   {
+    "pid": "aytonde01",
+    "share": 0.1022
+   },
+   {
+    "pid": "hachiru01",
+    "share": 0.1006
+   },
+   {
+    "pid": "laravja01",
+    "share": 0.1076
+   },
+   {
+    "pid": "kennalu01",
+    "share": 0.0385
+   },
+   {
+    "pid": "smartma01",
+    "share": 0.0923
+   },
+   {
+    "pid": "hayesja02",
+    "share": 0.063
+   },
+   {
+    "pid": "vandeja01",
+    "share": 0.0589
+   },
+   {
+    "pid": "vincega01",
+    "share": 0.0292
+   },
+   {
+    "pid": "knechda01",
+    "share": 0.0289
+   },
+   {
+    "pid": "smithni01",
+    "share": 0.0196
+   },
+   {
+    "pid": "jamesbr02",
+    "share": 0.0196
+   },
+   {
+    "pid": "klebima01",
+    "share": 0.0241
+   },
+   {
+    "pid": "kolokch01",
+    "share": 0.0003
+   }
+  ],
+  "playoff_centroid": [
+   0.0105,
+   -0.0314,
+   0.0936,
+   0.4491,
+   -0.8322,
+   0.0136,
+   -0.6958,
+   -0.0955
+  ]
+ },
+ {
+  "team": "MEM",
+  "name": "Memphis Grizzlies",
+  "conference": "West",
+  "division": "Southwest",
+  "W": 25.0,
+  "L": 57.0,
+  "NRtg": -5.9,
+  "SRS": -5.83,
+  "centroid": [
+   -0.2477,
+   0.1557,
+   -0.2,
+   -0.0456,
+   0.0278,
+   0.079,
+   -0.2288,
+   -0.0427
+  ],
+  "roster": [
+   {
+    "pid": "jacksja02",
+    "share": 0.0771
+   },
+   {
+    "pid": "wellsja01",
+    "share": 0.1016
+   },
+   {
+    "pid": "cowarce01",
+    "share": 0.0892
+   },
+   {
+    "pid": "spencca01",
+    "share": 0.0957
+   },
+   {
+    "pid": "landajo01",
+    "share": 0.0592
+   },
+   {
+    "pid": "jacksgg01",
+    "share": 0.0658
+   },
+   {
+    "pid": "aldamsa01",
+    "share": 0.0669
+   },
+   {
+    "pid": "claytwa01",
+    "share": 0.0334
+   },
+   {
+    "pid": "prospol01",
+    "share": 0.0549
+   },
+   {
+    "pid": "hendrta01",
+    "share": 0.0349
+   },
+   {
+    "pid": "caldwke01",
+    "share": 0.0607
+   },
+   {
+    "pid": "smallja01",
+    "share": 0.0463
+   },
+   {
+    "pid": "moranja01",
+    "share": 0.0318
+   },
+   {
+    "pid": "ruperra01",
+    "share": 0.0276
+   },
+   {
+    "pid": "willivi01",
+    "share": 0.0411
+   },
+   {
+    "pid": "jeromty01",
+    "share": 0.0189
+   },
+   {
+    "pid": "anderky01",
+    "share": 0.005
+   },
+   {
+    "pid": "konchjo01",
+    "share": 0.0243
+   },
+   {
+    "pid": "mashaja01",
+    "share": 0.0376
+   },
+   {
+    "pid": "burtoty01",
+    "share": 0.0171
+   },
+   {
+    "pid": "kolokch01",
+    "share": 0.0109
+   }
+  ]
+ },
+ {
+  "team": "MIA",
+  "name": "Miami Heat",
+  "conference": "East",
+  "division": "Southeast",
+  "W": 43.0,
+  "L": 39.0,
+  "NRtg": 2.2,
+  "SRS": 2.35,
+  "centroid": [
+   -0.0716,
+   0.2026,
+   -0.1039,
+   -0.4703,
+   0.254,
+   0.5182,
+   -0.1163,
+   -0.614
+  ],
+  "roster": [
+   {
+    "pid": "adebaba01",
+    "share": 0.1223
+   },
+   {
+    "pid": "powelno01",
+    "share": 0.0888
+   },
+   {
+    "pid": "jaqueja01",
+    "share": 0.1097
+   },
+   {
+    "pid": "wiggian01",
+    "share": 0.1067
+   },
+   {
+    "pid": "wareke01",
+    "share": 0.0882
+   },
+   {
+    "pid": "larsspe01",
+    "share": 0.0957
+   },
+   {
+    "pid": "herroty01",
+    "share": 0.0534
+   },
+   {
+    "pid": "mitchda01",
+    "share": 0.1035
+   },
+   {
+    "pid": "fontesi01",
+    "share": 0.0607
+   },
+   {
+    "pid": "smithdr01",
+    "share": 0.059
+   },
+   {
+    "pid": "jovicni01",
+    "share": 0.0418
+   },
+   {
+    "pid": "jakucka01",
+    "share": 0.0489
+   },
+   {
+    "pid": "gardnmy01",
+    "share": 0.0213
+   }
+  ]
+ },
+ {
+  "team": "MIL",
+  "name": "Milwaukee Bucks",
+  "conference": "East",
+  "division": "Central",
+  "W": 32.0,
+  "L": 50.0,
+  "NRtg": -6.4,
+  "SRS": -6.12,
+  "centroid": [
+   -0.3944,
+   -0.1516,
+   -0.0026,
+   0.4611,
+   0.0415,
+   0.0775,
+   -0.0435,
+   -0.0337
+  ],
+  "roster": [
+   {
+    "pid": "rolliry01",
+    "share": 0.1232
+   },
+   {
+    "pid": "antetgi01",
+    "share": 0.0539
+   },
+   {
+    "pid": "portibo01",
+    "share": 0.0839
+   },
+   {
+    "pid": "kuzmaky01",
+    "share": 0.0936
+   },
+   {
+    "pid": "turnemy01",
+    "share": 0.0991
+   },
+   {
+    "pid": "greenaj01",
+    "share": 0.1177
+   },
+   {
+    "pid": "porteke02",
+    "share": 0.0654
+   },
+   {
+    "pid": "thomaca02",
+    "share": 0.0155
+   },
+   {
+    "pid": "trentga02",
+    "share": 0.0714
+   },
+   {
+    "pid": "diengou01",
+    "share": 0.0417
+   },
+   {
+    "pid": "simsje01",
+    "share": 0.0683
+   },
+   {
+    "pid": "nancepe01",
+    "share": 0.0382
+   },
+   {
+    "pid": "princta02",
+    "share": 0.0317
+   },
+   {
+    "pid": "anthoco01",
+    "share": 0.0273
+   },
+   {
+    "pid": "coffeam01",
+    "share": 0.0137
+   },
+   {
+    "pid": "harriga01",
+    "share": 0.0343
+   },
+   {
+    "pid": "jacksan01",
+    "share": 0.0212
+   }
+  ]
+ },
+ {
+  "team": "MIN",
+  "name": "Minnesota Timberwolves",
+  "conference": "West",
+  "division": "Northwest",
+  "W": 49.0,
+  "L": 33.0,
+  "NRtg": 3.3,
+  "SRS": 3.07,
+  "centroid": [
+   0.0557,
+   0.2193,
+   -0.0033,
+   -0.0963,
+   -0.1025,
+   -0.3828,
+   0.0001,
+   0.3624
+  ],
+  "roster": [
+   {
+    "pid": "edwaran01",
+    "share": 0.11
+   },
+   {
+    "pid": "randlju01",
+    "share": 0.1344
+   },
+   {
+    "pid": "mcdanja02",
+    "share": 0.1192
+   },
+   {
+    "pid": "reidna01",
+    "share": 0.1033
+   },
+   {
+    "pid": "dosunay01",
+    "share": 0.0357
+   },
+   {
+    "pid": "divindo01",
+    "share": 0.1284
+   },
+   {
+    "pid": "goberru01",
+    "share": 0.1225
+   },
+   {
+    "pid": "hylanbo01",
+    "share": 0.0606
+   },
+   {
+    "pid": "dilliro01",
+    "share": 0.0168
+   },
+   {
+    "pid": "millele01",
+    "share": 0.0049
+   },
+   {
+    "pid": "clarkja02",
+    "share": 0.0457
+   },
+   {
+    "pid": "anderky01",
+    "share": 0.0187
+   },
+   {
+    "pid": "conlemi01",
+    "share": 0.051
+   },
+   {
+    "pid": "shannte01",
+    "share": 0.0277
+   },
+   {
+    "pid": "berinjo01",
+    "share": 0.0162
+   },
+   {
+    "pid": "phillju01",
+    "share": 0.0048
+   }
+  ],
+  "playoff_centroid": [
+   0.155,
+   0.3509,
+   0.0021,
+   -0.1665,
+   -0.2517,
+   -0.2385,
+   0.0487,
+   0.3419
+  ]
+ },
+ {
+  "team": "NOP",
+  "name": "New Orleans Pelicans",
+  "conference": "West",
+  "division": "Southwest",
+  "W": 26.0,
+  "L": 56.0,
+  "NRtg": -4.5,
+  "SRS": -4.26,
+  "centroid": [
+   0.2333,
+   0.4105,
+   0.2196,
+   -0.047,
+   -0.2659,
+   -0.1747,
+   0.5316,
+   0.2088
+  ],
+  "roster": [
+   {
+    "pid": "murphtr02",
+    "share": 0.1209
+   },
+   {
+    "pid": "willizi01",
+    "share": 0.095
+   },
+   {
+    "pid": "beysa01",
+    "share": 0.1159
+   },
+   {
+    "pid": "fearsje01",
+    "share": 0.109
+   },
+   {
+    "pid": "queende01",
+    "share": 0.1044
+   },
+   {
+    "pid": "poolejo01",
+    "share": 0.0482
+   },
+   {
+    "pid": "alvarjo01",
+    "share": 0.0463
+   },
+   {
+    "pid": "joneshe01",
+    "share": 0.082
+   },
+   {
+    "pid": "missiyv01",
+    "share": 0.067
+   },
+   {
+    "pid": "matkoka01",
+    "share": 0.0471
+   },
+   {
+    "pid": "mcgowbr01",
+    "share": 0.0454
+   },
+   {
+    "pid": "peavymi01",
+    "share": 0.0471
+   },
+   {
+    "pid": "hawkijo01",
+    "share": 0.0357
+   },
+   {
+    "pid": "murrade01",
+    "share": 0.0201
+   },
+   {
+    "pid": "looneke01",
+    "share": 0.0159
+   }
+  ]
+ },
+ {
+  "team": "NYK",
+  "name": "New York Knicks",
+  "conference": "East",
+  "division": "Atlantic",
+  "W": 53.0,
+  "L": 29.0,
+  "NRtg": 6.5,
+  "SRS": 6.05,
+  "centroid": [
+   -0.1076,
+   0.0889,
+   0.1133,
+   -0.0656,
+   0.0325,
+   0.2919,
+   0.0978,
+   -0.3519
+  ],
+  "roster": [
+   {
+    "pid": "brunsja01",
+    "share": 0.1339
+   },
+   {
+    "pid": "townska01",
+    "share": 0.1201
+   },
+   {
+    "pid": "bridgmi01",
+    "share": 0.1392
+   },
+   {
+    "pid": "anunoog01",
+    "share": 0.115
+   },
+   {
+    "pid": "hartjo01",
+    "share": 0.1031
+   },
+   {
+    "pid": "clarkjo01",
+    "share": 0.0661
+   },
+   {
+    "pid": "alvarjo01",
+    "share": 0.0245
+   },
+   {
+    "pid": "mcbrimi01",
+    "share": 0.0559
+   },
+   {
+    "pid": "shamela01",
+    "share": 0.0606
+   },
+   {
+    "pid": "yabusgu01",
+    "share": 0.0189
+   },
+   {
+    "pid": "robinmi01",
+    "share": 0.0608
+   },
+   {
+    "pid": "kolekty01",
+    "share": 0.0376
+   },
+   {
+    "pid": "diawamo01",
+    "share": 0.0328
+   },
+   {
+    "pid": "sochaje01",
+    "share": 0.0057
+   },
+   {
+    "pid": "hukpoar01",
+    "share": 0.0258
+   }
+  ],
+  "playoff_centroid": [
+   -0.1626,
+   0.1571,
+   0.0951,
+   -0.0988,
+   0.0143,
+   0.214,
+   0.078,
+   -0.331
+  ]
+ },
+ {
+  "team": "OKC",
+  "name": "Oklahoma City Thunder",
+  "conference": "West",
+  "division": "Northwest",
+  "W": 64.0,
+  "L": 18.0,
+  "NRtg": 11.2,
+  "SRS": 11.04,
+  "centroid": [
+   -0.1466,
+   0.0338,
+   -0.1901,
+   0.1029,
+   0.0411,
+   0.0863,
+   0.054,
+   0.377
+  ],
+  "roster": [
+   {
+    "pid": "gilgesh01",
+    "share": 0.1162
+   },
+   {
+    "pid": "holmgch01",
+    "share": 0.1027
+   },
+   {
+    "pid": "joeis01",
+    "share": 0.0775
+   },
+   {
+    "pid": "mitchaj01",
+    "share": 0.0758
+   },
+   {
+    "pid": "wallaca01",
+    "share": 0.1052
+   },
+   {
+    "pid": "wiggiaa01",
+    "share": 0.0727
+   },
+   {
+    "pid": "dortlu01",
+    "share": 0.0951
+   },
+   {
+    "pid": "willija06",
+    "share": 0.0481
+   },
+   {
+    "pid": "mccaija01",
+    "share": 0.0278
+   },
+   {
+    "pid": "willija07",
+    "share": 0.0657
+   },
+   {
+    "pid": "harteis01",
+    "share": 0.0585
+   },
+   {
+    "pid": "diengou01",
+    "share": 0.0152
+   },
+   {
+    "pid": "willike04",
+    "share": 0.044
+   },
+   {
+    "pid": "carusal01",
+    "share": 0.0525
+   },
+   {
+    "pid": "carlsbr01",
+    "share": 0.0251
+   },
+   {
+    "pid": "barnhbr01",
+    "share": 0.0179
+   }
+  ],
+  "playoff_centroid": [
+   -0.1079,
+   0.1991,
+   -0.1402,
+   0.0282,
+   0.0464,
+   0.141,
+   -0.0763,
+   0.2633
+  ]
+ },
+ {
+  "team": "ORL",
+  "name": "Orlando Magic",
+  "conference": "East",
+  "division": "Southeast",
+  "W": 45.0,
+  "L": 37.0,
+  "NRtg": 0.6,
+  "SRS": 0.81,
+  "centroid": [
+   -0.0004,
+   0.2994,
+   -0.1637,
+   -0.1491,
+   -0.1141,
+   0.1298,
+   -0.2004,
+   0.1378
+  ],
+  "roster": [
+   {
+    "pid": "banede01",
+    "share": 0.1395
+   },
+   {
+    "pid": "banchpa01",
+    "share": 0.1266
+   },
+   {
+    "pid": "blackan01",
+    "share": 0.0967
+   },
+   {
+    "pid": "cartewe01",
+    "share": 0.1158
+   },
+   {
+    "pid": "suggsja01",
+    "share": 0.0797
+   },
+   {
+    "pid": "dasiltr01",
+    "share": 0.0961
+   },
+   {
+    "pid": "wagnefr01",
+    "share": 0.0516
+   },
+   {
+    "pid": "bitadgo01",
+    "share": 0.0492
+   },
+   {
+    "pid": "carteje01",
+    "share": 0.031
+   },
+   {
+    "pid": "howarje01",
+    "share": 0.0352
+   },
+   {
+    "pid": "wagnemo01",
+    "share": 0.0216
+   },
+   {
+    "pid": "richaja02",
+    "share": 0.0297
+   },
+   {
+    "pid": "pendano01",
+    "share": 0.0383
+   },
+   {
+    "pid": "cainja01",
+    "share": 0.0246
+   },
+   {
+    "pid": "jonesty01",
+    "share": 0.0382
+   },
+   {
+    "pid": "isaacjo01",
+    "share": 0.0264
+   }
+  ],
+  "playoff_centroid": [
+   0.0298,
+   0.5744,
+   -0.3071,
+   -0.2314,
+   -0.0265,
+   0.1796,
+   -0.2184,
+   0.2305
+  ]
+ },
+ {
+  "team": "PHI",
+  "name": "Philadelphia 76ers",
+  "conference": "East",
+  "division": "Atlantic",
+  "W": 45.0,
+  "L": 37.0,
+  "NRtg": -0.1,
+  "SRS": -0.27,
+  "centroid": [
+   0.1313,
+   0.2102,
+   -0.1223,
+   -0.1483,
+   -0.1962,
+   -0.0269,
+   0.2786,
+   0.3007
+  ],
+  "roster": [
+   {
+    "pid": "maxeyty01",
+    "share": 0.1371
+   },
+   {
+    "pid": "edgecvj01",
+    "share": 0.1352
+   },
+   {
+    "pid": "embiijo01",
+    "share": 0.0619
+   },
+   {
+    "pid": "grimequ01",
+    "share": 0.1137
+   },
+   {
+    "pid": "oubreke01",
+    "share": 0.0811
+   },
+   {
+    "pid": "georgpa01",
+    "share": 0.0585
+   },
+   {
+    "pid": "mccaija01",
+    "share": 0.0319
+   },
+   {
+    "pid": "barlodo01",
+    "share": 0.087
+   },
+   {
+    "pid": "drumman01",
+    "share": 0.0634
+   },
+   {
+    "pid": "edwarju01",
+    "share": 0.0503
+   },
+   {
+    "pid": "watfotr01",
+    "share": 0.0445
+   },
+   {
+    "pid": "bonaad01",
+    "share": 0.0636
+   },
+   {
+    "pid": "martity01",
+    "share": 0.0042
+   },
+   {
+    "pid": "walkeja01",
+    "share": 0.0393
+   },
+   {
+    "pid": "terryda01",
+    "share": 0.009
+   },
+   {
+    "pid": "payneca01",
+    "share": 0.0193
+   }
+  ],
+  "playoff_centroid": [
+   -0.091,
+   0.3967,
+   -0.3268,
+   0.0172,
+   -0.193,
+   -0.0729,
+   0.2686,
+   0.4618
+  ]
+ },
+ {
+  "team": "PHO",
+  "name": "Phoenix Suns",
+  "conference": "West",
+  "division": "Pacific",
+  "W": 45.0,
+  "L": 37.0,
+  "NRtg": 1.5,
+  "SRS": 1.75,
+  "centroid": [
+   -0.2359,
+   -0.011,
+   0.176,
+   0.5557,
+   -0.1632,
+   -0.5437,
+   0.0997,
+   -0.2362
+  ],
+  "roster": [
+   {
+    "pid": "bookede01",
+    "share": 0.1109
+   },
+   {
+    "pid": "brookdi01",
+    "share": 0.088
+   },
+   {
+    "pid": "gilleco01",
+    "share": 0.118
+   },
+   {
+    "pid": "allengr01",
+    "share": 0.0758
+   },
+   {
+    "pid": "onealro01",
+    "share": 0.1144
+   },
+   {
+    "pid": "willima07",
+    "share": 0.0732
+   },
+   {
+    "pid": "goodwjo01",
+    "share": 0.0813
+   },
+   {
+    "pid": "greenja05",
+    "share": 0.0428
+   },
+   {
+    "pid": "ighodos01",
+    "share": 0.0935
+   },
+   {
+    "pid": "dunnry01",
+    "share": 0.0701
+   },
+   {
+    "pid": "richani01",
+    "share": 0.0131
+   },
+   {
+    "pid": "bouyeja01",
+    "share": 0.0333
+   },
+   {
+    "pid": "flemira01",
+    "share": 0.0348
+   },
+   {
+    "pid": "coffeam01",
+    "share": 0.0116
+   },
+   {
+    "pid": "maluakh01",
+    "share": 0.0212
+   },
+   {
+    "pid": "liveris01",
+    "share": 0.0179
+   }
+  ],
+  "playoff_centroid": [
+   -0.4285,
+   0.3331,
+   0.0072,
+   0.5704,
+   -0.3634,
+   -0.474,
+   0.2675,
+   -0.1261
+  ]
+ },
+ {
+  "team": "POR",
+  "name": "Portland Trail Blazers",
+  "conference": "West",
+  "division": "Northwest",
+  "W": 42.0,
+  "L": 40.0,
+  "NRtg": -0.3,
+  "SRS": -0.29,
+  "centroid": [
+   0.0701,
+   0.0256,
+   -0.1646,
+   -0.589,
+   0.3802,
+   -0.4854,
+   0.552,
+   0.4276
+  ],
+  "roster": [
+   {
+    "pid": "avdijde01",
+    "share": 0.1135
+   },
+   {
+    "pid": "camarto01",
+    "share": 0.141
+   },
+   {
+    "pid": "grantje01",
+    "share": 0.0875
+   },
+   {
+    "pid": "sharpsh01",
+    "share": 0.0759
+   },
+   {
+    "pid": "clingdo01",
+    "share": 0.1081
+   },
+   {
+    "pid": "holidjr01",
+    "share": 0.0805
+   },
+   {
+    "pid": "krejcvi01",
+    "share": 0.0188
+   },
+   {
+    "pid": "loveca01",
+    "share": 0.0523
+   },
+   {
+    "pid": "hendesc01",
+    "share": 0.0386
+   },
+   {
+    "pid": "williro04",
+    "share": 0.052
+   },
+   {
+    "pid": "cissosi01",
+    "share": 0.0741
+   },
+   {
+    "pid": "ruperra01",
+    "share": 0.0298
+   },
+   {
+    "pid": "murrakr01",
+    "share": 0.0688
+   },
+   {
+    "pid": "thybuma01",
+    "share": 0.0248
+   },
+   {
+    "pid": "weslebl01",
+    "share": 0.0186
+   },
+   {
+    "pid": "yangha01",
+    "share": 0.0155
+   }
+  ],
+  "playoff_centroid": [
+   -0.0192,
+   0.2941,
+   -0.1106,
+   -0.4929,
+   0.4797,
+   -0.4911,
+   0.4614,
+   0.3707
+  ]
+ },
+ {
+  "team": "SAC",
+  "name": "Sacramento Kings",
+  "conference": "West",
+  "division": "Pacific",
+  "W": 22.0,
+  "L": 60.0,
+  "NRtg": -10.1,
+  "SRS": -9.58,
+  "centroid": [
+   -0.1032,
+   0.2311,
+   -0.1631,
+   0.5426,
+   -0.5179,
+   0.5516,
+   -0.3802,
+   0.0227
+  ],
+  "roster": [
+   {
+    "pid": "derozde01",
+    "share": 0.1233
+   },
+   {
+    "pid": "westbru01",
+    "share": 0.095
+   },
+   {
+    "pid": "raynama01",
+    "share": 0.1007
+   },
+   {
+    "pid": "monkma01",
+    "share": 0.0699
+   },
+   {
+    "pid": "schrode01",
+    "share": 0.0541
+   },
+   {
+    "pid": "lavinza01",
+    "share": 0.0627
+   },
+   {
+    "pid": "achiupr01",
+    "share": 0.0895
+   },
+   {
+    "pid": "cliffni01",
+    "share": 0.0965
+   },
+   {
+    "pid": "huntede01",
+    "share": 0.0026
+   },
+   {
+    "pid": "elliske01",
+    "share": 0.0389
+   },
+   {
+    "pid": "plowdda01",
+    "share": 0.0433
+   },
+   {
+    "pid": "cartede02",
+    "share": 0.0359
+   },
+   {
+    "pid": "murrake02",
+    "share": 0.0406
+   },
+   {
+    "pid": "sabondo01",
+    "share": 0.0289
+   },
+   {
+    "pid": "cardwdy01",
+    "share": 0.0465
+   },
+   {
+    "pid": "eubandr01",
+    "share": 0.0283
+   },
+   {
+    "pid": "mcderdo01",
+    "share": 0.0225
+   },
+   {
+    "pid": "hayeski01",
+    "share": 0.0208
+   }
+  ]
+ },
+ {
+  "team": "SAS",
+  "name": "San Antonio Spurs",
+  "conference": "West",
+  "division": "Southwest",
+  "W": 62.0,
+  "L": 20.0,
+  "NRtg": 8.3,
+  "SRS": 8.28,
+  "centroid": [
+   0.1,
+   0.1289,
+   -0.1425,
+   -0.189,
+   0.2725,
+   0.1503,
+   -0.0465,
+   0.3505
+  ],
+  "roster": [
+   {
+    "pid": "wembavi01",
+    "share": 0.0989
+   },
+   {
+    "pid": "foxde01",
+    "share": 0.1183
+   },
+   {
+    "pid": "castlst01",
+    "share": 0.108
+   },
+   {
+    "pid": "johnske04",
+    "share": 0.1013
+   },
+   {
+    "pid": "vassede01",
+    "share": 0.1083
+   },
+   {
+    "pid": "champju02",
+    "share": 0.1201
+   },
+   {
+    "pid": "harpedy01",
+    "share": 0.0826
+   },
+   {
+    "pid": "barneha02",
+    "share": 0.1053
+   },
+   {
+    "pid": "kornelu01",
+    "share": 0.0758
+   },
+   {
+    "pid": "bryanca01",
+    "share": 0.0434
+   },
+   {
+    "pid": "sochaje01",
+    "share": 0.019
+   },
+   {
+    "pid": "olynyke01",
+    "share": 0.0191
+   }
+  ],
+  "playoff_centroid": [
+   0.0215,
+   0.3306,
+   -0.2994,
+   -0.0839,
+   0.4355,
+   0.2416,
+   -0.0922,
+   0.4739
+  ]
+ },
+ {
+  "team": "TOR",
+  "name": "Toronto Raptors",
+  "conference": "East",
+  "division": "Atlantic",
+  "W": 46.0,
+  "L": 36.0,
+  "NRtg": 2.9,
+  "SRS": 2.75,
+  "centroid": [
+   0.0679,
+   0.251,
+   -0.1534,
+   -0.0624,
+   0.2546,
+   0.7786,
+   -0.2904,
+   0.056
+  ],
+  "roster": [
+   {
+    "pid": "ingrabr01",
+    "share": 0.1368
+   },
+   {
+    "pid": "barnesc01",
+    "share": 0.1409
+   },
+   {
+    "pid": "quickim01",
+    "share": 0.1172
+   },
+   {
+    "pid": "barrerj01",
+    "share": 0.0907
+   },
+   {
+    "pid": "mamuksa01",
+    "share": 0.092
+   },
+   {
+    "pid": "sheadja01",
+    "share": 0.0973
+   },
+   {
+    "pid": "walteja01",
+    "share": 0.0774
+   },
+   {
+    "pid": "poeltja01",
+    "share": 0.0604
+   },
+   {
+    "pid": "murraco01",
+    "share": 0.0655
+   },
+   {
+    "pid": "dickgr01",
+    "share": 0.0561
+   },
+   {
+    "pid": "agbajoc01",
+    "share": 0.0342
+   },
+   {
+    "pid": "battlja01",
+    "share": 0.0272
+   },
+   {
+    "pid": "jackstr02",
+    "share": 0.0045
+   }
+  ],
+  "playoff_centroid": [
+   0.2825,
+   0.2335,
+   -0.0165,
+   -0.1946,
+   0.3291,
+   0.7534,
+   -0.2249,
+   0.0949
+  ]
+ },
+ {
+  "team": "UTA",
+  "name": "Utah Jazz",
+  "conference": "West",
+  "division": "Northwest",
+  "W": 22.0,
+  "L": 60.0,
+  "NRtg": -8.2,
+  "SRS": -8.05,
+  "centroid": [
+   -0.0868,
+   0.3107,
+   -0.1368,
+   -0.0276,
+   0.0091,
+   0.4647,
+   -0.1814,
+   0.3251
+  ],
+  "roster": [
+   {
+    "pid": "georgke01",
+    "share": 0.0932
+   },
+   {
+    "pid": "markkla01",
+    "share": 0.0753
+   },
+   {
+    "pid": "sensabr01",
+    "share": 0.092
+   },
+   {
+    "pid": "baileac01",
+    "share": 0.1038
+   },
+   {
+    "pid": "jacksja02",
+    "share": 0.0038
+   },
+   {
+    "pid": "filipky01",
+    "share": 0.094
+   },
+   {
+    "pid": "colliis01",
+    "share": 0.0792
+   },
+   {
+    "pid": "willico04",
+    "share": 0.0851
+   },
+   {
+    "pid": "claytwa01",
+    "share": 0.0423
+   },
+   {
+    "pid": "mykhasv01",
+    "share": 0.0603
+   },
+   {
+    "pid": "nurkiju01",
+    "share": 0.0565
+   },
+   {
+    "pid": "hendrta01",
+    "share": 0.0257
+   },
+   {
+    "pid": "willivi01",
+    "share": 0.0044
+   },
+   {
+    "pid": "anderky01",
+    "share": 0.0209
+   },
+   {
+    "pid": "loveke01",
+    "share": 0.032
+   },
+   {
+    "pid": "konchjo01",
+    "share": 0.0355
+   },
+   {
+    "pid": "tshieos01",
+    "share": 0.0234
+   },
+   {
+    "pid": "harklej01",
+    "share": 0.0284
+   },
+   {
+    "pid": "chandke01",
+    "share": 0.0185
+   },
+   {
+    "pid": "mbengbe01",
+    "share": 0.0257
+   }
+  ]
+ },
+ {
+  "team": "WAS",
+  "name": "Washington Wizards",
+  "conference": "East",
+  "division": "Southeast",
+  "W": 17.0,
+  "L": 65.0,
+  "NRtg": -11.7,
+  "SRS": -11.62,
+  "centroid": [
+   -0.2047,
+   0.1602,
+   -0.0822,
+   0.3367,
+   -0.2044,
+   -0.0949,
+   0.1363,
+   0.1375
+  ],
+  "roster": [
+   {
+    "pid": "mccolcj01",
+    "share": 0.0563
+   },
+   {
+    "pid": "carrica01",
+    "share": 0.1181
+   },
+   {
+    "pid": "sarral01",
+    "share": 0.0679
+   },
+   {
+    "pid": "rileywi01",
+    "share": 0.0849
+   },
+   {
+    "pid": "johnstr03",
+    "share": 0.075
+   },
+   {
+    "pid": "georgky01",
+    "share": 0.0723
+   },
+   {
+    "pid": "coulibi01",
+    "share": 0.0763
+   },
+   {
+    "pid": "middlkh01",
+    "share": 0.043
+   },
+   {
+    "pid": "baglema01",
+    "share": 0.038
+   },
+   {
+    "pid": "champju01",
+    "share": 0.0716
+   },
+   {
+    "pid": "kispeco01",
+    "share": 0.0192
+   },
+   {
+    "pid": "hardyja02",
+    "share": 0.0244
+   },
+   {
+    "pid": "vukcetr01",
+    "share": 0.0349
+   },
+   {
+    "pid": "watkija01",
+    "share": 0.0537
+   },
+   {
+    "pid": "coopesh01",
+    "share": 0.0364
+   },
+   {
+    "pid": "gillan01",
+    "share": 0.0495
+   },
+   {
+    "pid": "youngtr01",
+    "share": 0.0054
+   },
+   {
+    "pid": "whitmca01",
+    "share": 0.0184
+   },
+   {
+    "pid": "johnsaj01",
+    "share": 0.0111
+   },
+   {
+    "pid": "reeseju01",
+    "share": 0.0209
+   },
+   {
+    "pid": "blackle01",
+    "share": 0.0225
+   }
+  ]
+ }
+]
