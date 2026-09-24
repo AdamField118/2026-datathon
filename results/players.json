@@ -6,7 +6,7 @@
   "age": 26.0,
   "mp": 2289.0,
   "playoff_mp": 0.0,
-  "playoff_share_change": -0.1162,
+  "playoff_share_change": null,
   "pos_listed": "PG",
   "pos_pbp": {
    "PG": 86.0,
@@ -85,7 +85,8 @@
     0.0564
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 1.0
+   "misfit_freq": 1.0,
+   "twin_stable": true
   }
  },
  {
@@ -95,7 +96,7 @@
   "age": 27.0,
   "mp": 2259.0,
   "playoff_mp": 544.0,
-  "playoff_share_change": 0.0353,
+  "playoff_share_change": 0.0127,
   "pos_listed": "PG",
   "pos_pbp": {
    "PG": 100.0,
@@ -206,7 +207,8 @@
     0.0801
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -216,7 +218,7 @@
   "age": 29.0,
   "mp": 2443.0,
   "playoff_mp": 249.0,
-  "playoff_share_change": 0.0243,
+  "playoff_share_change": 0.0048,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 0.0,
@@ -326,7 +328,8 @@
     0.0269
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -336,7 +339,7 @@
   "age": 37.0,
   "mp": 2840.0,
   "playoff_mp": 41.0,
-  "playoff_share_change": -0.1147,
+  "playoff_share_change": 0.0191,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 0.0,
@@ -414,7 +417,8 @@
     0.047
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -424,7 +428,7 @@
   "age": 25.0,
   "mp": 2661.0,
   "playoff_mp": 437.0,
-  "playoff_share_change": 0.0317,
+  "playoff_share_change": 0.0071,
   "pos_listed": "PG",
   "pos_pbp": {
    "PG": 98.0,
@@ -534,7 +538,8 @@
     0.0731
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -544,7 +549,7 @@
   "age": 29.0,
   "mp": 2342.0,
   "playoff_mp": 652.0,
-  "playoff_share_change": 0.0298,
+  "playoff_share_change": 0.0115,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 19.0,
@@ -654,7 +659,8 @@
     0.0541
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -664,7 +670,7 @@
   "age": 29.0,
   "mp": 2590.0,
   "playoff_mp": 702.0,
-  "playoff_share_change": 0.022,
+  "playoff_share_change": 0.0081,
   "pos_listed": "PG",
   "pos_pbp": {
    "PG": 96.0,
@@ -774,7 +780,8 @@
     0.0835
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -784,7 +791,7 @@
   "age": 28.0,
   "mp": 2652.0,
   "playoff_mp": 238.0,
-  "playoff_share_change": 0.0325,
+  "playoff_share_change": 0.0179,
   "pos_listed": "PG",
   "pos_pbp": {
    "PG": 100.0,
@@ -894,7 +901,8 @@
     0.0565
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -983,7 +991,8 @@
     0.0361
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -993,7 +1002,7 @@
   "age": 30.0,
   "mp": 2265.0,
   "playoff_mp": 237.0,
-  "playoff_share_change": 0.0512,
+  "playoff_share_change": 0.0194,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -1104,7 +1113,8 @@
     0.0572
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -1114,7 +1124,7 @@
   "age": 24.0,
   "mp": 2137.0,
   "playoff_mp": 324.0,
-  "playoff_share_change": 0.0045,
+  "playoff_share_change": -0.011,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 1.0,
@@ -1224,7 +1234,8 @@
     0.0467
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -1234,7 +1245,7 @@
   "age": 29.0,
   "mp": 2146.0,
   "playoff_mp": 153.0,
-  "playoff_share_change": 0.0507,
+  "playoff_share_change": 0.0197,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 5.0,
@@ -1342,7 +1353,8 @@
     0.0389
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -1352,7 +1364,7 @@
   "age": 31.0,
   "mp": 2610.0,
   "playoff_mp": 400.0,
-  "playoff_share_change": 0.0069,
+  "playoff_share_change": 0.0012,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -1460,7 +1472,8 @@
     0.0573
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -1470,7 +1483,7 @@
   "age": 28.0,
   "mp": 2604.0,
   "playoff_mp": 148.0,
-  "playoff_share_change": -0.0448,
+  "playoff_share_change": -0.0176,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 0.0,
@@ -1546,7 +1559,8 @@
     0.0562
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -1556,7 +1570,7 @@
   "age": 36.0,
   "mp": 2438.0,
   "playoff_mp": 672.0,
-  "playoff_share_change": 0.1084,
+  "playoff_share_change": 0.0147,
   "pos_listed": "PG",
   "pos_pbp": {
    "PG": 46.0,
@@ -1664,7 +1678,8 @@
     0.0674
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -1674,7 +1689,7 @@
   "age": 27.0,
   "mp": 2756.0,
   "playoff_mp": 253.0,
-  "playoff_share_change": 0.0115,
+  "playoff_share_change": 0.0106,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 2.0,
@@ -1782,7 +1797,8 @@
     0.0599
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -1792,7 +1808,7 @@
   "age": 27.0,
   "mp": 2603.0,
   "playoff_mp": 213.0,
-  "playoff_share_change": 0.0162,
+  "playoff_share_change": 0.0089,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 33.0,
@@ -1902,7 +1918,8 @@
     0.0601
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -1912,7 +1929,7 @@
   "age": 24.0,
   "mp": 2532.0,
   "playoff_mp": 214.0,
-  "playoff_share_change": 0.0204,
+  "playoff_share_change": 0.0021,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 0.0,
@@ -2020,7 +2037,8 @@
     0.054
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -2030,7 +2048,7 @@
   "age": 22.0,
   "mp": 1866.0,
   "playoff_mp": 750.0,
-  "playoff_share_change": 0.0401,
+  "playoff_share_change": 0.0206,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -2141,7 +2159,8 @@
     0.0383
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -2151,7 +2170,7 @@
   "age": 23.0,
   "mp": 2502.0,
   "playoff_mp": 273.0,
-  "playoff_share_change": 0.0362,
+  "playoff_share_change": 0.0177,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -2259,7 +2278,8 @@
     0.0625
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -2269,7 +2289,7 @@
   "age": 25.0,
   "mp": 2199.0,
   "playoff_mp": 174.0,
-  "playoff_share_change": 0.0337,
+  "playoff_share_change": 0.0062,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 0.0,
@@ -2377,7 +2397,8 @@
     0.0605
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -2387,7 +2408,7 @@
   "age": 24.0,
   "mp": 2172.0,
   "playoff_mp": 572.0,
-  "playoff_share_change": 0.0593,
+  "playoff_share_change": 0.0288,
   "pos_listed": "PG",
   "pos_pbp": {
    "PG": 83.0,
@@ -2498,7 +2519,8 @@
     0.0386
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -2508,7 +2530,7 @@
   "age": 30.0,
   "mp": 2322.0,
   "playoff_mp": 578.0,
-  "playoff_share_change": 0.0085,
+  "playoff_share_change": -0.0022,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -2616,7 +2638,8 @@
     0.0365
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -2704,7 +2727,8 @@
     0.0328
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -2790,7 +2814,8 @@
     0.0498
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -2878,7 +2903,8 @@
     0.0297
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -2966,7 +2992,8 @@
     0.0487
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -2976,7 +3003,7 @@
   "age": 23.0,
   "mp": 2398.0,
   "playoff_mp": 232.0,
-  "playoff_share_change": 0.038,
+  "playoff_share_change": 0.0223,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -3084,7 +3111,8 @@
     0.0268
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.2
+   "misfit_freq": 0.2,
+   "twin_stable": true
   }
  },
  {
@@ -3094,7 +3122,7 @@
   "age": 24.0,
   "mp": 2681.0,
   "playoff_mp": 273.0,
-  "playoff_share_change": 0.0246,
+  "playoff_share_change": 0.0229,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -3204,7 +3232,8 @@
     0.0457
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -3290,7 +3319,8 @@
     0.0541
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -3300,7 +3330,7 @@
   "age": 23.0,
   "mp": 2953.0,
   "playoff_mp": 264.0,
-  "playoff_share_change": 0.032,
+  "playoff_share_change": 0.0276,
   "pos_listed": "PG",
   "pos_pbp": {
    "PG": 83.0,
@@ -3410,7 +3440,8 @@
     0.0708
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 1.0
+   "misfit_freq": 1.0,
+   "twin_stable": true
   }
  },
  {
@@ -3420,7 +3451,7 @@
   "age": 34.0,
   "mp": 2264.0,
   "playoff_mp": 192.0,
-  "playoff_share_change": 0.0735,
+  "playoff_share_change": 0.0132,
   "pos_listed": "PG",
   "pos_pbp": {
    "PG": 77.0,
@@ -3528,7 +3559,8 @@
     0.0535
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -3614,7 +3646,8 @@
     0.0412
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -3700,7 +3733,8 @@
     0.0572
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -3710,7 +3744,7 @@
   "age": 22.0,
   "mp": 1976.0,
   "playoff_mp": 422.0,
-  "playoff_share_change": 0.0249,
+  "playoff_share_change": 0.008,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -3820,7 +3854,8 @@
     0.1
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -3830,7 +3865,7 @@
   "age": 28.0,
   "mp": 2556.0,
   "playoff_mp": 231.0,
-  "playoff_share_change": 0.0079,
+  "playoff_share_change": 0.0027,
   "pos_listed": "PG",
   "pos_pbp": {
    "PG": 100.0,
@@ -3938,7 +3973,8 @@
     0.0702
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -3948,7 +3984,7 @@
   "age": 28.0,
   "mp": 2231.0,
   "playoff_mp": 704.0,
-  "playoff_share_change": 0.0133,
+  "playoff_share_change": 0.0106,
   "pos_listed": "PG",
   "pos_pbp": {
    "PG": 99.0,
@@ -4056,7 +4092,8 @@
     0.0687
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -4142,7 +4179,8 @@
     0.042
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -4228,7 +4266,8 @@
     0.021
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -4314,7 +4353,8 @@
     0.0702
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -4400,7 +4440,8 @@
     0.0738
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -4486,7 +4527,8 @@
     0.0426
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -4572,7 +4614,8 @@
     0.0561
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -4582,7 +4625,7 @@
   "age": 31.0,
   "mp": 2625.0,
   "playoff_mp": 251.0,
-  "playoff_share_change": 0.0163,
+  "playoff_share_change": 0.0074,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 22.0,
@@ -4692,7 +4735,8 @@
     0.0317
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -4778,7 +4822,8 @@
     0.0424
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -4864,7 +4909,8 @@
     0.0347
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -4874,7 +4920,7 @@
   "age": 41.0,
   "mp": 1989.0,
   "playoff_mp": 384.0,
-  "playoff_share_change": 0.0574,
+  "playoff_share_change": 0.0219,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 0.0,
@@ -4982,7 +5028,8 @@
     0.072
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -5068,7 +5115,8 @@
     0.0242
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -5078,7 +5126,7 @@
   "age": 22.0,
   "mp": 2705.0,
   "playoff_mp": 252.0,
-  "playoff_share_change": 0.0362,
+  "playoff_share_change": 0.0286,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -5186,7 +5234,8 @@
     0.0292
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -5196,7 +5245,7 @@
   "age": 20.0,
   "mp": 2623.0,
   "playoff_mp": 407.0,
-  "playoff_share_change": 0.0222,
+  "playoff_share_change": 0.0084,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 28.0,
@@ -5306,7 +5355,8 @@
     0.0331
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -5316,7 +5366,7 @@
   "age": 27.0,
   "mp": 1762.0,
   "playoff_mp": 221.0,
-  "playoff_share_change": 0.0017,
+  "playoff_share_change": 0.0095,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 16.0,
@@ -5424,7 +5474,8 @@
     0.0348
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -5434,7 +5485,7 @@
   "age": 29.0,
   "mp": 2692.0,
   "playoff_mp": 608.0,
-  "playoff_share_change": -0.0037,
+  "playoff_share_change": -0.0035,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 0.0,
@@ -5542,7 +5593,8 @@
     0.0608
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -5552,7 +5604,7 @@
   "age": 23.0,
   "mp": 1997.0,
   "playoff_mp": 459.0,
-  "playoff_share_change": 0.0252,
+  "playoff_share_change": 0.0069,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -5662,7 +5714,8 @@
     0.0304
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -5672,7 +5725,7 @@
   "age": 24.0,
   "mp": 2074.0,
   "playoff_mp": 640.0,
-  "playoff_share_change": 0.0407,
+  "playoff_share_change": 0.0152,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -5780,7 +5833,8 @@
     0.0227
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -5866,7 +5920,8 @@
     0.0594
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -5954,7 +6009,8 @@
     0.0601
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -5964,7 +6020,7 @@
   "age": 26.0,
   "mp": 2231.0,
   "playoff_mp": 0.0,
-  "playoff_share_change": -0.1128,
+  "playoff_share_change": null,
   "pos_listed": "PG",
   "pos_pbp": {
    "PG": 80.0,
@@ -6040,7 +6096,8 @@
     0.0565
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -6126,7 +6183,8 @@
     0.0608
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.2
+   "misfit_freq": 0.2,
+   "twin_stable": true
   }
  },
  {
@@ -6136,7 +6194,7 @@
   "age": 21.0,
   "mp": 2038.0,
   "playoff_mp": 760.0,
-  "playoff_share_change": 0.0332,
+  "playoff_share_change": 0.0128,
   "pos_listed": "PG",
   "pos_pbp": {
    "PG": 48.0,
@@ -6244,7 +6302,8 @@
     0.0637
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -6330,7 +6389,8 @@
     0.0466
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -6340,7 +6400,7 @@
   "age": 30.0,
   "mp": 1702.0,
   "playoff_mp": 149.0,
-  "playoff_share_change": 0.069,
+  "playoff_share_change": 0.0286,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 0.0,
@@ -6416,7 +6476,8 @@
     0.0519
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 1.0
+   "misfit_freq": 1.0,
+   "twin_stable": true
   }
  },
  {
@@ -6502,7 +6563,8 @@
     0.0692
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -6588,7 +6650,8 @@
     0.0291
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -6598,7 +6661,7 @@
   "age": 25.0,
   "mp": 2297.0,
   "playoff_mp": 199.0,
-  "playoff_share_change": 0.0219,
+  "playoff_share_change": 0.0089,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -6706,7 +6769,8 @@
     0.0417
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -6716,7 +6780,7 @@
   "age": 28.0,
   "mp": 2224.0,
   "playoff_mp": 586.0,
-  "playoff_share_change": 0.0152,
+  "playoff_share_change": 0.0053,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -6826,7 +6890,8 @@
     0.0431
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -6912,7 +6977,8 @@
     0.032
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -6922,7 +6988,7 @@
   "age": 21.0,
   "mp": 2147.0,
   "playoff_mp": 192.0,
-  "playoff_share_change": 0.0233,
+  "playoff_share_change": 0.0242,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 29.0,
@@ -7032,7 +7098,8 @@
     0.0321
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -7042,7 +7109,7 @@
   "age": 25.0,
   "mp": 2731.0,
   "playoff_mp": 165.0,
-  "playoff_share_change": -0.0008,
+  "playoff_share_change": -0.0013,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -7150,7 +7217,8 @@
     0.0495
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 1.0
+   "misfit_freq": 1.0,
+   "twin_stable": true
   }
  },
  {
@@ -7160,7 +7228,7 @@
   "age": 25.0,
   "mp": 1726.0,
   "playoff_mp": 271.0,
-  "playoff_share_change": 0.0717,
+  "playoff_share_change": 0.0351,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 0.0,
@@ -7268,7 +7336,8 @@
     0.0295
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -7278,7 +7347,7 @@
   "age": 25.0,
   "mp": 2316.0,
   "playoff_mp": 406.0,
-  "playoff_share_change": 0.0239,
+  "playoff_share_change": 0.0088,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -7386,7 +7455,8 @@
     0.0244
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -7396,7 +7466,7 @@
   "age": 26.0,
   "mp": 1911.0,
   "playoff_mp": 411.0,
-  "playoff_share_change": -0.0231,
+  "playoff_share_change": -0.0226,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 0.0,
@@ -7506,7 +7576,8 @@
     0.0375
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -7516,7 +7587,7 @@
   "age": 33.0,
   "mp": 2127.0,
   "playoff_mp": 140.0,
-  "playoff_share_change": -0.0094,
+  "playoff_share_change": -0.0136,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 4.0,
@@ -7594,7 +7665,8 @@
     0.0486
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -7604,7 +7676,7 @@
   "age": 31.0,
   "mp": 1695.0,
   "playoff_mp": 112.0,
-  "playoff_share_change": 0.0075,
+  "playoff_share_change": -0.0306,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -7680,7 +7752,8 @@
     0.0402
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -7766,7 +7839,8 @@
     0.0548
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -7776,7 +7850,7 @@
   "age": 26.0,
   "mp": 2007.0,
   "playoff_mp": 323.0,
-  "playoff_share_change": 0.0107,
+  "playoff_share_change": 0.0035,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -7886,7 +7960,8 @@
     0.0622
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -7972,7 +8047,8 @@
     0.032
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -7982,7 +8058,7 @@
   "age": 22.0,
   "mp": 1471.0,
   "playoff_mp": 67.0,
-  "playoff_share_change": -0.0186,
+  "playoff_share_change": -0.0668,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 41.0,
@@ -8058,7 +8134,8 @@
     0.0305
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -8068,7 +8145,7 @@
   "age": 26.0,
   "mp": 1881.0,
   "playoff_mp": 292.0,
-  "playoff_share_change": 0.0663,
+  "playoff_share_change": 0.0012,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 29.0,
@@ -8178,7 +8255,8 @@
     0.0681
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -8188,7 +8266,7 @@
   "age": 31.0,
   "mp": 1201.0,
   "playoff_mp": 233.0,
-  "playoff_share_change": 0.0279,
+  "playoff_share_change": 0.007,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -8296,7 +8374,8 @@
     0.0526
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -8306,7 +8385,7 @@
   "age": 26.0,
   "mp": 2282.0,
   "playoff_mp": 114.0,
-  "playoff_share_change": 0.0032,
+  "playoff_share_change": -0.0001,
   "pos_listed": "PG",
   "pos_pbp": {
    "PG": 88.0,
@@ -8382,7 +8461,8 @@
     0.0719
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -8392,7 +8472,7 @@
   "age": 25.0,
   "mp": 2206.0,
   "playoff_mp": 243.0,
-  "playoff_share_change": -0.0189,
+  "playoff_share_change": -0.0305,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 1.0,
@@ -8500,7 +8580,8 @@
     0.0496
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -8510,7 +8591,7 @@
   "age": 29.0,
   "mp": 2494.0,
   "playoff_mp": 96.0,
-  "playoff_share_change": -0.0927,
+  "playoff_share_change": -0.0267,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 44.0,
@@ -8586,7 +8667,8 @@
     0.0397
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -8672,7 +8754,8 @@
     0.076
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -8758,7 +8841,8 @@
     0.032
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -8844,7 +8928,8 @@
     0.0674
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -8930,7 +9015,8 @@
     0.0702
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -8940,7 +9026,7 @@
   "age": 35.0,
   "mp": 1818.0,
   "playoff_mp": 114.0,
-  "playoff_share_change": 0.0507,
+  "playoff_share_change": -0.0089,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -9016,7 +9102,8 @@
     0.0656
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -9026,7 +9113,7 @@
   "age": 22.0,
   "mp": 1910.0,
   "playoff_mp": 196.0,
-  "playoff_share_change": 0.0203,
+  "playoff_share_change": -0.0077,
   "pos_listed": "PG",
   "pos_pbp": {
    "PG": 49.0,
@@ -9134,7 +9221,8 @@
     0.0214
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -9220,7 +9308,8 @@
     0.0268
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -9306,7 +9395,8 @@
     0.0579
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -9392,7 +9482,8 @@
     0.0681
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -9402,7 +9493,7 @@
   "age": 31.0,
   "mp": 2113.0,
   "playoff_mp": 383.0,
-  "playoff_share_change": 0.0064,
+  "playoff_share_change": 0.0084,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 1.0,
@@ -9510,7 +9601,8 @@
     0.0466
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -9596,7 +9688,8 @@
     0.031
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -9606,7 +9699,7 @@
   "age": 21.0,
   "mp": 2094.0,
   "playoff_mp": 107.0,
-  "playoff_share_change": -0.0168,
+  "playoff_share_change": -0.0241,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -9682,7 +9775,8 @@
     0.0294
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -9692,7 +9786,7 @@
   "age": 25.0,
   "mp": 2044.0,
   "playoff_mp": 801.0,
-  "playoff_share_change": 0.0402,
+  "playoff_share_change": 0.018,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 16.0,
@@ -9800,7 +9894,8 @@
     0.0479
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -9886,7 +9981,8 @@
     0.0695
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -9896,7 +9992,7 @@
   "age": 26.0,
   "mp": 2288.0,
   "playoff_mp": 237.0,
-  "playoff_share_change": 0.0256,
+  "playoff_share_change": 0.0188,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -10004,7 +10100,8 @@
     0.0351
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -10090,7 +10187,8 @@
     0.076
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -10176,7 +10274,8 @@
     0.0819
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -10262,7 +10361,8 @@
     0.0622
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -10348,7 +10448,8 @@
     0.1132
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -10358,7 +10459,7 @@
   "age": 24.0,
   "mp": 2266.0,
   "playoff_mp": 705.0,
-  "playoff_share_change": 0.0117,
+  "playoff_share_change": 0.0126,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 0.0,
@@ -10466,7 +10567,8 @@
     0.0416
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -10476,7 +10578,7 @@
   "age": 22.0,
   "mp": 2520.0,
   "playoff_mp": 166.0,
-  "playoff_share_change": -0.0123,
+  "playoff_share_change": -0.0229,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 1.0,
@@ -10586,7 +10688,8 @@
     0.0717
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -10596,7 +10699,7 @@
   "age": 27.0,
   "mp": 1958.0,
   "playoff_mp": 285.0,
-  "playoff_share_change": 0.0182,
+  "playoff_share_change": 0.0054,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -10704,7 +10807,8 @@
     0.0818
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -10790,7 +10894,8 @@
     0.0371
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -10800,7 +10905,7 @@
   "age": 26.0,
   "mp": 1751.0,
   "playoff_mp": 104.0,
-  "playoff_share_change": -0.0275,
+  "playoff_share_change": -0.0293,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -10878,7 +10983,8 @@
     0.0396
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -10964,7 +11070,8 @@
     0.04
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -11050,7 +11157,8 @@
     0.0459
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -11136,7 +11244,8 @@
     0.0459
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -11146,7 +11255,7 @@
   "age": 23.0,
   "mp": 1777.0,
   "playoff_mp": 216.0,
-  "playoff_share_change": -0.0408,
+  "playoff_share_change": -0.0592,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 0.0,
@@ -11254,7 +11363,8 @@
     0.028
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -11340,7 +11450,8 @@
     0.0724
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -11350,7 +11461,7 @@
   "age": 35.0,
   "mp": 1560.0,
   "playoff_mp": 192.0,
-  "playoff_share_change": 0.081,
+  "playoff_share_change": 0.0374,
   "pos_listed": "PG",
   "pos_pbp": {
    "PG": 75.0,
@@ -11458,7 +11569,8 @@
     0.0537
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -11544,7 +11656,8 @@
     0.0249
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -11554,7 +11667,7 @@
   "age": 27.0,
   "mp": 1519.0,
   "playoff_mp": 529.0,
-  "playoff_share_change": 0.0435,
+  "playoff_share_change": 0.0094,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -11662,7 +11775,8 @@
     0.043
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -11748,7 +11862,8 @@
     0.0625
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -11834,7 +11949,8 @@
     0.038
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -11920,7 +12036,8 @@
     0.0408
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -11930,7 +12047,7 @@
   "age": 26.0,
   "mp": 1344.0,
   "playoff_mp": 0.0,
-  "playoff_share_change": -0.0401,
+  "playoff_share_change": null,
   "pos_listed": "PG",
   "pos_pbp": {
    "PG": 92.0,
@@ -12006,7 +12123,8 @@
     0.0755
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -12094,7 +12212,8 @@
     0.0345
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -12104,7 +12223,7 @@
   "age": 30.0,
   "mp": 1467.0,
   "playoff_mp": 38.0,
-  "playoff_share_change": -0.0347,
+  "playoff_share_change": -0.0407,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 31.0,
@@ -12180,7 +12299,8 @@
     0.0383
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -12190,7 +12310,7 @@
   "age": 33.0,
   "mp": 1746.0,
   "playoff_mp": 485.0,
-  "playoff_share_change": 0.0551,
+  "playoff_share_change": 0.0289,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -12298,7 +12418,8 @@
     0.0505
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -12308,7 +12429,7 @@
   "age": 33.0,
   "mp": 2380.0,
   "playoff_mp": 372.0,
-  "playoff_share_change": 0.0088,
+  "playoff_share_change": -0.0013,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -12418,7 +12539,8 @@
     0.0763
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -12428,7 +12550,7 @@
   "age": 19.0,
   "mp": 1558.0,
   "playoff_mp": 615.0,
-  "playoff_share_change": 0.0314,
+  "playoff_share_change": 0.0173,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 9.0,
@@ -12539,7 +12661,8 @@
     0.0732
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -12625,7 +12748,8 @@
     0.0367
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -12711,7 +12835,8 @@
     0.0919
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -12797,7 +12922,8 @@
     0.0319
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -12883,7 +13009,8 @@
     0.052
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -12969,7 +13096,8 @@
     0.0415
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -13055,7 +13183,8 @@
     0.0708
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -13141,7 +13270,8 @@
     0.0358
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -13151,7 +13281,7 @@
   "age": 30.0,
   "mp": 1994.0,
   "playoff_mp": 614.0,
-  "playoff_share_change": 0.033,
+  "playoff_share_change": 0.0088,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 0.0,
@@ -13259,7 +13389,8 @@
     0.059
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -13269,7 +13400,7 @@
   "age": 23.0,
   "mp": 1598.0,
   "playoff_mp": 0.0,
-  "playoff_share_change": -0.0802,
+  "playoff_share_change": null,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 0.0,
@@ -13345,7 +13476,8 @@
     0.0201
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -13355,7 +13487,7 @@
   "age": 24.0,
   "mp": 1574.0,
   "playoff_mp": 248.0,
-  "playoff_share_change": 0.0682,
+  "playoff_share_change": 0.0326,
   "pos_listed": "PG",
   "pos_pbp": {
    "PG": 89.0,
@@ -13463,7 +13595,8 @@
     0.0524
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -13473,7 +13606,7 @@
   "age": 26.0,
   "mp": 1507.0,
   "playoff_mp": 143.0,
-  "playoff_share_change": -0.0367,
+  "playoff_share_change": -0.0426,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 55.0,
@@ -13549,7 +13682,8 @@
     0.0333
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -13559,7 +13693,7 @@
   "age": 26.0,
   "mp": 1372.0,
   "playoff_mp": 0.0,
-  "playoff_share_change": -0.0609,
+  "playoff_share_change": null,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 49.0,
@@ -13635,7 +13769,8 @@
     0.0304
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -13721,7 +13856,8 @@
     0.0649
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -13807,7 +13943,8 @@
     0.0394
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -13817,7 +13954,7 @@
   "age": 27.0,
   "mp": 1927.0,
   "playoff_mp": 386.0,
-  "playoff_share_change": 0.0614,
+  "playoff_share_change": 0.0428,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -13925,7 +14062,8 @@
     0.046
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -13935,7 +14073,7 @@
   "age": 26.0,
   "mp": 1926.0,
   "playoff_mp": 152.0,
-  "playoff_share_change": -0.0072,
+  "playoff_share_change": -0.0151,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -14043,7 +14181,8 @@
     0.0297
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -14053,7 +14192,7 @@
   "age": 23.0,
   "mp": 1473.0,
   "playoff_mp": 317.0,
-  "playoff_share_change": 0.0127,
+  "playoff_share_change": 0.0124,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 13.0,
@@ -14163,7 +14302,8 @@
     0.0395
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -14249,7 +14389,8 @@
     0.0279
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -14259,7 +14400,7 @@
   "age": 33.0,
   "mp": 1986.0,
   "playoff_mp": 183.0,
-  "playoff_share_change": -0.0678,
+  "playoff_share_change": -0.0693,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -14367,7 +14508,8 @@
     0.0517
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 1.0
+   "misfit_freq": 1.0,
+   "twin_stable": true
   }
  },
  {
@@ -14377,7 +14519,7 @@
   "age": 32.0,
   "mp": 2213.0,
   "playoff_mp": 97.0,
-  "playoff_share_change": -0.011,
+  "playoff_share_change": -0.0172,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 0.0,
@@ -14453,7 +14595,8 @@
     0.0548
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -14539,7 +14682,8 @@
     0.035
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 1.0
+   "misfit_freq": 1.0,
+   "twin_stable": true
   }
  },
  {
@@ -14549,7 +14693,7 @@
   "age": 24.0,
   "mp": 1899.0,
   "playoff_mp": 107.0,
-  "playoff_share_change": -0.0321,
+  "playoff_share_change": -0.0391,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 0.0,
@@ -14625,7 +14769,8 @@
     0.0333
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -14711,7 +14856,8 @@
     0.0616
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -14721,7 +14867,7 @@
   "age": 32.0,
   "mp": 1697.0,
   "playoff_mp": 271.0,
-  "playoff_share_change": 0.0292,
+  "playoff_share_change": -0.0226,
   "pos_listed": "PG",
   "pos_pbp": {
    "PG": 100.0,
@@ -14829,7 +14975,8 @@
     0.0705
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -14915,7 +15062,8 @@
     0.0519
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -15001,7 +15149,8 @@
     0.0486
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -15087,7 +15236,8 @@
     0.0318
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -15173,7 +15323,8 @@
     0.0286
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -15183,7 +15334,7 @@
   "age": 23.0,
   "mp": 1896.0,
   "playoff_mp": 427.0,
-  "playoff_share_change": 0.0304,
+  "playoff_share_change": 0.0189,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 0.0,
@@ -15293,7 +15444,8 @@
     0.0386
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -15303,7 +15455,7 @@
   "age": 28.0,
   "mp": 1934.0,
   "playoff_mp": 164.0,
-  "playoff_share_change": -0.0005,
+  "playoff_share_change": -0.0057,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -15411,7 +15563,8 @@
     0.0618
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -15421,7 +15574,7 @@
   "age": 30.0,
   "mp": 1506.0,
   "playoff_mp": 0.0,
-  "playoff_share_change": -0.0226,
+  "playoff_share_change": null,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -15497,7 +15650,8 @@
     0.024
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -15583,7 +15737,8 @@
     0.0327
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -15593,7 +15748,7 @@
   "age": 30.0,
   "mp": 1574.0,
   "playoff_mp": 364.0,
-  "playoff_share_change": 0.0587,
+  "playoff_share_change": 0.0067,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 0.0,
@@ -15701,7 +15856,8 @@
     0.0333
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -15711,7 +15867,7 @@
   "age": 24.0,
   "mp": 1416.0,
   "playoff_mp": 0.0,
-  "playoff_share_change": -0.0717,
+  "playoff_share_change": null,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -15787,7 +15943,8 @@
     0.0207
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -15797,7 +15954,7 @@
   "age": 24.0,
   "mp": 1019.0,
   "playoff_mp": 122.0,
-  "playoff_share_change": 0.0212,
+  "playoff_share_change": 0.0022,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 0.0,
@@ -15873,7 +16030,8 @@
     0.0168
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -15883,7 +16041,7 @@
   "age": 27.0,
   "mp": 1549.0,
   "playoff_mp": 46.0,
-  "playoff_share_change": -0.0123,
+  "playoff_share_change": -0.047,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 0.0,
@@ -15959,7 +16117,8 @@
     0.0385
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -16045,7 +16204,8 @@
     0.0599
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -16131,7 +16291,8 @@
     0.0222
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -16217,7 +16378,8 @@
     0.0476
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -16303,7 +16465,8 @@
     0.0818
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -16313,7 +16476,7 @@
   "age": 24.0,
   "mp": 2061.0,
   "playoff_mp": 114.0,
-  "playoff_share_change": -0.0576,
+  "playoff_share_change": -0.0454,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -16389,7 +16552,8 @@
     0.036
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -16399,7 +16563,7 @@
   "age": 24.0,
   "mp": 1455.0,
   "playoff_mp": 318.0,
-  "playoff_share_change": 0.0205,
+  "playoff_share_change": 0.0104,
   "pos_listed": "PG",
   "pos_pbp": {
    "PG": 92.0,
@@ -16507,7 +16671,8 @@
     0.0396
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -16517,7 +16682,7 @@
   "age": 29.0,
   "mp": 1377.0,
   "playoff_mp": 338.0,
-  "playoff_share_change": 0.0072,
+  "playoff_share_change": -0.0275,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 0.0,
@@ -16625,7 +16790,8 @@
     0.0522
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -16711,7 +16877,8 @@
     0.0688
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -16721,7 +16888,7 @@
   "age": 29.0,
   "mp": 1647.0,
   "playoff_mp": 186.0,
-  "playoff_share_change": 0.0467,
+  "playoff_share_change": 0.0021,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 0.0,
@@ -16829,7 +16996,8 @@
     0.0277
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -16839,7 +17007,7 @@
   "age": 22.0,
   "mp": 2046.0,
   "playoff_mp": 374.0,
-  "playoff_share_change": -0.0006,
+  "playoff_share_change": -0.0068,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 19.0,
@@ -16949,7 +17117,8 @@
     0.0478
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -17035,7 +17204,8 @@
     0.0382
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -17121,7 +17291,8 @@
     0.0818
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -17131,7 +17302,7 @@
   "age": 29.0,
   "mp": 1681.0,
   "playoff_mp": 326.0,
-  "playoff_share_change": 0.097,
+  "playoff_share_change": 0.0399,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 10.0,
@@ -17239,7 +17410,8 @@
     0.0772
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -17249,7 +17421,7 @@
   "age": 29.0,
   "mp": 1998.0,
   "playoff_mp": 116.0,
-  "playoff_share_change": -0.0196,
+  "playoff_share_change": -0.021,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 31.0,
@@ -17325,7 +17497,8 @@
     0.0479
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -17411,7 +17584,8 @@
     0.0312
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -17421,7 +17595,7 @@
   "age": 35.0,
   "mp": 1135.0,
   "playoff_mp": 394.0,
-  "playoff_share_change": 0.0922,
+  "playoff_share_change": 0.0214,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -17529,7 +17703,8 @@
     0.0464
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.3
+   "misfit_freq": 0.3,
+   "twin_stable": true
   }
  },
  {
@@ -17539,7 +17714,7 @@
   "age": 20.0,
   "mp": 1503.0,
   "playoff_mp": 23.0,
-  "playoff_share_change": -0.0601,
+  "playoff_share_change": -0.0615,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 0.0,
@@ -17615,7 +17790,8 @@
     0.0239
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -17625,7 +17801,7 @@
   "age": 20.0,
   "mp": 1551.0,
   "playoff_mp": 58.0,
-  "playoff_share_change": -0.0612,
+  "playoff_share_change": -0.056,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 0.0,
@@ -17701,7 +17877,8 @@
     0.0452
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -17787,7 +17964,8 @@
     0.0596
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -17873,7 +18051,8 @@
     0.0411
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -17883,7 +18062,7 @@
   "age": 24.0,
   "mp": 1549.0,
   "playoff_mp": 195.0,
-  "playoff_share_change": 0.0554,
+  "playoff_share_change": 0.0278,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -17991,7 +18170,8 @@
     0.0524
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -18077,7 +18257,8 @@
     0.0306
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -18163,7 +18344,8 @@
     0.0462
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -18173,7 +18355,7 @@
   "age": 33.0,
   "mp": 1279.0,
   "playoff_mp": 195.0,
-  "playoff_share_change": -0.0222,
+  "playoff_share_change": -0.0289,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 1.0,
@@ -18281,7 +18463,8 @@
     0.0263
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -18367,7 +18550,8 @@
     0.0273
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -18377,7 +18561,7 @@
   "age": 28.0,
   "mp": 1176.0,
   "playoff_mp": 0.0,
-  "playoff_share_change": -0.0569,
+  "playoff_share_change": null,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 0.0,
@@ -18453,7 +18637,8 @@
     0.0261
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -18463,7 +18648,7 @@
   "age": 27.0,
   "mp": 1414.0,
   "playoff_mp": 75.0,
-  "playoff_share_change": -0.0507,
+  "playoff_share_change": -0.0666,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 2.0,
@@ -18539,7 +18724,8 @@
     0.0343
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -18549,7 +18735,7 @@
   "age": 27.0,
   "mp": 1572.0,
   "playoff_mp": 5.0,
-  "playoff_share_change": -0.0744,
+  "playoff_share_change": -0.0727,
   "pos_listed": "PG",
   "pos_pbp": {
    "PG": 40.0,
@@ -18625,7 +18811,8 @@
     0.0691
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -18635,7 +18822,7 @@
   "age": 25.0,
   "mp": 1177.0,
   "playoff_mp": 116.0,
-  "playoff_share_change": -0.0192,
+  "playoff_share_change": -0.0207,
   "pos_listed": "PG",
   "pos_pbp": {
    "PG": 92.0,
@@ -18711,7 +18898,8 @@
     0.065
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -18797,7 +18985,8 @@
     0.035
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -18883,7 +19072,8 @@
     0.0298
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.8
+   "misfit_freq": 0.8,
+   "twin_stable": true
   }
  },
  {
@@ -18969,7 +19159,8 @@
     0.0571
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -19055,7 +19246,8 @@
     0.0375
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -19141,7 +19333,8 @@
     0.0373
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -19227,7 +19420,8 @@
     0.0617
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 1.0
+   "misfit_freq": 1.0,
+   "twin_stable": true
   }
  },
  {
@@ -19313,7 +19507,8 @@
     0.0361
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -19399,7 +19594,8 @@
     0.0295
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -19409,7 +19605,7 @@
   "age": 30.0,
   "mp": 1005.0,
   "playoff_mp": 89.0,
-  "playoff_share_change": 0.0115,
+  "playoff_share_change": 0.0073,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -19485,7 +19681,8 @@
     0.0449
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -19495,7 +19692,7 @@
   "age": 24.0,
   "mp": 1317.0,
   "playoff_mp": 165.0,
-  "playoff_share_change": -0.0178,
+  "playoff_share_change": -0.0455,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -19605,7 +19802,8 @@
     0.0512
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -19615,7 +19813,7 @@
   "age": 31.0,
   "mp": 1769.0,
   "playoff_mp": 345.0,
-  "playoff_share_change": 0.0525,
+  "playoff_share_change": 0.0249,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 25.0,
@@ -19723,7 +19921,8 @@
     0.043
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -19733,7 +19932,7 @@
   "age": 26.0,
   "mp": 1849.0,
   "playoff_mp": 335.0,
-  "playoff_share_change": -0.0013,
+  "playoff_share_change": -0.0186,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 0.0,
@@ -19841,7 +20040,8 @@
     0.0392
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -19927,7 +20127,8 @@
     0.0362
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -20013,7 +20214,8 @@
     0.0211
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -20101,7 +20303,8 @@
     0.0641
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -20111,7 +20314,7 @@
   "age": 32.0,
   "mp": 1446.0,
   "playoff_mp": 132.0,
-  "playoff_share_change": -0.034,
+  "playoff_share_change": -0.0235,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 8.0,
@@ -20187,7 +20390,8 @@
     0.0339
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -20197,7 +20401,7 @@
   "age": 23.0,
   "mp": 828.0,
   "playoff_mp": 151.0,
-  "playoff_share_change": 0.1154,
+  "playoff_share_change": 0.0495,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 9.0,
@@ -20305,7 +20509,8 @@
     0.0501
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -20315,7 +20520,7 @@
   "age": 33.0,
   "mp": 871.0,
   "playoff_mp": 25.0,
-  "playoff_share_change": -0.0263,
+  "playoff_share_change": -0.0298,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -20391,7 +20596,8 @@
     0.0343
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -20477,7 +20683,8 @@
     0.0448
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -20487,7 +20694,7 @@
   "age": 24.0,
   "mp": 936.0,
   "playoff_mp": 107.0,
-  "playoff_share_change": -0.0178,
+  "playoff_share_change": -0.029,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 0.0,
@@ -20563,7 +20770,8 @@
     0.0465
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -20573,7 +20781,7 @@
   "age": 21.0,
   "mp": 1160.0,
   "playoff_mp": 258.0,
-  "playoff_share_change": 0.0435,
+  "playoff_share_change": -0.0033,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 14.0,
@@ -20681,7 +20889,8 @@
     0.0626
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -20691,7 +20900,7 @@
   "age": 27.0,
   "mp": 1118.0,
   "playoff_mp": 59.0,
-  "playoff_share_change": -0.0216,
+  "playoff_share_change": -0.0324,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -20767,7 +20976,8 @@
     0.0415
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -20777,7 +20987,7 @@
   "age": 25.0,
   "mp": 1392.0,
   "playoff_mp": 16.0,
-  "playoff_share_change": -0.0051,
+  "playoff_share_change": -0.0632,
   "pos_listed": "PG",
   "pos_pbp": {
    "PG": 55.0,
@@ -20853,7 +21063,8 @@
     0.0418
    ],
    "twin_freq": 0.9,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -20939,7 +21150,8 @@
     0.0432
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 1.0
+   "misfit_freq": 1.0,
+   "twin_stable": true
   }
  },
  {
@@ -20949,7 +21161,7 @@
   "age": 22.0,
   "mp": 1689.0,
   "playoff_mp": 96.0,
-  "playoff_share_change": -0.0486,
+  "playoff_share_change": -0.0547,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -21025,7 +21237,8 @@
     0.0462
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -21035,7 +21248,7 @@
   "age": 23.0,
   "mp": 1852.0,
   "playoff_mp": 224.0,
-  "playoff_share_change": 0.0378,
+  "playoff_share_change": 0.0392,
   "pos_listed": "PG",
   "pos_pbp": {
    "PG": 100.0,
@@ -21145,7 +21358,8 @@
     0.0441
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -21231,7 +21445,8 @@
     0.0416
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -21241,7 +21456,7 @@
   "age": 21.0,
   "mp": 1474.0,
   "playoff_mp": 224.0,
-  "playoff_share_change": 0.0569,
+  "playoff_share_change": 0.048,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 12.0,
@@ -21349,7 +21564,8 @@
     0.0399
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -21435,7 +21651,8 @@
     0.024
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -21521,7 +21738,8 @@
     0.0308
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -21607,7 +21825,8 @@
     0.0404
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -21617,7 +21836,7 @@
   "age": 30.0,
   "mp": 769.0,
   "playoff_mp": 0.0,
-  "playoff_share_change": -0.0209,
+  "playoff_share_change": null,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -21693,7 +21912,8 @@
     0.0194
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -21703,7 +21923,7 @@
   "age": 26.0,
   "mp": 1080.0,
   "playoff_mp": 54.0,
-  "playoff_share_change": 0.0016,
+  "playoff_share_change": -0.0309,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 0.0,
@@ -21779,7 +21999,8 @@
     0.0462
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -21789,7 +22010,7 @@
   "age": 23.0,
   "mp": 1808.0,
   "playoff_mp": 129.0,
-  "playoff_share_change": 0.0428,
+  "playoff_share_change": 0.0425,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -21865,7 +22086,8 @@
     0.072
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -21951,7 +22173,8 @@
     0.0202
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -22037,7 +22260,8 @@
     0.0423
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 1.0
+   "misfit_freq": 1.0,
+   "twin_stable": true
   }
  },
  {
@@ -22047,7 +22271,7 @@
   "age": 24.0,
   "mp": 1399.0,
   "playoff_mp": 187.0,
-  "playoff_share_change": 0.0599,
+  "playoff_share_change": -0.0026,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 0.0,
@@ -22155,7 +22379,8 @@
     0.0499
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -22241,7 +22466,8 @@
     0.0812
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -22327,7 +22553,8 @@
     0.0323
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -22413,7 +22640,8 @@
     0.0444
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -22499,7 +22727,8 @@
     0.0179
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -22585,7 +22814,8 @@
     0.0628
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -22671,7 +22901,8 @@
     0.0295
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -22681,7 +22912,7 @@
   "age": 27.0,
   "mp": 1370.0,
   "playoff_mp": 170.0,
-  "playoff_share_change": 0.0131,
+  "playoff_share_change": -0.0312,
   "pos_listed": "PG",
   "pos_pbp": {
    "PG": 100.0,
@@ -22789,7 +23020,8 @@
     0.0589
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -22799,7 +23031,7 @@
   "age": 24.0,
   "mp": 1013.0,
   "playoff_mp": 0.0,
-  "playoff_share_change": -0.0513,
+  "playoff_share_change": null,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 86.0,
@@ -22875,7 +23107,8 @@
     0.0451
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -22961,7 +23194,8 @@
     0.0324
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -23047,7 +23281,8 @@
     0.0246
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -23133,7 +23368,8 @@
     0.0258
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -23143,7 +23379,7 @@
   "age": 26.0,
   "mp": 901.0,
   "playoff_mp": 86.0,
-  "playoff_share_change": -0.0201,
+  "playoff_share_change": -0.0179,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -23219,7 +23455,8 @@
     0.0402
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -23305,7 +23542,8 @@
     0.079
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -23315,7 +23553,7 @@
   "age": 25.0,
   "mp": 1207.0,
   "playoff_mp": 163.0,
-  "playoff_share_change": 0.006,
+  "playoff_share_change": -0.0083,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -23423,7 +23661,8 @@
     0.0358
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -23509,7 +23748,8 @@
     0.0282
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -23595,7 +23835,8 @@
     0.022
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -23605,7 +23846,7 @@
   "age": 30.0,
   "mp": 1149.0,
   "playoff_mp": 134.0,
-  "playoff_share_change": 0.0205,
+  "playoff_share_change": -0.0243,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -23681,7 +23922,8 @@
     0.0692
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -23691,7 +23933,7 @@
   "age": 25.0,
   "mp": 1080.0,
   "playoff_mp": 334.0,
-  "playoff_share_change": 0.0182,
+  "playoff_share_change": -0.0365,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 33.0,
@@ -23799,7 +24041,8 @@
     0.0323
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -23809,7 +24052,7 @@
   "age": 20.0,
   "mp": 1246.0,
   "playoff_mp": 191.0,
-  "playoff_share_change": 0.049,
+  "playoff_share_change": 0.0226,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -23917,7 +24160,8 @@
     0.0389
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -23927,7 +24171,7 @@
   "age": 26.0,
   "mp": 1478.0,
   "playoff_mp": 89.0,
-  "playoff_share_change": -0.0162,
+  "playoff_share_change": -0.0725,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 28.0,
@@ -24003,7 +24247,8 @@
     0.0384
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -24089,7 +24334,8 @@
     0.0472
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -24099,7 +24345,7 @@
   "age": 28.0,
   "mp": 1171.0,
   "playoff_mp": 310.0,
-  "playoff_share_change": 0.0083,
+  "playoff_share_change": -0.0277,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 3.0,
@@ -24207,7 +24453,8 @@
     0.0436
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -24293,7 +24540,8 @@
     0.044
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -24303,7 +24551,7 @@
   "age": 23.0,
   "mp": 1277.0,
   "playoff_mp": 240.0,
-  "playoff_share_change": 0.0014,
+  "playoff_share_change": -0.0152,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -24411,7 +24659,8 @@
     0.0368
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -24497,7 +24746,8 @@
     0.0462
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -24583,7 +24833,8 @@
     0.0435
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -24593,7 +24844,7 @@
   "age": 22.0,
   "mp": 1067.0,
   "playoff_mp": 4.0,
-  "playoff_share_change": -0.0516,
+  "playoff_share_change": -0.0529,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 0.0,
@@ -24669,7 +24920,8 @@
     0.0306
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -24755,7 +25007,8 @@
     0.0465
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -24841,7 +25094,8 @@
     0.033
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -24927,7 +25181,8 @@
     0.044
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -24937,7 +25192,7 @@
   "age": 30.0,
   "mp": 1430.0,
   "playoff_mp": 296.0,
-  "playoff_share_change": -0.0193,
+  "playoff_share_change": -0.034,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -25045,7 +25300,8 @@
     0.0746
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -25055,7 +25311,7 @@
   "age": 31.0,
   "mp": 1154.0,
   "playoff_mp": 216.0,
-  "playoff_share_change": 0.0055,
+  "playoff_share_change": -0.0109,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 4.0,
@@ -25163,7 +25419,8 @@
     0.0242
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -25249,7 +25506,8 @@
     0.0495
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -25335,7 +25593,8 @@
     0.041
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -25421,7 +25680,8 @@
     0.0356
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -25507,7 +25767,8 @@
     0.0387
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -25517,7 +25778,7 @@
   "age": 23.0,
   "mp": 830.0,
   "playoff_mp": 156.0,
-  "playoff_share_change": 0.0904,
+  "playoff_share_change": 0.0161,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -25625,7 +25886,8 @@
     0.0447
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -25635,7 +25897,7 @@
   "age": 27.0,
   "mp": 1137.0,
   "playoff_mp": 350.0,
-  "playoff_share_change": 0.0386,
+  "playoff_share_change": -0.0036,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -25743,7 +26005,8 @@
     0.0416
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -25753,7 +26016,7 @@
   "age": 22.0,
   "mp": 1099.0,
   "playoff_mp": 0.0,
-  "playoff_share_change": -0.0149,
+  "playoff_share_change": null,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -25829,7 +26092,8 @@
     0.0286
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 1.0
+   "misfit_freq": 1.0,
+   "twin_stable": true
   }
  },
  {
@@ -25915,7 +26179,8 @@
     0.0348
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -25925,7 +26190,7 @@
   "age": 21.0,
   "mp": 748.0,
   "playoff_mp": 145.0,
-  "playoff_share_change": 0.083,
+  "playoff_share_change": 0.0169,
   "pos_listed": "PG",
   "pos_pbp": {
    "PG": 100.0,
@@ -26001,7 +26266,8 @@
     0.0221
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -26011,7 +26277,7 @@
   "age": 25.0,
   "mp": 1429.0,
   "playoff_mp": 99.0,
-  "playoff_share_change": -0.0135,
+  "playoff_share_change": -0.0184,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 5.0,
@@ -26087,7 +26353,8 @@
     0.0676
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -26097,7 +26364,7 @@
   "age": 23.0,
   "mp": 861.0,
   "playoff_mp": 18.0,
-  "playoff_share_change": -0.0307,
+  "playoff_share_change": -0.0254,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 1.0,
@@ -26173,7 +26440,8 @@
     0.0381
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -26183,7 +26451,7 @@
   "age": 21.0,
   "mp": 970.0,
   "playoff_mp": 0.0,
-  "playoff_share_change": -0.0165,
+  "playoff_share_change": null,
   "pos_listed": "PG",
   "pos_pbp": {
    "PG": 65.0,
@@ -26259,7 +26527,8 @@
     0.0469
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -26345,7 +26614,8 @@
     0.0369
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -26431,7 +26701,8 @@
     0.0346
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -26441,7 +26712,7 @@
   "age": 23.0,
   "mp": 1355.0,
   "playoff_mp": 34.0,
-  "playoff_share_change": -0.0332,
+  "playoff_share_change": -0.0452,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 0.0,
@@ -26517,7 +26788,8 @@
     0.0441
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -26527,7 +26799,7 @@
   "age": 32.0,
   "mp": 1231.0,
   "playoff_mp": 142.0,
-  "playoff_share_change": -0.0081,
+  "playoff_share_change": -0.0276,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -26603,7 +26875,8 @@
     0.0588
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -26689,7 +26962,8 @@
     0.0918
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -26699,7 +26973,7 @@
   "age": 28.0,
   "mp": 1008.0,
   "playoff_mp": 108.0,
-  "playoff_share_change": 0.039,
+  "playoff_share_change": 0.0188,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -26775,7 +27049,8 @@
     0.0654
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -26861,7 +27136,8 @@
     0.0342
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -26947,7 +27223,8 @@
     0.0596
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -26957,7 +27234,7 @@
   "age": 33.0,
   "mp": 819.0,
   "playoff_mp": 13.0,
-  "playoff_share_change": 0.0064,
+  "playoff_share_change": -0.0033,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 0.0,
@@ -27033,7 +27310,8 @@
     0.0623
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -27119,7 +27397,8 @@
     0.0398
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -27129,7 +27408,7 @@
   "age": 22.0,
   "mp": 977.0,
   "playoff_mp": 109.0,
-  "playoff_share_change": -0.0079,
+  "playoff_share_change": -0.0131,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 0.0,
@@ -27205,7 +27484,8 @@
     0.0239
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -27215,7 +27495,7 @@
   "age": 21.0,
   "mp": 1435.0,
   "playoff_mp": 26.0,
-  "playoff_share_change": -0.051,
+  "playoff_share_change": -0.0526,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 13.0,
@@ -27291,7 +27571,8 @@
     0.0615
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -27377,7 +27658,8 @@
     0.0347
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -27387,7 +27669,7 @@
   "age": 26.0,
   "mp": 972.0,
   "playoff_mp": 83.0,
-  "playoff_share_change": 0.0004,
+  "playoff_share_change": -0.0056,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -27463,7 +27745,8 @@
     0.0325
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -27473,7 +27756,7 @@
   "age": 25.0,
   "mp": 1004.0,
   "playoff_mp": 19.0,
-  "playoff_share_change": -0.0465,
+  "playoff_share_change": -0.0541,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -27549,7 +27832,8 @@
     0.0227
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -27559,7 +27843,7 @@
   "age": 30.0,
   "mp": 1007.0,
   "playoff_mp": 0.0,
-  "playoff_share_change": -0.0185,
+  "playoff_share_change": null,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -27635,7 +27919,8 @@
     0.029
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -27721,7 +28006,8 @@
     0.0508
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -27731,7 +28017,7 @@
   "age": 28.0,
   "mp": 732.0,
   "playoff_mp": 41.0,
-  "playoff_share_change": -0.0277,
+  "playoff_share_change": -0.0319,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -27807,7 +28093,8 @@
     0.0184
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -27893,7 +28180,8 @@
     0.0245
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -27979,7 +28267,8 @@
     0.0395
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -27989,7 +28278,7 @@
   "age": 21.0,
   "mp": 1212.0,
   "playoff_mp": 89.0,
-  "playoff_share_change": -0.0085,
+  "playoff_share_change": -0.0213,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -28065,7 +28354,8 @@
     0.0393
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -28075,7 +28365,7 @@
   "age": 23.0,
   "mp": 834.0,
   "playoff_mp": 0.0,
-  "playoff_share_change": -0.0267,
+  "playoff_share_change": null,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -28151,7 +28441,8 @@
     0.037
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -28161,7 +28452,7 @@
   "age": 31.0,
   "mp": 855.0,
   "playoff_mp": 72.0,
-  "playoff_share_change": -0.0233,
+  "playoff_share_change": -0.0363,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -28237,7 +28528,8 @@
     0.0418
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -28247,7 +28539,7 @@
   "age": 22.0,
   "mp": 719.0,
   "playoff_mp": 0.0,
-  "playoff_share_change": -0.0048,
+  "playoff_share_change": null,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 0.0,
@@ -28323,7 +28615,8 @@
     0.0319
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -28333,7 +28626,7 @@
   "age": 27.0,
   "mp": 1354.0,
   "playoff_mp": 104.0,
-  "playoff_share_change": 0.003,
+  "playoff_share_change": -0.0001,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 3.0,
@@ -28409,7 +28702,8 @@
     0.0455
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -28495,7 +28789,8 @@
     0.0298
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -28505,7 +28800,7 @@
   "age": 24.0,
   "mp": 1417.0,
   "playoff_mp": 145.0,
-  "playoff_share_change": 0.0297,
+  "playoff_share_change": 0.0084,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 0.0,
@@ -28581,7 +28876,8 @@
     0.0291
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -28667,7 +28963,8 @@
     0.0289
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -28677,7 +28974,7 @@
   "age": 31.0,
   "mp": 1020.0,
   "playoff_mp": 353.0,
-  "playoff_share_change": 0.0454,
+  "playoff_share_change": 0.0222,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 1.0,
@@ -28785,7 +29082,8 @@
     0.0361
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -28795,7 +29093,7 @@
   "age": 27.0,
   "mp": 522.0,
   "playoff_mp": 218.0,
-  "playoff_share_change": 0.1032,
+  "playoff_share_change": 0.0155,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -28903,7 +29201,8 @@
     0.056
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -28913,7 +29212,7 @@
   "age": 25.0,
   "mp": 864.0,
   "playoff_mp": 40.0,
-  "playoff_share_change": -0.0283,
+  "playoff_share_change": -0.0441,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -28989,7 +29288,8 @@
     0.04
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -28999,7 +29299,7 @@
   "age": 22.0,
   "mp": 1234.0,
   "playoff_mp": 96.0,
-  "playoff_share_change": -0.0257,
+  "playoff_share_change": -0.0324,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -29075,7 +29375,8 @@
     0.0422
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -29161,7 +29462,8 @@
     0.0339
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -29247,7 +29549,8 @@
     0.0559
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -29333,7 +29636,8 @@
     0.0446
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -29343,7 +29647,7 @@
   "age": 23.0,
   "mp": 1179.0,
   "playoff_mp": 50.0,
-  "playoff_share_change": -0.025,
+  "playoff_share_change": -0.0291,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -29419,7 +29723,8 @@
     0.048
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -29429,7 +29734,7 @@
   "age": 29.0,
   "mp": 1318.0,
   "playoff_mp": 407.0,
-  "playoff_share_change": 0.0259,
+  "playoff_share_change": 0.0011,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -29537,7 +29842,8 @@
     0.0513
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -29623,7 +29929,8 @@
     0.0352
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -29633,7 +29940,7 @@
   "age": 27.0,
   "mp": 1175.0,
   "playoff_mp": 251.0,
-  "playoff_share_change": -0.0047,
+  "playoff_share_change": -0.0235,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -29743,7 +30050,8 @@
     0.0863
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -29829,7 +30137,8 @@
     0.034
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -29839,7 +30148,7 @@
   "age": 30.0,
   "mp": 867.0,
   "playoff_mp": 17.0,
-  "playoff_share_change": -0.0208,
+  "playoff_share_change": -0.0615,
   "pos_listed": "PG",
   "pos_pbp": {
    "PG": 94.0,
@@ -29915,7 +30224,8 @@
     0.055
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -30001,7 +30311,8 @@
     0.0934
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -30087,7 +30398,8 @@
     0.0669
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -30173,7 +30485,8 @@
     0.0302
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -30183,7 +30496,7 @@
   "age": 21.0,
   "mp": 1072.0,
   "playoff_mp": 0.0,
-  "playoff_share_change": -0.0292,
+  "playoff_share_change": null,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 4.0,
@@ -30259,7 +30572,8 @@
     0.0391
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -30269,7 +30583,7 @@
   "age": 25.0,
   "mp": 1333.0,
   "playoff_mp": 25.0,
-  "playoff_share_change": -0.0466,
+  "playoff_share_change": -0.0766,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 2.0,
@@ -30345,7 +30659,8 @@
     0.0489
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -30431,7 +30746,8 @@
     0.0496
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -30517,7 +30833,8 @@
     0.0339
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -30603,7 +30920,8 @@
     0.0316
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -30613,7 +30931,7 @@
   "age": 23.0,
   "mp": 670.0,
   "playoff_mp": 0.0,
-  "playoff_share_change": -0.028,
+  "playoff_share_change": null,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 31.0,
@@ -30689,7 +31007,8 @@
     0.0226
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -30699,7 +31018,7 @@
   "age": 25.0,
   "mp": 973.0,
   "playoff_mp": 0.0,
-  "playoff_share_change": -0.0329,
+  "playoff_share_change": null,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 8.0,
@@ -30775,7 +31094,8 @@
     0.0194
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -30785,7 +31105,7 @@
   "age": 29.0,
   "mp": 781.0,
   "playoff_mp": 67.0,
-  "playoff_share_change": 0.0065,
+  "playoff_share_change": -0.0106,
   "pos_listed": "PG",
   "pos_pbp": {
    "PG": 100.0,
@@ -30861,7 +31181,8 @@
     0.0225
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -30871,7 +31192,7 @@
   "age": 22.0,
   "mp": 695.0,
   "playoff_mp": 3.0,
-  "playoff_share_change": -0.0333,
+  "playoff_share_change": -0.0402,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 0.0,
@@ -30947,7 +31268,8 @@
     0.0206
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -31033,7 +31355,8 @@
     0.029
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -31119,7 +31442,8 @@
     0.0377
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -31129,7 +31453,7 @@
   "age": 20.0,
   "mp": 818.0,
   "playoff_mp": 187.0,
-  "playoff_share_change": -0.0079,
+  "playoff_share_change": -0.0126,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -31237,7 +31561,8 @@
     0.0272
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -31323,7 +31648,8 @@
     0.0388
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -31409,7 +31735,8 @@
     0.0837
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -31495,7 +31822,8 @@
     0.0373
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -31505,7 +31833,7 @@
   "age": 26.0,
   "mp": 777.0,
   "playoff_mp": 0.0,
-  "playoff_share_change": -0.0041,
+  "playoff_share_change": null,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 7.0,
@@ -31581,7 +31909,8 @@
     0.0332
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -31591,7 +31920,7 @@
   "age": 19.0,
   "mp": 1084.0,
   "playoff_mp": 19.0,
-  "playoff_share_change": -0.0436,
+  "playoff_share_change": -0.0412,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 2.0,
@@ -31667,7 +31996,8 @@
     0.0402
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -31677,7 +32007,7 @@
   "age": 25.0,
   "mp": 1148.0,
   "playoff_mp": 21.0,
-  "playoff_share_change": -0.0533,
+  "playoff_share_change": -0.0622,
   "pos_listed": "PG",
   "pos_pbp": {
    "PG": 86.0,
@@ -31753,7 +32083,8 @@
     0.0504
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.5
+   "misfit_freq": 0.5,
+   "twin_stable": true
   }
  },
  {
@@ -31763,7 +32094,7 @@
   "age": 26.0,
   "mp": 1128.0,
   "playoff_mp": 75.0,
-  "playoff_share_change": -0.0263,
+  "playoff_share_change": -0.0277,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -31839,7 +32170,8 @@
     0.0504
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -31849,7 +32181,7 @@
   "age": 31.0,
   "mp": 926.0,
   "playoff_mp": 22.0,
-  "playoff_share_change": -0.0315,
+  "playoff_share_change": -0.0285,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -31925,7 +32257,8 @@
     0.0269
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -32011,7 +32344,8 @@
     0.0494
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -32021,7 +32355,7 @@
   "age": 23.0,
   "mp": 762.0,
   "playoff_mp": 29.0,
-  "playoff_share_change": -0.0273,
+  "playoff_share_change": -0.0295,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -32097,7 +32431,8 @@
     0.0319
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -32107,7 +32442,7 @@
   "age": 28.0,
   "mp": 701.0,
   "playoff_mp": 0.0,
-  "playoff_share_change": -0.0129,
+  "playoff_share_change": null,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -32183,7 +32518,8 @@
     0.0247
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -32193,7 +32529,7 @@
   "age": 24.0,
   "mp": 888.0,
   "playoff_mp": 57.0,
-  "playoff_share_change": -0.0251,
+  "playoff_share_change": -0.0148,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 11.0,
@@ -32269,7 +32605,8 @@
     0.0422
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -32279,7 +32616,7 @@
   "age": 24.0,
   "mp": 727.0,
   "playoff_mp": 53.0,
-  "playoff_share_change": -0.0252,
+  "playoff_share_change": -0.0213,
   "pos_listed": "PG",
   "pos_pbp": {
    "PG": 80.0,
@@ -32355,7 +32692,8 @@
     0.0493
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -32365,7 +32703,7 @@
   "age": 21.0,
   "mp": 545.0,
   "playoff_mp": 13.0,
-  "playoff_share_change": -0.0246,
+  "playoff_share_change": -0.0319,
   "pos_listed": "PG",
   "pos_pbp": {
    "PG": 49.0,
@@ -32441,7 +32779,8 @@
     0.0231
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -32451,7 +32790,7 @@
   "age": 27.0,
   "mp": 384.0,
   "playoff_mp": 0.0,
-  "playoff_share_change": -0.0142,
+  "playoff_share_change": null,
   "pos_listed": "PG",
   "pos_pbp": {
    "PG": 100.0,
@@ -32527,7 +32866,8 @@
     0.0316
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -32537,7 +32877,7 @@
   "age": 32.0,
   "mp": 853.0,
   "playoff_mp": 61.0,
-  "playoff_share_change": 0.0028,
+  "playoff_share_change": -0.0478,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 0.0,
@@ -32613,7 +32953,8 @@
     0.0376
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -32699,7 +33040,8 @@
     0.0541
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -32709,7 +33051,7 @@
   "age": 26.0,
   "mp": 644.0,
   "playoff_mp": 10.0,
-  "playoff_share_change": -0.0222,
+  "playoff_share_change": -0.0479,
   "pos_listed": "PG",
   "pos_pbp": {
    "PG": 100.0,
@@ -32785,7 +33127,8 @@
     0.0233
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -32871,7 +33214,8 @@
     0.0245
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -32881,7 +33225,7 @@
   "age": 26.0,
   "mp": 807.0,
   "playoff_mp": 4.0,
-  "playoff_share_change": -0.0377,
+  "playoff_share_change": -0.0589,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 60.0,
@@ -32957,7 +33301,8 @@
     0.0566
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -33043,7 +33388,8 @@
     0.0309
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -33129,7 +33475,8 @@
     0.0393
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -33215,7 +33562,8 @@
     0.0542
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -33301,7 +33649,8 @@
     0.041
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -33387,7 +33736,8 @@
     0.0521
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -33473,7 +33823,8 @@
     0.0577
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -33483,7 +33834,7 @@
   "age": 28.0,
   "mp": 427.0,
   "playoff_mp": 13.0,
-  "playoff_share_change": -0.0138,
+  "playoff_share_change": -0.0223,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -33559,7 +33910,8 @@
     0.0519
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -33569,7 +33921,7 @@
   "age": 20.0,
   "mp": 634.0,
   "playoff_mp": 43.0,
-  "playoff_share_change": -0.0227,
+  "playoff_share_change": -0.0084,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 0.0,
@@ -33645,7 +33997,8 @@
     0.046
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -33655,7 +34008,7 @@
   "age": 38.0,
   "mp": 991.0,
   "playoff_mp": 168.0,
-  "playoff_share_change": 0.0082,
+  "playoff_share_change": -0.0181,
   "pos_listed": "PG",
   "pos_pbp": {
    "PG": 100.0,
@@ -33763,7 +34116,8 @@
     0.0388
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -33773,7 +34127,7 @@
   "age": 26.0,
   "mp": 488.0,
   "playoff_mp": 0.0,
-  "playoff_share_change": -0.0246,
+  "playoff_share_change": null,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -33849,7 +34203,8 @@
     0.0343
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -33859,7 +34214,7 @@
   "age": 25.0,
   "mp": 538.0,
   "playoff_mp": 203.0,
-  "playoff_share_change": 0.0433,
+  "playoff_share_change": 0.0418,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 1.0,
@@ -33967,7 +34322,8 @@
     0.0324
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -34053,7 +34409,8 @@
     0.0486
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -34063,7 +34420,7 @@
   "age": 20.0,
   "mp": 587.0,
   "playoff_mp": 3.0,
-  "playoff_share_change": -0.0278,
+  "playoff_share_change": -0.0328,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 35.0,
@@ -34139,7 +34496,8 @@
     0.031
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -34225,7 +34583,8 @@
     0.052
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -34235,7 +34594,7 @@
   "age": 21.0,
   "mp": 673.0,
   "playoff_mp": 18.0,
-  "playoff_share_change": -0.0153,
+  "playoff_share_change": -0.0322,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -34311,7 +34670,8 @@
     0.0293
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -34397,7 +34757,8 @@
     0.0344
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -34483,7 +34844,8 @@
     0.0542
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -34493,7 +34855,7 @@
   "age": 29.0,
   "mp": 879.0,
   "playoff_mp": 93.0,
-  "playoff_share_change": -0.0284,
+  "playoff_share_change": 0.009,
   "pos_listed": "PG",
   "pos_pbp": {
    "PG": 99.0,
@@ -34569,7 +34931,8 @@
     0.0322
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -34579,7 +34942,7 @@
   "age": 24.0,
   "mp": 553.0,
   "playoff_mp": 18.0,
-  "playoff_share_change": -0.0206,
+  "playoff_share_change": -0.0277,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 0.0,
@@ -34655,7 +35018,8 @@
     0.0164
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -34741,7 +35105,8 @@
     0.0396
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -34751,7 +35116,7 @@
   "age": 20.0,
   "mp": 500.0,
   "playoff_mp": 11.0,
-  "playoff_share_change": -0.0177,
+  "playoff_share_change": -0.0244,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -34827,7 +35192,8 @@
     0.0324
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -34837,7 +35203,7 @@
   "age": 21.0,
   "mp": 757.0,
   "playoff_mp": 3.0,
-  "playoff_share_change": -0.0364,
+  "playoff_share_change": -0.041,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 0.0,
@@ -34913,7 +35279,8 @@
     0.0409
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -34999,7 +35366,8 @@
     0.028
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -35085,7 +35453,8 @@
     0.0315
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -35171,7 +35540,8 @@
     0.036
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -35181,7 +35551,7 @@
   "age": 26.0,
   "mp": 486.0,
   "playoff_mp": 123.0,
-  "playoff_share_change": 0.0487,
+  "playoff_share_change": 0.0226,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 0.0,
@@ -35257,7 +35627,8 @@
     0.0287
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -35343,7 +35714,8 @@
     0.0375
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -35429,7 +35801,8 @@
     0.0253
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -35439,7 +35812,7 @@
   "age": 29.0,
   "mp": 979.0,
   "playoff_mp": 30.0,
-  "playoff_share_change": 0.0162,
+  "playoff_share_change": 0.0068,
   "pos_listed": "PG",
   "pos_pbp": {
    "PG": 100.0,
@@ -35515,7 +35888,8 @@
     0.0629
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -35525,7 +35899,7 @@
   "age": 25.0,
   "mp": 457.0,
   "playoff_mp": 61.0,
-  "playoff_share_change": -0.0051,
+  "playoff_share_change": -0.0077,
   "pos_listed": "PG",
   "pos_pbp": {
    "PG": 100.0,
@@ -35601,7 +35975,8 @@
     0.0371
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -35687,7 +36062,8 @@
     0.0184
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -35697,7 +36073,7 @@
   "age": 24.0,
   "mp": 517.0,
   "playoff_mp": 71.0,
-  "playoff_share_change": 0.0155,
+  "playoff_share_change": 0.014,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 0.0,
@@ -35773,7 +36149,8 @@
     0.0378
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -35859,7 +36236,8 @@
     0.0581
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -35869,7 +36247,7 @@
   "age": 25.0,
   "mp": 626.0,
   "playoff_mp": 19.0,
-  "playoff_share_change": -0.0182,
+  "playoff_share_change": -0.0106,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -35945,7 +36323,8 @@
     0.0182
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -36031,7 +36410,8 @@
     0.0251
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -36041,7 +36421,7 @@
   "age": 32.0,
   "mp": 730.0,
   "playoff_mp": 0.0,
-  "playoff_share_change": -0.0367,
+  "playoff_share_change": null,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -36117,7 +36497,8 @@
     0.0558
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -36127,7 +36508,7 @@
   "age": 26.0,
   "mp": 536.0,
   "playoff_mp": 15.0,
-  "playoff_share_change": -0.0167,
+  "playoff_share_change": -0.0213,
   "pos_listed": "PG",
   "pos_pbp": {
    "PG": 96.0,
@@ -36203,7 +36584,8 @@
     0.0356
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -36213,7 +36595,7 @@
   "age": 21.0,
   "mp": 375.0,
   "playoff_mp": 18.0,
-  "playoff_share_change": -0.0116,
+  "playoff_share_change": -0.0396,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 81.0,
@@ -36289,7 +36671,8 @@
     0.0214
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -36299,7 +36682,7 @@
   "age": 25.0,
   "mp": 496.0,
   "playoff_mp": 4.0,
-  "playoff_share_change": -0.002,
+  "playoff_share_change": -0.0153,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -36375,7 +36758,8 @@
     0.0316
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -36461,7 +36845,8 @@
     0.0364
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -36547,7 +36932,8 @@
     0.0226
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -36633,7 +37019,8 @@
     0.0273
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -36643,7 +37030,7 @@
   "age": 23.0,
   "mp": 551.0,
   "playoff_mp": 39.0,
-  "playoff_share_change": 0.006,
+  "playoff_share_change": -0.0286,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 7.0,
@@ -36719,7 +37106,8 @@
     0.0314
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -36729,7 +37117,7 @@
   "age": 28.0,
   "mp": 480.0,
   "playoff_mp": 53.0,
-  "playoff_share_change": 0.0199,
+  "playoff_share_change": -0.0115,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 12.0,
@@ -36805,7 +37193,8 @@
     0.0297
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -36891,7 +37280,8 @@
     0.0351
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -36977,7 +37367,8 @@
     0.0253
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -37063,7 +37454,8 @@
     0.0516
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -37149,7 +37541,8 @@
     0.0349
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -37235,7 +37628,8 @@
     0.0416
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -37321,7 +37715,8 @@
     0.0405
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -37331,7 +37726,7 @@
   "age": 31.0,
   "mp": 374.0,
   "playoff_mp": 0.0,
-  "playoff_share_change": -0.0188,
+  "playoff_share_change": null,
   "pos_listed": "PG",
   "pos_pbp": {
    "PG": 95.0,
@@ -37407,7 +37802,8 @@
     0.0368
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -37493,7 +37889,8 @@
     0.0605
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -37503,7 +37900,7 @@
   "age": 28.0,
   "mp": 450.0,
   "playoff_mp": 41.0,
-  "playoff_share_change": 0.0268,
+  "playoff_share_change": -0.0045,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -37579,7 +37976,8 @@
     0.0288
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -37589,7 +37987,7 @@
   "age": 28.0,
   "mp": 728.0,
   "playoff_mp": 0.0,
-  "playoff_share_change": -0.0369,
+  "playoff_share_change": null,
   "pos_listed": "PG",
   "pos_pbp": {
    "PG": 43.0,
@@ -37665,7 +38063,8 @@
     0.0644
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -37751,7 +38150,8 @@
     0.0335
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -37761,7 +38161,7 @@
   "age": 22.0,
   "mp": 469.0,
   "playoff_mp": 26.0,
-  "playoff_share_change": -0.0181,
+  "playoff_share_change": -0.0154,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -37837,7 +38237,8 @@
     0.0209
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -37847,7 +38248,7 @@
   "age": 19.0,
   "mp": 314.0,
   "playoff_mp": 23.0,
-  "playoff_share_change": -0.0079,
+  "playoff_share_change": -0.0135,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -37923,7 +38324,8 @@
     0.0356
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -38009,7 +38411,8 @@
     0.0263
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -38095,7 +38498,8 @@
     0.037
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -38105,7 +38509,7 @@
   "age": 28.0,
   "mp": 490.0,
   "playoff_mp": 6.0,
-  "playoff_share_change": -0.0051,
+  "playoff_share_change": -0.0523,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 1.0,
@@ -38181,7 +38585,8 @@
     0.032
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -38191,7 +38596,7 @@
   "age": 22.0,
   "mp": 361.0,
   "playoff_mp": 5.0,
-  "playoff_share_change": -0.0141,
+  "playoff_share_change": -0.0433,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 47.0,
@@ -38267,7 +38672,8 @@
     0.0289
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -38353,7 +38759,8 @@
     0.0255
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -38363,7 +38770,7 @@
   "age": 22.0,
   "mp": 428.0,
   "playoff_mp": 25.0,
-  "playoff_share_change": 0.0039,
+  "playoff_share_change": -0.0093,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 0.0,
@@ -38439,7 +38846,8 @@
     0.0287
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -38525,7 +38933,8 @@
     0.0316
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -38535,7 +38944,7 @@
   "age": 19.0,
   "mp": 411.0,
   "playoff_mp": 45.0,
-  "playoff_share_change": 0.0261,
+  "playoff_share_change": 0.0096,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -38611,7 +39020,8 @@
     0.0411
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -38621,7 +39031,7 @@
   "age": 28.0,
   "mp": 521.0,
   "playoff_mp": 0.0,
-  "playoff_share_change": -0.0263,
+  "playoff_share_change": null,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -38697,7 +39107,8 @@
     0.0506
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -38707,7 +39118,7 @@
   "age": 34.0,
   "mp": 360.0,
   "playoff_mp": 35.0,
-  "playoff_share_change": -0.012,
+  "playoff_share_change": -0.0195,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -38783,7 +39194,8 @@
     0.0388
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -38869,7 +39281,8 @@
     0.0318
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -38879,7 +39292,7 @@
   "age": 33.0,
   "mp": 449.0,
   "playoff_mp": 5.0,
-  "playoff_share_change": -0.0216,
+  "playoff_share_change": -0.043,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -38955,7 +39368,8 @@
     0.0296
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -39041,7 +39455,8 @@
     0.0232
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -39051,7 +39466,7 @@
   "age": 30.0,
   "mp": 405.0,
   "playoff_mp": 30.0,
-  "playoff_share_change": 0.0001,
+  "playoff_share_change": -0.0117,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 1.0,
@@ -39127,7 +39542,8 @@
     0.0281
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -39213,7 +39629,8 @@
     0.0425
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -39299,7 +39716,8 @@
     0.0265
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -39385,7 +39803,8 @@
     0.0323
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -39395,7 +39814,7 @@
   "age": 32.0,
   "mp": 620.0,
   "playoff_mp": 49.0,
-  "playoff_share_change": 0.0023,
+  "playoff_share_change": -0.0188,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -39471,7 +39890,8 @@
     0.034
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -39481,7 +39901,7 @@
   "age": 25.0,
   "mp": 318.0,
   "playoff_mp": 25.0,
-  "playoff_share_change": -0.0012,
+  "playoff_share_change": -0.0283,
   "pos_listed": "SF",
   "pos_pbp": {
    "PG": 0.0,
@@ -39557,7 +39977,8 @@
     0.0218
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -39567,7 +39988,7 @@
   "age": 21.0,
   "mp": 375.0,
   "playoff_mp": 42.0,
-  "playoff_share_change": -0.0017,
+  "playoff_share_change": -0.0153,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 59.0,
@@ -39643,7 +40064,8 @@
     0.0182
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -39729,7 +40151,8 @@
     0.0371
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -39739,7 +40162,7 @@
   "age": 23.0,
   "mp": 498.0,
   "playoff_mp": 76.0,
-  "playoff_share_change": -0.0086,
+  "playoff_share_change": -0.0068,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -39815,7 +40238,8 @@
     0.0291
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -39901,7 +40325,8 @@
     0.0395
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -39987,7 +40412,8 @@
     0.0398
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -40073,7 +40499,8 @@
     0.048
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -40083,7 +40510,7 @@
   "age": 20.0,
   "mp": 300.0,
   "playoff_mp": 5.0,
-  "playoff_share_change": -0.011,
+  "playoff_share_change": -0.0239,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -40159,7 +40586,8 @@
     0.0273
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -40245,7 +40673,8 @@
     0.0201
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -40331,7 +40760,8 @@
     0.0247
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -40341,7 +40771,7 @@
   "age": 34.0,
   "mp": 461.0,
   "playoff_mp": 14.0,
-  "playoff_share_change": -0.0176,
+  "playoff_share_change": -0.0252,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -40417,7 +40847,8 @@
     0.0365
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -40427,7 +40858,7 @@
   "age": 25.0,
   "mp": 357.0,
   "playoff_mp": 0.0,
-  "playoff_share_change": -0.0003,
+  "playoff_share_change": null,
   "pos_listed": "C",
   "pos_pbp": {
    "PG": 0.0,
@@ -40503,7 +40934,8 @@
     0.0247
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -40513,7 +40945,7 @@
   "age": 23.0,
   "mp": 348.0,
   "playoff_mp": 0.0,
-  "playoff_share_change": -0.0175,
+  "playoff_share_change": null,
   "pos_listed": "SG",
   "pos_pbp": {
    "PG": 0.0,
@@ -40589,7 +41021,8 @@
     0.0321
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -40599,7 +41032,7 @@
   "age": 27.0,
   "mp": 347.0,
   "playoff_mp": 0.0,
-  "playoff_share_change": -0.0176,
+  "playoff_share_change": null,
   "pos_listed": "PF",
   "pos_pbp": {
    "PG": 0.0,
@@ -40675,7 +41108,8 @@
     0.0286
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  },
  {
@@ -40761,7 +41195,8 @@
     0.0471
    ],
    "twin_freq": 1.0,
-   "misfit_freq": 0.0
+   "misfit_freq": 0.0,
+   "twin_stable": true
   }
  }
 ]

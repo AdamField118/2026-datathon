@@ -380,6 +380,7 @@ def orient(fit: Fit, Z, keys):
 
 
 K_TOLERANCE = 0.02   # choose the smallest k within 2% of the best held-out error
+STABLE_FREQ = 0.6    # a twin / misfit counts as stable if it reappears in >= 60% of the refits
 
 # Hand-written names for the default embedding (DEFAULT_GROUPS, auto k = 8), (negative end, positive end).
 # Only attached when that configuration is used; features.json also lists each axis's extreme
@@ -396,7 +397,7 @@ AXIS_NAMES = [
 ]
 
 
-def choose_k(X, M, N, kmax=8, frac=0.1, seed=0, steps=1500, masks=3):
+def choose_k(X, M, N, kmax=12, frac=0.1, seed=0, steps=1500, masks=3):
     """Held-out reconstruction error (weighted, standardised) for k = 1..kmax, averaged
     over several random hide-masks so the choice doesn't hinge on one draw."""
     hides = [M & (np.random.default_rng(seed + m).random(M.shape) < frac) for m in range(masks)]
@@ -525,18 +526,47 @@ def corr_with_p(x, y, n_perm=5000, seed=0):
     return r_, float((1 + (null >= abs(r_)).sum()) / (n_perm + 1))
 
 
-def playoff_rotation(Z, pid_to_i, all_reg, po_tot, n_perm=5000, seed=0):
+def holm(ps):
+    """Holm-Bonferroni adjusted p-values for one family of tests (e.g. the same test on all k axes)."""
+    ps = np.asarray(ps, float)
+    order = np.argsort(ps)
+    adj = np.empty(len(ps))
+    running = 0.0
+    for rank, i in enumerate(order):
+        running = max(running, min(1.0, (len(ps) - rank) * ps[i]))
+        adj[i] = running
+    return adj
+
+
+def add_holm(rows, key="p"):
+    """Add "p_holm" to a list of per-axis result dicts, in place."""
+    for row, a in zip(rows, holm([row[key] for row in rows])):
+        row["p_holm"] = float(a)
+    return rows
+
+
+def playoff_rotation(Z, pid_to_i, all_reg, po_tot, per_game=True, n_perm=5000, seed=0):
     """Which styles gain playoff minutes? For every embedded player on a playoff team:
-    delta = playoff share of team minutes - regular-season share (both shares over the
-    whole roster). Partial correlation of delta with each axis, controlling for
-    regular-season share (so "stars play more" can't explain it), with a permutation p-value."""
+    delta = playoff share of team minutes - regular-season share. Partial correlation of
+    delta with each axis, controlling for regular-season share (so "stars play more" can't
+    explain it), with a permutation p-value.
+    per_game=True (default): shares are minutes per game *played* / 240, and only players
+    who appeared in the playoffs count, so missed games (injuries, returns) don't look like
+    coaching decisions. per_game=False: shares of season-total team minutes (old version)."""
     rows = []
     for ab in po_tot["Team"].dropna().unique():
-        rs = all_reg[all_reg["t:Team"] == ab].groupby("pid")["t:MP"].sum()
-        po = po_tot[po_tot["Team"] == ab].groupby("pid")["MP"].sum()
+        rs = all_reg[all_reg["t:Team"] == ab].groupby("pid")[["t:MP", "t:G"]].sum()
+        po = po_tot[po_tot["Team"] == ab].groupby("pid")[["MP", "G"]].sum()
         for p in rs.index:
-            if p in pid_to_i:
-                rows.append((pid_to_i[p], rs[p] / rs.sum(), po.get(p, 0.0) / po.sum()))
+            if p not in pid_to_i:
+                continue
+            if per_game:
+                if p in po.index and po.loc[p, "G"] > 0:
+                    rows.append((pid_to_i[p], rs.loc[p, "t:MP"] / rs.loc[p, "t:G"] / 240,
+                                 po.loc[p, "MP"] / po.loc[p, "G"] / 240))
+            else:
+                rows.append((pid_to_i[p], rs.loc[p, "t:MP"] / rs["t:MP"].sum(),
+                             (po.loc[p, "MP"] if p in po.index else 0.0) / po["MP"].sum()))
     idx = np.array([i for i, _, _ in rows])
     rs_share = np.array([a for _, a, _ in rows])
     delta = np.array([b for _, _, b in rows]) - rs_share
@@ -744,6 +774,18 @@ def main(argv=None):
     # display field: defence score ranked only among players with the same primary position
     primary_pos = pos_pct.argmax(1)
     def_pct_pos = percentile_within(def_score, primary_pos)
+    # sensitivity: does the defence score also reward playmaking? take the position, assist
+    # and usage directions out of Z (one after another) and redo the held-out ranking
+    creation = {}
+    for key in ["AST%", "USG%"]:
+        f = next(f for f in FEATURES if f.key == key)
+        v = pd.to_numeric(f.fn(season)[0], errors="coerce").to_numpy(float)
+        creation[key] = np.where(np.isnan(v), np.nanmean(v), v)
+    Z_pcc = Z_pc
+    for v in creation.values():
+        Z_pcc = remove_direction(Z_pcc, v)
+    def_pcc_res, def_pcc_score, _ = analyze_all_defense(Z_pcc, is_def, dpoy)
+    def_pcc_pct = percentile_within(def_pcc_score, primary_pos)
     is_nba = np.array([a["all_nba"] is not None for a in awards])
     nba_idx = np.where(is_nba)[0]
     pool = np.where(mp >= mp[nba_idx].min())[0]
@@ -870,12 +912,46 @@ def main(argv=None):
                       for t in team_json if "playoff_centroid" in t])
     all_reg = st[~st["t:Team"].astype(str).str.match(r"\dTM")]   # every player, for roster totals
     rot_res, rot_idx, rot_delta = playoff_rotation(Z, pid_to_i, all_reg, po_tot, seed=args.seed)
+    rot_tot_res, _, _ = playoff_rotation(Z, pid_to_i, all_reg, po_tot, per_game=False, seed=args.seed)
     po_share_delta = np.full(n, np.nan)
     po_share_delta[rot_idx] = rot_delta
     pstyle_res, pstyle = playoff_style(fit, season, pids, feats, seed=args.seed)
+    # playoff shift of each team = who plays (playoff minutes on regular-season z, i.e.
+    # playoff_centroid - centroid) + how they play (playoff-minute-weighted change in each
+    # player's own z, like-for-like features; players without a playoff placement count as 0)
+    decomp = []
+    for t in team_json:
+        if "playoff_centroid" not in t:
+            continue
+        pr = po_tot[(po_tot["Team"] == t["team"]) & po_tot["pid"].isin(pids)]
+        pw = pr["MP"].to_numpy(float) / pr["MP"].sum()
+        who = np.array(t["playoff_centroid"]) - np.array(t["centroid"])
+        how = np.zeros(k)
+        cov = 0.0
+        for p, w_ in zip(pr["pid"], pw):
+            if p in pstyle:
+                how += w_ * (pstyle[p][0] - pstyle[p][2])
+                cov += w_
+        t["playoff_shift"] = {"who_plays": r(who), "how_they_play": r(how), "total": r(who + how),
+                              "coverage": r(cov, 3)}
+        decomp.append((who, how))
+    who_all = np.array([a for a, _ in decomp])
+    how_all = np.array([b for _, b in decomp])
+    shift_decomp = {"n_teams": len(decomp),
+                    "mean_who_plays": r(who_all.mean(0)), "mean_how_they_play": r(how_all.mean(0)),
+                    "teams_up_who_plays": [int((who_all[:, j] > 0).sum()) for j in range(k)],
+                    "teams_up_how_they_play": [int((how_all[:, j] > 0).sum()) for j in range(k)],
+                    "median_coverage": r(float(np.median([t["playoff_shift"]["coverage"] for t in team_json
+                                                          if "playoff_shift" in t])), 3)}
     age = season["t:Age"].to_numpy(float)
     is_rookie = np.array([a["all_rookie"] is not None for a in awards])
     age_res = analyze_age(Z, age, is_rookie, n_perm=2000, seed=args.seed)
+    # multiple testing: each per-axis test is run k times, so adjust within each family (Holm)
+    for fam in [rot_res["axes"], rot_tot_res["axes"], pstyle_res["axes"],
+                age_res["age_corr"], age_res["rookie_mean_diff"]]:
+        add_holm(fam)
+    team_style_p_holm = holm([p for _, p in team_style])
+    ball_security_p_holm = dict(zip(ball_security, holm([p for _, p in ball_security.values()])))
 
     # JSON
     out = Path(args.out)
@@ -911,7 +987,8 @@ def main(argv=None):
             players[-1]["playoff_style"] = {"z": r(zp), "z_sd": r(zp_sd), "regular_z_same_features": r(zr)}
         if stab:
             players[-1]["stability"] = {"z_sd": r(stab["z_sd"][i]), "twin_freq": r(stab["twin_freq"][i], 2),
-                                        "misfit_freq": r(stab["misfit_freq"][i], 2)}
+                                        "misfit_freq": r(stab["misfit_freq"][i], 2),
+                                        "twin_stable": bool(stab["twin_freq"][i] >= STABLE_FREQ)}
     feature_json = [{"key": f.key, "label": f.label, "group": f.group, "loadings": r(fit.W[j])}
                     for j, f in enumerate(feats)]
     named = (not args.give and not args.hold and set(args.groups) == set(DEFAULT_GROUPS)
@@ -938,7 +1015,8 @@ def main(argv=None):
         "positions": {**pos_res, **({"loo_r2_resampled": r(stab["pos_r2"])} if stab else {})},
         "misfits": [{"pid": pids[i], "name": names[i], "listed": listed[i], "pbp": r(pos_num[i], 2),
                      "latent": r(pos_rec[i], 2),
-                     **({"freq": r(stab["misfit_freq"][i], 2), "gap_sd": r(stab["gap_sd"][i], 2)} if stab else {})}
+                     **({"freq": r(stab["misfit_freq"][i], 2), "gap_sd": r(stab["gap_sd"][i], 2),
+                         "stable": bool(stab["misfit_freq"][i] >= STABLE_FREQ)} if stab else {})}
                     for i in misfit_ids],
         "all_defense": {**def_res,
                         "heldout_ranks": {pids[i]: v for i, v in def_res["heldout_ranks"].items()},
@@ -952,13 +1030,25 @@ def main(argv=None):
                         "within_position": {
                             "honoree_pct": {pids[i]: r(def_pct_pos[i], 1) for i in np.where(is_def)[0]},
                             "median_honoree_pct": r(float(np.median(def_pct_pos[is_def])), 1),
-                            "corr_score_with_position": r(float(np.corrcoef(def_score, pos_num)[0, 1]))},
+                            "corr_score_with_position": r(float(np.corrcoef(def_score, pos_num)[0, 1])),
+                            "corr_score_with_creation": {kk: r(float(np.corrcoef(def_score, v)[0, 1]))
+                                                         for kk, v in creation.items()}},
+                        "position_and_creation_controlled": {
+                            **def_pcc_res, "removed": ["position", *creation],
+                            "heldout_ranks": {pids[i]: v for i, v in def_pcc_res["heldout_ranks"].items()},
+                            "latent_top15": [pids[i] for i in np.argsort(-def_pcc_score)[:15]],
+                            "honoree_pct_in_position": {pids[i]: r(def_pcc_pct[i], 1) for i in np.where(is_def)[0]},
+                            "median_honoree_pct_in_position": r(float(np.median(def_pcc_pct[is_def])), 1),
+                            "corr_with_creation_after": {kk: r(float(np.corrcoef(def_pcc_score, v)[0, 1]))
+                                                         for kk, v in creation.items()}},
                         "defense_only_embedding": {
                             **def_only_res, "k": kd, "features": [f.key for f in dfeats],
                             "heldout_ranks": {pids[i]: v for i, v in def_only_res["heldout_ranks"].items()},
                             "latent_top15": [pids[i] for i in np.argsort(-def_only_score)[:15]]}},
         "all_nba": {**nba_res, "star_twins": {pids[i]: pids[j] for i, j in star_twin.items()},
-                    **({"star_twin_freq": {pids[i]: r(f, 2) for i, f in stab["star_twin_freq"].items()}}
+                    **({"star_twin_freq": {pids[i]: r(f, 2) for i, f in stab["star_twin_freq"].items()},
+                        "star_twin_stable": {pids[i]: bool(f >= STABLE_FREQ) for i, f in stab["star_twin_freq"].items()},
+                        "stable_threshold": STABLE_FREQ}
                        if stab else {})},
         "masked_recovery": mask_res,
         "impact": {
@@ -974,9 +1064,12 @@ def main(argv=None):
         "trades": trade_res,
         "teams": {"centroid_vs_nrtg_corr": r(team_style_corr),
                   "centroid_vs_nrtg_p": r([p for _, p in team_style]),
-                  "ball_security_vs_nrtg": {kk: {"r": r(c), "p": r(p)} for kk, (c, p) in ball_security.items()},
+                  "centroid_vs_nrtg_p_holm": r(team_style_p_holm),
+                  "ball_security_vs_nrtg": {kk: {"r": r(c), "p": r(p), "p_holm": r(ball_security_p_holm[kk])}
+                                            for kk, (c, p) in ball_security.items()},
                   "mean_playoff_shift": r(shift.mean(0)) if len(shift) else None,
-                  "playoff_shift_teams_up": [int((shift[:, j] > 0).sum()) for j in range(k)] if len(shift) else None},
+                  "playoff_shift_teams_up": [int((shift[:, j] > 0).sum()) for j in range(k)] if len(shift) else None,
+                  "playoff_shift_decomposition": shift_decomp},
         "age_rookies": {"age_corr": [{kk: r(v) for kk, v in a.items()} for a in age_res["age_corr"]],
                         "all_rookie_mean_diff": [{kk: r(v) for kk, v in a.items()}
                                                  for a in age_res["rookie_mean_diff"]],
@@ -984,7 +1077,10 @@ def main(argv=None):
         "playoff_style": {**pstyle_res,
                           "restricted_vs_full_axis_corr": r(pstyle_res["restricted_vs_full_axis_corr"]),
                           "axes": [{kk: r(v) for kk, v in a.items()} for a in pstyle_res["axes"]]},
-        "playoff_rotation": {**rot_res, "axes": [{kk: r(v) for kk, v in a.items()} for a in rot_res["axes"]]},
+        "playoff_rotation": {**rot_res, "basis": "minutes per game played / 240 (players who appeared in the playoffs)",
+                             "axes": [{kk: r(v) for kk, v in a.items()} for a in rot_res["axes"]],
+                             "season_totals_version": {**rot_tot_res, "axes": [{kk: r(v) for kk, v in a.items()}
+                                                                               for a in rot_tot_res["axes"]]}},
     }
     manifest = {"season": "2025-26", "generated_at": time.strftime("%Y-%m-%d %H:%M:%S"),
                 "k": k, "k_errors": {str(kk): r(e) for kk, e in kerr.items()},
@@ -1026,6 +1122,11 @@ def main(argv=None):
           f"honorees' percentile among same position: "
           + ", ".join(f"{names[i]} {def_pct_pos[i]:.0f}" for i in np.where(is_def)[0])
           + f" (median {np.median(def_pct_pos[is_def]):.0f})")
+    print(f"  defence score vs creation: " + ", ".join(f"{kk} r = {np.corrcoef(def_score, v)[0, 1]:+.2f}"
+                                                      for kk, v in creation.items())
+          + f"; position+creation controlled: median held-out rank {def_pcc_res['median_heldout_rank']:.0f}, "
+          f"DPOY spearman {def_pcc_res['dpoy_vote_spearman']:.2f}, honorees' median percentile in position "
+          f"{np.median(def_pcc_pct[is_def]):.0f}; top 10: " + ", ".join(names[i] for i in np.argsort(-def_pcc_score)[:10]))
     print(f"  defence-only embedding (k={kd}, position-controlled): median held-out rank "
           f"{def_only_res['median_heldout_rank']:.0f}; top 10: "
           + ", ".join(names[i] for i in np.argsort(-def_only_score)[:10]))
@@ -1043,19 +1144,23 @@ def main(argv=None):
         print(f"traded players ({trade_res['n_players']}): same-player stint distance "
               f"{trade_res['median_same_player']:.2f} vs random {trade_res['median_random_pair']:.2f}")
     print("team centroid vs NRtg per axis: " + ", ".join(f"{c:+.2f} (p={p:.3f})" for c, p in team_style))
-    print(f"playoff rotation ({rot_res['n_players']} players): minutes-share change vs axis, "
-          "controlling for regular-season share: "
-          + ", ".join(f"ax{j + 1} {a['partial_r']:+.2f} (p={a['p']:.3f})" for j, a in enumerate(rot_res["axes"])))
+    for label, rr in [("per game played", rot_res), ("season totals", rot_tot_res)]:
+        print(f"playoff rotation, {label} ({rr['n_players']} players): minutes-share change vs axis, "
+              "controlling for regular-season share: "
+              + ", ".join(f"ax{j + 1} {a['partial_r']:+.2f} (p={a['p']:.3f}, holm {a['p_holm']:.3f})" for j, a in enumerate(rr["axes"])))
     print("age (never an input) vs axis: "
-          + ", ".join(f"ax{j + 1} {a['r']:+.2f} (p={a['p']:.3f})" for j, a in enumerate(age_res["age_corr"])))
+          + ", ".join(f"ax{j + 1} {a['r']:+.2f} (p={a['p']:.3f}, holm {a['p_holm']:.3f})" for j, a in enumerate(age_res["age_corr"])))
     print(f"All-Rookie ({is_rookie.sum()}) mean z minus everyone else: "
-          + ", ".join(f"ax{j + 1} {a['diff']:+.2f} (p={a['p']:.3f})" for j, a in enumerate(age_res["rookie_mean_diff"])))
+          + ", ".join(f"ax{j + 1} {a['diff']:+.2f} (p={a['p']:.3f}, holm {a['p_holm']:.3f})" for j, a in enumerate(age_res["rookie_mean_diff"])))
     ps = pstyle_res
     print(f"playoff style ({ps['n_players']} players >= {ps['min_playoff_mp']} playoff MP, "
           f"{len(ps['features_used'])} features): same-player distance {ps['median_distance_same_player']:.2f} "
           f"vs random {ps['median_distance_random_pair']:.2f}; mean shift per axis "
-          + ", ".join(f"ax{j + 1} {a['mean_shift']:+.2f} (p={a['p']:.3f})" for j, a in enumerate(ps["axes"]))
+          + ", ".join(f"ax{j + 1} {a['mean_shift']:+.2f} (p={a['p']:.3f}, holm {a['p_holm']:.3f})" for j, a in enumerate(ps["axes"]))
           + "; restricted-vs-full axis corr " + ", ".join(f"{c:.2f}" for c in ps["restricted_vs_full_axis_corr"]))
+    print(f"team playoff shift ({shift_decomp['n_teams']} teams, median coverage {shift_decomp['median_coverage']:.0%}): "
+          "who plays " + ", ".join(f"ax{j + 1} {v:+.2f}" for j, v in enumerate(shift_decomp["mean_who_plays"]))
+          + " | how they play " + ", ".join(f"ax{j + 1} {v:+.2f}" for j, v in enumerate(shift_decomp["mean_how_they_play"])))
     print("ball security (roster-weighted) vs NRtg: "
           + ", ".join(f"{kk} {c:+.2f} (p={p:.3f})" for kk, (c, p) in ball_security.items()))
     print(f"wrote {out}/ in {time.time() - t0:.1f}s")
