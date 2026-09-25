@@ -72,6 +72,16 @@ html, body {
 	white-space: nowrap;
 }
 
+#player-data-card {
+	border: 2px solid;
+	border-radius: 10px;
+	padding: 5px;
+}
+
+#player-data-card > tr td {
+	border: 2px solid;
+}
+
 /* Scrollbar */
 html { scrollbar-color: #333 transparent; }                  /* Firefox */
 ::-webkit-scrollbar { width: 10px; background: transparent; }   /* Chrome / Safari / Edge */

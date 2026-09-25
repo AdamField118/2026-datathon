@@ -20,7 +20,7 @@ const canvas = document.querySelector('canvas.webgl');
 const scene = new THREE.Scene();
 scene.background = new THREE.Color('#0b0b0b');
 
-const camera = new THREE.PerspectiveCamera(60, 1, 0.1, 100);
+const camera = new THREE.PerspectiveCamera(60, stage.innerWidth/stage.innerHeight, 0.1, 100);
 camera.position.set(6, 4, 6);
 
 const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
@@ -66,6 +66,8 @@ function label(text, color, pos) {
 }
 
 // Players
+var selected = null;
+var selectedColor = new THREE.Color();
 const dummy = new THREE.Object3D();
 const dots = new THREE.InstancedMesh(new THREE.SphereGeometry(1, 10, 10),
 	new THREE.MeshBasicMaterial(), players.length);
@@ -75,11 +77,13 @@ function setAxes(sel) {
 	const extremes = new Set(sel.flatMap(j => [...axes[j].players_neg, ...axes[j].players_pos]));
 	players.forEach((p, i) => {
 		const hot = extremes.has(p.pid);
+		const color = selected == i ? new THREE.Color('#ff0000') : new THREE.Color(hot ? '#ffcc00' : '#dddddd');
+		const scale = (hot ? 0.09 : 0.045) * (selected == i ? 1.2 : 1);
 		dummy.position.set(p.z[sel[0]], p.z[sel[1]], p.z[sel[2]]);
-		dummy.scale.setScalar(hot ? 0.09 : 0.045);
+		dummy.scale.setScalar(scale);
 		dummy.updateMatrix();
 		dots.setMatrixAt(i, dummy.matrix);
-		dots.setColorAt(i, new THREE.Color(hot ? '#ffcc00' : '#dddddd'));
+		dots.setColorAt(i, color);
 	});
 	dots.instanceMatrix.needsUpdate = true;
 	dots.instanceColor.needsUpdate = true;
@@ -120,12 +124,61 @@ function renderList() {
 	});
 }
 
+const playerDisplay = document.getElementById('player-data-card');
+const buildDisplay = p => {
+	var rows = "";
+	p.z.forEach((axis, i) => {
+		rows += `<tr><td>${axisName(axes[i])}</td><td>${axis}</td></tr>`;
+	})
+
+	return `<h2>${p.name}</h2>
+	<h4>${p.team}</h2>
+	<table>
+		<tr><th>Axis</th><th>Position</th></tr>
+		${rows}
+	</table>`;
+}
+
+// Raycaster
+const raycaster = new THREE.Raycaster();
+const mouse = new THREE.Vector2();
+
+canvas.addEventListener('click', (event) => {
+	const rect = renderer.domElement.getBoundingClientRect();
+	mouse.x = ( ( event.clientX - rect.left ) / ( rect.right - rect.left ) ) * 2 - 1;
+	mouse.y = - ( ( event.clientY - rect.top ) / ( rect.bottom - rect.top) ) * 2 + 1;
+
+	raycaster.setFromCamera(mouse, camera);
+
+	const intersects = raycaster.intersectObject(dots);
+
+
+
+	if (intersects.length > 0) {
+		if (selected != null) {
+			dots.setColorAt(selected, selectedColor);
+		}
+
+		selected = intersects[0].instanceId;
+
+		playerDisplay.hidden = false;
+		playerDisplay.innerHTML = buildDisplay(players[selected]);
+
+		dots.getColorAt(selected, selectedColor);
+
+		dots.setColorAt(selected, new THREE.Color('#ff0000'));
+
+		dots.instanceColor.needsUpdate = true;
+	}
+});
+
 renderList();
 setAxes(picked);
 
 // Animate
 renderer.setAnimationLoop(() => {
 	controls.update();
+
 	renderer.render(scene, camera);
 	labelRenderer.render(scene, camera);
 });
