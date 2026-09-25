@@ -44,7 +44,7 @@ const COLOR_MODES = {
 		label: 'Impact beyond style',
 		color: p => p.impact.beyond_style == null ? NO_DATA
 			: diverge(Math.min(Math.max(p.impact.beyond_style / IMPACT_CLIP, -1), 1) / 2 + 0.5),
-		scale: diverge, ticks: [`−${IMPACT_CLIP}`, '0', `+${IMPACT_CLIP}`],
+		scale: diverge, ticks: [`-${IMPACT_CLIP}`, '0', `+${IMPACT_CLIP}`],
 		note: 'On-off net rating (per 100 possessions) minus what the player\'s style predicts, shrunk toward 0 for low minutes. Clipped at ±6.',
 	},
 	awards: {
@@ -157,7 +157,7 @@ function draw() {
 		const at = Math.max(AXIS_LEN * f[s], 1.2) + 0.3;   // keep labels readable on short axes
 		const dir = new THREE.Vector3().setComponent(s, 1);
 		label(`${SLOTS[s]}+ ${a.name_pos ?? `axis ${j + 1} +`}`, SLOT_COLORS[s], dir.clone().multiplyScalar(at));
-		label(`${SLOTS[s]}− ${a.name_neg ?? `axis ${j + 1} −`}`, SLOT_COLORS[s], dir.clone().multiplyScalar(-at));
+		label(`${SLOTS[s]}- ${a.name_neg ?? `axis ${j + 1} -`}`, SLOT_COLORS[s], dir.clone().multiplyScalar(-at));
 	});
 	renderLegend();
 }
@@ -240,7 +240,7 @@ function selectPlayer(i) {
 // Player search: fuzzy find on names (accents ignored, like "doncic" finds Dončić)
 const search = document.getElementById('player-search');
 const results = document.getElementById('search-results');
-const fold = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+const fold = s => s.normalize('NFD').replace(/[^a-zA-Z0-9\s.'-]/g, '').toLowerCase();
 const folded = players.map(p => Array.from(fold(p.name)).join(''));
 let matches = [];
 let active = 0;
@@ -267,7 +267,7 @@ function renderResults() {
 		const name = Array.from(players[i].name)
 			.map((ch, k) => hits.includes(k) ? `<mark>${ch}</mark>` : ch).join('');
 		return `<li data-n="${n}" class="${n === active ? 'active' : ''}">
-			<span>${name}</span><span class="meta">${players[i].team} · ${players[i].pos_listed}</span></li>`;
+			<span>${name}</span><span class="meta">${players[i].team} - ${players[i].pos_listed}</span></li>`;
 	}).join('');
 }
 
