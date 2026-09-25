@@ -22,13 +22,22 @@
 	</header>
 
 	<main class="viewer">
-		<div class="stage">
-			<canvas class="webgl"></canvas>
+		<div class="stack">
+			<div class="stage">
+				<canvas class="webgl"></canvas>
+			</div>
+			<div id="player-data-card" hidden="true"></div>
 		</div>
 		<aside class="controls">
-			<h2>Axes <span class="hint">pick three</span></h2>
+			<button id="view-toggle">Switch to 3D</button>
+
+			<h2>Axes <span class="hint" id="pick-hint">pick two</span></h2>
 			<ul id="axis-list"></ul>
-			<div id="player-data-card" hidden="true"></div>
+			<h2>Colour <select id="color-by"></select></h2>
+			<div id="color-legend"></div>
+
+			<h2>Scale <label class="hint"><input type="checkbox" id="stretch" checked> stretch by importance</label></h2>
+			<p class="note" id="scale-note"></p>
 		</aside>
 	</main>
 

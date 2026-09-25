@@ -957,6 +957,7 @@ def main(argv=None):
             vi = np.array([v[pid_to_i[p]] for p in ros["pid"]])
             ok = ~np.isnan(vi)
             tv.append((w[ok] * vi[ok]).sum() / w[ok].sum())
+            t.setdefault("ball_security", {})[f.key] = r(tv[-1], 6)
         ball_security[f.key] = corr_with_p(np.array(tv), nrtg, seed=args.seed)
     shift = np.array([np.array(t["playoff_centroid"]) - np.array(t["centroid"])
                       for t in team_json if "playoff_centroid" in t])
