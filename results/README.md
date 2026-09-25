@@ -138,6 +138,7 @@ A list of 30 objects.
 | `W`, `L`, `NRtg`, `SRS` | regular season |
 | `centroid` | k numbers: regular-season minutes-weighted mean z of the team's embedded players |
 | `roster[]` | `{pid, share}`: share of the team's embedded-player regular-season minutes |
+| `ball_security` | `{TOV%, bad_pass, lost_ball}`: roster-minute-weighted mean over the team's embedded players (TOV% as a fraction, the others per 36 min). Not embedded; used in `analysis.teams.ball_security_vs_nrtg`. |
 
 Playoff teams only (key absent for the other 14):
 

@@ -14,14 +14,62 @@ const [players, features] = await Promise.all([
 const axes = features.axes;
 const axisName = a => a.name_neg ? `${a.name_neg} <--> ${a.name_pos}` : `Axis ${a.id + 1}`;
 
-// Scene, camera, renderers
+// Scale
+const loadings = features.features.map(f => f.loadings);
+const axisNorm = axes.map((_, j) => Math.hypot(...loadings.map(w => w[j])));
+const STRETCH = axisNorm.map(v => v / axisNorm[0]);
+
+// Colours
+const ramp = t => new THREE.Color().setHSL(0.62 - 0.55 * t, 0.85, 0.55);            // blue -> green -> orange
+const diverge = t => t < 0.5 ? new THREE.Color('#3b82f6').lerp(new THREE.Color('#555555'), t * 2)
+	: new THREE.Color('#555555').lerp(new THREE.Color('#ef4444'), t * 2 - 1);          // blue -> grey -> red
+const NO_DATA = new THREE.Color('#333333');
+const [AGE_LO, AGE_HI] = [20, 36];   // clipped
+const IMPACT_CLIP = 6;
+
+const COLOR_MODES = {
+	position: {
+		label: 'Position (play-by-play)',
+		color: p => ramp((p.pos_num_pbp - 1) / 4),
+		scale: ramp, ticks: ['PG', 'SG', 'SF', 'PF', 'C'],
+		note: 'Minutes-weighted position from Basketball-Reference play-by-play. The model never saw it.',
+	},
+	age: {
+		label: 'Age',
+		color: p => ramp(Math.min(Math.max((p.age - AGE_LO) / (AGE_HI - AGE_LO), 0), 1)),
+		scale: ramp, ticks: [`≤${AGE_LO}`, 24, 28, 32, `≥${AGE_HI}`],
+		note: 'Age this season, clipped to 20-36. The model never saw it.',
+	},
+	impact: {
+		label: 'Impact beyond style',
+		color: p => p.impact.beyond_style == null ? NO_DATA
+			: diverge(Math.min(Math.max(p.impact.beyond_style / IMPACT_CLIP, -1), 1) / 2 + 0.5),
+		scale: diverge, ticks: [`−${IMPACT_CLIP}`, '0', `+${IMPACT_CLIP}`],
+		note: 'On-off net rating (per 100 possessions) minus what the player\'s style predicts, shrunk toward 0 for low minutes. Clipped at ±6.',
+	},
+	awards: {
+		label: 'Awards',
+		color: p => p.awards.all_nba && p.awards.all_def ? new THREE.Color('#ff66cc')
+			: p.awards.all_nba ? new THREE.Color('#ffcc00')
+			: p.awards.all_def ? new THREE.Color('#33ccff')
+			: p.awards.all_star ? new THREE.Color('#ffffff') : new THREE.Color('#444444'),
+		swatches: [['#ffcc00', 'All-NBA'], ['#33ccff', 'All-Defensive'], ['#ff66cc', 'Both'],
+			['#ffffff', 'All-Star (other)'], ['#444444', 'None']],
+		note: 'Season awards. The model never saw them.',
+	},
+};
+
+// Scene, cameras, renderers
 const stage = document.querySelector('.stage');
 const canvas = document.querySelector('canvas.webgl');
 const scene = new THREE.Scene();
 scene.background = new THREE.Color('#0b0b0b');
 
-const camera = new THREE.PerspectiveCamera(60, 1, 0.1, 100);
-camera.position.set(6, 4, 6);
+const HALF = 4;   // 2D view
+const cam2d = new THREE.OrthographicCamera(-HALF, HALF, HALF, -HALF, 0.1, 100);
+cam2d.position.set(0, 0, 20);
+const cam3d = new THREE.PerspectiveCamera(60, 1, 0.1, 100);
+cam3d.position.set(6, 4, 6);
 
 const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -32,13 +80,18 @@ labelRenderer.domElement.style.top = '0';
 labelRenderer.domElement.style.pointerEvents = 'none';
 stage.appendChild(labelRenderer.domElement);
 
-const controls = new OrbitControls(camera, canvas);
-controls.enableDamping = true;
+const controls2d = new OrbitControls(cam2d, canvas);
+controls2d.enableRotate = false;   // 2D: pan and zoom only
+const controls3d = new OrbitControls(cam3d, canvas);
+controls3d.enableDamping = true;
 
 function resize() {
-	const w = stage.clientWidth, h = stage.clientHeight;
-	camera.aspect = w / h;
-	camera.updateProjectionMatrix();
+	const w = stage.clientWidth, h = stage.clientHeight, aspect = w / h;
+	cam2d.left = -HALF * aspect;
+	cam2d.right = HALF * aspect;
+	cam2d.updateProjectionMatrix();
+	cam3d.aspect = aspect;
+	cam3d.updateProjectionMatrix();
 	renderer.setSize(w, h, false);
 	labelRenderer.setSize(w, h);
 }
@@ -47,7 +100,6 @@ new ResizeObserver(resize).observe(stage);
 // Axes
 const axesPos = new THREE.AxesHelper(AXIS_LEN);
 const axesNeg = new THREE.AxesHelper(AXIS_LEN);
-axesNeg.scale.set(-1, -1, -1);
 axesNeg.material.transparent = true;
 axesNeg.material.opacity = 0.4;
 scene.add(axesPos, axesNeg);
@@ -71,33 +123,49 @@ const dots = new THREE.InstancedMesh(new THREE.SphereGeometry(1, 10, 10),
 	new THREE.MeshBasicMaterial(), players.length);
 scene.add(dots);
 
-function setAxes(sel) {
-	const extremes = new Set(sel.flatMap(j => [...axes[j].players_neg, ...axes[j].players_pos]));
+// State
+let mode = '2d';
+let picked = [0, 1];
+let colorBy = 'position';
+let stretch = true;
+const need = () => mode === '2d' ? 2 : 3;
+const factor = j => stretch ? STRETCH[j] : 1;
+
+function draw() {
+	const sel = picked;
+	const cm = COLOR_MODES[colorBy];
+	const f = [0, 1, 2].map(s => sel[s] == null ? 0 : factor(sel[s]));
 	players.forEach((p, i) => {
-		const hot = extremes.has(p.pid);
-		dummy.position.set(p.z[sel[0]], p.z[sel[1]], p.z[sel[2]]);
-		dummy.scale.setScalar(hot ? 0.09 : 0.045);
+		const c = [0, 1, 2].map(s => sel[s] == null ? 0 : p.z[sel[s]] * f[s]);
+		dummy.position.set(c[0], c[1], c[2]);
+		const big = colorBy === 'awards' && (p.awards.all_nba || p.awards.all_def);
+		dummy.scale.setScalar(big ? 0.09 : 0.05);
 		dummy.updateMatrix();
 		dots.setMatrixAt(i, dummy.matrix);
-		dots.setColorAt(i, new THREE.Color(hot ? '#ffcc00' : '#dddddd'));
+		dots.setColorAt(i, cm.color(p));
 	});
 	dots.instanceMatrix.needsUpdate = true;
 	dots.instanceColor.needsUpdate = true;
 
+	const len = f.map(v => Math.max(v, 1e-3));
+	axesPos.scale.set(len[0], len[1], len[2]);
+	axesNeg.scale.set(-len[0], -len[1], -len[2]);
 	labels.clear();
 	sel.forEach((j, s) => {
 		const a = axes[j];
+		const at = Math.max(AXIS_LEN * f[s], 1.2) + 0.3;   // keep labels readable on short axes
 		const dir = new THREE.Vector3().setComponent(s, 1);
-		label(`${SLOTS[s]}+ ${a.name_pos ?? `axis ${j + 1} +`}`, SLOT_COLORS[s], dir.clone().multiplyScalar(AXIS_LEN + 0.3));
-		label(`${SLOTS[s]}− ${a.name_neg ?? `axis ${j + 1} −`}`, SLOT_COLORS[s], dir.clone().multiplyScalar(-AXIS_LEN - 0.3));
+		label(`${SLOTS[s]}+ ${a.name_pos ?? `axis ${j + 1} +`}`, SLOT_COLORS[s], dir.clone().multiplyScalar(at));
+		label(`${SLOTS[s]}− ${a.name_neg ?? `axis ${j + 1} −`}`, SLOT_COLORS[s], dir.clone().multiplyScalar(-at));
 	});
+	renderLegend();
 }
 
-// Axis picker
+// Controls panel
 const list = document.getElementById('axis-list');
-let picked = [0, 1, 2];
 
 function renderList() {
+	document.getElementById('pick-hint').textContent = `pick ${need() === 2 ? 'two' : 'three'}`;
 	list.innerHTML = '';
 	axes.forEach((a, j) => {
 		const s = picked.indexOf(j);
@@ -109,23 +177,62 @@ function renderList() {
 		li.querySelector('input').onchange = e => {
 			if (e.target.checked) {
 				picked.push(j);
-				if (picked.length > 3) picked.shift();
+				if (picked.length > need()) picked.shift();
 			} else {
 				picked = picked.filter(k => k !== j);
 			}
 			renderList();
-			if (picked.length === 3) setAxes(picked);
+			if (picked.length === need()) draw();
 		};
 		list.appendChild(li);
 	});
 }
 
+function renderLegend() {
+	const cm = COLOR_MODES[colorBy];
+	const box = document.getElementById('color-legend');
+	if (cm.swatches) {
+		box.innerHTML = cm.swatches.map(([c, t]) =>
+			`<div class="swatch"><span style="background:${c}"></span>${t}</div>`).join('');
+	} else {
+		const stops = [0, 0.25, 0.5, 0.75, 1].map(t => cm.scale(t).getStyle()).join(', ');
+		box.innerHTML = `<div class="gradient" style="background: linear-gradient(to right, ${stops})"></div>
+			<div class="ticks">${cm.ticks.map(t => `<span>${t}</span>`).join('')}</div>`;
+	}
+	box.innerHTML += `<p class="note">${cm.note}</p>`;
+
+	document.getElementById('scale-note').innerHTML = stretch
+		? `Each axis is stretched by how much it changes the player's stats (the length of its loading vector), relative to axis 1. Longer axis = more important.
+		   <br>${picked.map((j, s) => `<b style="color:${SLOT_COLORS[s]}">${SLOTS[s]}</b> ×${STRETCH[j].toFixed(2)}`).join(' &nbsp; ')}`
+		: 'Not stretched: every axis is drawn with the same spread, so small axes look as big as large ones.';
+}
+
+const select = document.getElementById('color-by');
+select.innerHTML = Object.entries(COLOR_MODES).map(([k, m]) => `<option value="${k}">${m.label}</option>`).join('');
+select.onchange = () => { colorBy = select.value; draw(); };
+
+document.getElementById('stretch').onchange = e => { stretch = e.target.checked; draw(); };
+
+const btn = document.getElementById('view-toggle');
+btn.onclick = () => {
+	mode = mode === '2d' ? '3d' : '2d';
+	if (mode === '2d') picked = picked.slice(0, 2);
+	else while (picked.length < 3) picked.push([0, 1, 2, 3].find(j => !picked.includes(j)));
+	btn.textContent = mode === '2d' ? 'Switch to 3D' : 'Switch to 2D';
+	controls2d.enabled = mode === '2d';
+	controls3d.enabled = mode === '3d';
+	renderList();
+	draw();
+};
+controls3d.enabled = false;
+
 renderList();
-setAxes(picked);
+draw();
 
 // Animate
 renderer.setAnimationLoop(() => {
-	controls.update();
-	renderer.render(scene, camera);
-	labelRenderer.render(scene, camera);
+	const cam = mode === '2d' ? cam2d : cam3d;
+	(mode === '2d' ? controls2d : controls3d).update();
+	renderer.render(scene, cam);
+	labelRenderer.render(scene, cam);
 });

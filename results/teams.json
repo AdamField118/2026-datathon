@@ -110,6 +110,11 @@
    0.1278,
    -0.143
   ],
+  "ball_security": {
+   "TOV%": 0.11601,
+   "bad_pass": 1.056439,
+   "lost_ball": 0.551927
+  },
   "playoff_shift": {
    "who_plays": [
     -0.0307,
@@ -328,6 +333,11 @@
    -0.143,
    -0.4991
   ],
+  "ball_security": {
+   "TOV%": 0.10201,
+   "bad_pass": 0.701235,
+   "lost_ball": 0.593966
+  },
   "playoff_shift": {
    "who_plays": [
     -0.0797,
@@ -559,7 +569,12 @@
     "pid": "smithma02",
     "share": 0.0184
    }
-  ]
+  ],
+  "ball_security": {
+   "TOV%": 0.138072,
+   "bad_pass": 1.034292,
+   "lost_ball": 0.718571
+  }
  },
  {
   "team": "CHI",
@@ -665,7 +680,12 @@
     "pid": "olbrila01",
     "share": 0.0179
    }
-  ]
+  ],
+  "ball_security": {
+   "TOV%": 0.124644,
+   "bad_pass": 1.079725,
+   "lost_ball": 0.746364
+  }
  },
  {
   "team": "CHO",
@@ -743,7 +763,12 @@
     "pid": "mcneeli01",
     "share": 0.0197
    }
-  ]
+  ],
+  "ball_security": {
+   "TOV%": 0.128244,
+   "bad_pass": 1.008561,
+   "lost_ball": 0.599067
+  }
  },
  {
   "team": "CLE",
@@ -844,6 +869,11 @@
    -0.2611,
    -0.2154
   ],
+  "ball_security": {
+   "TOV%": 0.115614,
+   "bad_pass": 1.11056,
+   "lost_ball": 0.628866
+  },
   "playoff_shift": {
    "who_plays": [
     -0.0315,
@@ -1071,7 +1101,12 @@
     "pid": "robinje02",
     "share": 0.0032
    }
-  ]
+  ],
+  "ball_security": {
+   "TOV%": 0.126985,
+   "bad_pass": 1.029357,
+   "lost_ball": 0.698641
+  }
  },
  {
   "team": "DEN",
@@ -1160,6 +1195,11 @@
    -0.5041,
    0.3786
   ],
+  "ball_security": {
+   "TOV%": 0.105982,
+   "bad_pass": 0.987092,
+   "lost_ball": 0.493165
+  },
   "playoff_shift": {
    "who_plays": [
     -0.0424,
@@ -1378,6 +1418,11 @@
    -0.1046,
    0.3864
   ],
+  "ball_security": {
+   "TOV%": 0.12073,
+   "bad_pass": 1.083558,
+   "lost_ball": 0.67047
+  },
   "playoff_shift": {
    "who_plays": [
     -0.0593,
@@ -1593,7 +1638,12 @@
     "pid": "jackstr02",
     "share": 0.022
    }
-  ]
+  ],
+  "ball_security": {
+   "TOV%": 0.135176,
+   "bad_pass": 1.269542,
+   "lost_ball": 0.532461
+  }
  },
  {
   "team": "HOU",
@@ -1674,6 +1724,11 @@
    0.0116,
    0.4704
   ],
+  "ball_security": {
+   "TOV%": 0.125531,
+   "bad_pass": 1.083265,
+   "lost_ball": 0.667766
+  },
   "playoff_shift": {
    "who_plays": [
     -0.0413,
@@ -1909,7 +1964,12 @@
     "pid": "slawsja01",
     "share": 0.0162
    }
-  ]
+  ],
+  "ball_security": {
+   "TOV%": 0.123852,
+   "bad_pass": 0.965655,
+   "lost_ball": 0.664792
+  }
  },
  {
   "team": "LAC",
@@ -1999,7 +2059,12 @@
     "pid": "chrisca02",
     "share": 0.025
    }
-  ]
+  ],
+  "ball_security": {
+   "TOV%": 0.129078,
+   "bad_pass": 0.961903,
+   "lost_ball": 0.621782
+  }
  },
  {
   "team": "LAL",
@@ -2096,6 +2161,11 @@
    -0.6958,
    -0.0955
   ],
+  "ball_security": {
+   "TOV%": 0.124188,
+   "bad_pass": 1.159145,
+   "lost_ball": 0.576136
+  },
   "playoff_shift": {
    "who_plays": [
     0.0346,
@@ -2331,7 +2401,12 @@
     "pid": "kolokch01",
     "share": 0.0109
    }
-  ]
+  ],
+  "ball_security": {
+   "TOV%": 0.125299,
+   "bad_pass": 1.069902,
+   "lost_ball": 0.645186
+  }
  },
  {
   "team": "MIA",
@@ -2405,7 +2480,12 @@
     "pid": "gardnmy01",
     "share": 0.0213
    }
-  ]
+  ],
+  "ball_security": {
+   "TOV%": 0.115634,
+   "bad_pass": 0.955406,
+   "lost_ball": 0.664873
+  }
  },
  {
   "team": "MIL",
@@ -2495,7 +2575,12 @@
     "pid": "jacksan01",
     "share": 0.0212
    }
-  ]
+  ],
+  "ball_security": {
+   "TOV%": 0.134025,
+   "bad_pass": 1.010963,
+   "lost_ball": 0.651081
+  }
  },
  {
   "team": "MIN",
@@ -2592,6 +2677,11 @@
    0.0487,
    0.3419
   ],
+  "ball_security": {
+   "TOV%": 0.122825,
+   "bad_pass": 1.025385,
+   "lost_ball": 0.665148
+  },
   "playoff_shift": {
    "who_plays": [
     0.0993,
@@ -2803,7 +2893,12 @@
     "pid": "looneke01",
     "share": 0.0159
    }
-  ]
+  ],
+  "ball_security": {
+   "TOV%": 0.115387,
+   "bad_pass": 1.00172,
+   "lost_ball": 0.672978
+  }
  },
  {
   "team": "NYK",
@@ -2896,6 +2991,11 @@
    0.078,
    -0.331
   ],
+  "ball_security": {
+   "TOV%": 0.116702,
+   "bad_pass": 0.924374,
+   "lost_ball": 0.55342
+  },
   "playoff_shift": {
    "who_plays": [
     -0.055,
@@ -3122,6 +3222,11 @@
    -0.0763,
    0.2633
   ],
+  "ball_security": {
+   "TOV%": 0.110731,
+   "bad_pass": 0.869424,
+   "lost_ball": 0.560765
+  },
   "playoff_shift": {
    "who_plays": [
     0.0387,
@@ -3348,6 +3453,11 @@
    -0.2184,
    0.2305
   ],
+  "ball_security": {
+   "TOV%": 0.118523,
+   "bad_pass": 0.997886,
+   "lost_ball": 0.648523
+  },
   "playoff_shift": {
    "who_plays": [
     0.0302,
@@ -3574,6 +3684,11 @@
    0.2686,
    0.4618
   ],
+  "ball_security": {
+   "TOV%": 0.11602,
+   "bad_pass": 0.837513,
+   "lost_ball": 0.664321
+  },
   "playoff_shift": {
    "who_plays": [
     -0.2223,
@@ -3800,6 +3915,11 @@
    0.2675,
    -0.1261
   ],
+  "ball_security": {
+   "TOV%": 0.12532,
+   "bad_pass": 0.969144,
+   "lost_ball": 0.610787
+  },
   "playoff_shift": {
    "who_plays": [
     -0.1926,
@@ -4026,6 +4146,11 @@
    0.4614,
    0.3707
   ],
+  "ball_security": {
+   "TOV%": 0.139115,
+   "bad_pass": 1.302295,
+   "lost_ball": 0.832891
+  },
   "playoff_shift": {
    "who_plays": [
     -0.0893,
@@ -4249,7 +4374,12 @@
     "pid": "hayeski01",
     "share": 0.0208
    }
-  ]
+  ],
+  "ball_security": {
+   "TOV%": 0.120762,
+   "bad_pass": 1.090378,
+   "lost_ball": 0.612499
+  }
  },
  {
   "team": "SAS",
@@ -4330,6 +4460,11 @@
    -0.0922,
    0.4739
   ],
+  "ball_security": {
+   "TOV%": 0.105671,
+   "bad_pass": 0.918045,
+   "lost_ball": 0.630359
+  },
   "playoff_shift": {
    "who_plays": [
     -0.0785,
@@ -4544,6 +4679,11 @@
    -0.2249,
    0.0949
   ],
+  "ball_security": {
+   "TOV%": 0.114699,
+   "bad_pass": 1.066899,
+   "lost_ball": 0.461259
+  },
   "playoff_shift": {
    "who_plays": [
     0.2146,
@@ -4775,7 +4915,12 @@
     "pid": "mbengbe01",
     "share": 0.0257
    }
-  ]
+  ],
+  "ball_security": {
+   "TOV%": 0.131486,
+   "bad_pass": 1.138479,
+   "lost_ball": 0.710879
+  }
  },
  {
   "team": "WAS",
@@ -4881,6 +5026,11 @@
     "pid": "blackle01",
     "share": 0.0225
    }
-  ]
+  ],
+  "ball_security": {
+   "TOV%": 0.131264,
+   "bad_pass": 1.219402,
+   "lost_ball": 0.695805
+  }
  }
 ]

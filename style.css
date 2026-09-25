@@ -63,6 +63,27 @@ html, body {
 #axis-list label:hover { background: #222; }
 .slot { width: 18px; font-weight: bold; }
 
+#view-toggle {
+	width: 100%;
+	margin-bottom: 16px;
+	padding: 8px;
+	border: 1px solid #333;
+	border-radius: 6px;
+	background: #181818;
+	color: #ddd;
+	cursor: pointer;
+}
+#view-toggle:hover { background: #222; }
+.controls h2 { margin-top: 16px; display: flex; align-items: center; gap: 8px; }
+select { background: #181818; color: #ddd; border: 1px solid #333; border-radius: 4px; padding: 2px 4px; }
+
+/* Legends */
+.gradient { height: 10px; border-radius: 3px; }
+.ticks { display: flex; justify-content: space-between; font-size: 0.75rem; color: #999; margin-top: 2px; }
+.swatch { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; margin: 2px 0; }
+.swatch span { width: 10px; height: 10px; border-radius: 50%; }
+.note { font-size: 0.75rem; color: #888; margin-top: 6px; line-height: 1.4; }
+
 /* Axis-end labels drawn over the canvas (CSS2DRenderer) */
 .axis-label {
 	font-size: 12px;
