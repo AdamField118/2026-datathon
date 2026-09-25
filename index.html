@@ -22,15 +22,21 @@
 	</header>
 
 	<main class="viewer">
-		<div class="stage">
-			<canvas class="webgl"></canvas>
+		<div class="stack">
+			<div class="stage">
+				<canvas class="webgl"></canvas>
+			</div>
+			<div class="search">
+				<input id="player-search" type="search" placeholder="Search a player or tap a node on the graph" autocomplete="off" spellcheck="false">
+				<ul id="search-results" hidden></ul>
+			</div>
+			<div id="player-data-card" hidden="true"></div>
 		</div>
 		<aside class="controls">
 			<button id="view-toggle">Switch to 3D</button>
 
 			<h2>Axes <span class="hint" id="pick-hint">pick two</span></h2>
 			<ul id="axis-list"></ul>
-
 			<h2>Colour <select id="color-by"></select></h2>
 			<div id="color-legend"></div>
 

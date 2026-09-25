@@ -118,6 +118,7 @@ function label(text, color, pos) {
 }
 
 // Players
+var selected = null;
 const dummy = new THREE.Object3D();
 const dots = new THREE.InstancedMesh(new THREE.SphereGeometry(1, 10, 10),
 	new THREE.MeshBasicMaterial(), players.length);
@@ -139,10 +140,10 @@ function draw() {
 		const c = [0, 1, 2].map(s => sel[s] == null ? 0 : p.z[sel[s]] * f[s]);
 		dummy.position.set(c[0], c[1], c[2]);
 		const big = colorBy === 'awards' && (p.awards.all_nba || p.awards.all_def);
-		dummy.scale.setScalar(big ? 0.09 : 0.05);
+		dummy.scale.setScalar(i === selected ? 0.12 : big ? 0.09 : 0.05);
 		dummy.updateMatrix();
 		dots.setMatrixAt(i, dummy.matrix);
-		dots.setColorAt(i, cm.color(p));
+		dots.setColorAt(i, i == selected ? new THREE.Color(0xff0000) : cm.color(p));
 	});
 	dots.instanceMatrix.needsUpdate = true;
 	dots.instanceColor.needsUpdate = true;
@@ -187,6 +188,122 @@ function renderList() {
 		list.appendChild(li);
 	});
 }
+
+const playerDisplay = document.getElementById('player-data-card');
+const buildDisplay = p => {
+	var rows = "";
+	p.z.forEach((axis, i) => {
+		rows += `<tr><td>${axisName(axes[i])}</td><td>${axis}</td></tr>`;
+	})
+
+	return `<h2>${p.name}</h2>
+	<h4>${p.team}</h2>
+	<table>
+		<tr><th>Axis</th><th>Position</th></tr>
+		${rows}
+	</table>
+	<span id="headshot">
+	<img src='https://www.basketball-reference.com/req/202106291/images/headshots/${p.pid}.jpg'>
+	</span>`;
+}
+
+// Raycaster
+const raycaster = new THREE.Raycaster();
+const mouse = new THREE.Vector2();
+
+canvas.addEventListener('click', (event) => {
+	const rect = renderer.domElement.getBoundingClientRect();
+	mouse.x = ( ( event.clientX - rect.left ) / ( rect.right - rect.left ) ) * 2 - 1;
+	mouse.y = - ( ( event.clientY - rect.top ) / ( rect.bottom - rect.top) ) * 2 + 1;
+
+	raycaster.setFromCamera(mouse, mode === '2d' ? cam2d : cam3d);
+
+	const intersects = raycaster.intersectObject(dots);
+
+
+
+	if (intersects.length > 0) {
+		selectPlayer(intersects[0].instanceId);
+	}
+});
+
+// Selecting a player (from a click on the graph or from the search box)
+function selectPlayer(i) {
+	selected = i;
+	playerDisplay.hidden = false;
+	playerDisplay.innerHTML = buildDisplay(players[i]);
+	search.value = players[i].name;
+	results.hidden = true;
+	draw();   // draw() colours the selected dot red and enlarges it
+}
+
+// Player search: fuzzy find on names (accents ignored, e.g. "doncic" finds Dončić)
+const search = document.getElementById('player-search');
+const results = document.getElementById('search-results');
+const fold = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+const folded = players.map(p => Array.from(fold(p.name)).join(''));
+let matches = [];
+let active = 0;
+
+// every query letter must appear in order; consecutive letters and word starts score higher
+function fuzzy(query, text) {
+	let score = 0, from = 0, prev = -2;
+	const hits = [];
+	for (const ch of query.replace(/\s+/g, '')) {
+		const k = text.indexOf(ch, from);
+		if (k < 0) return null;
+		score += k === prev + 1 ? 3 : 1;
+		if (k === 0 || /[\s.'-]/.test(text[k - 1])) score += 2;
+		hits.push(k);
+		prev = k;
+		from = k + 1;
+	}
+	return { score, hits };
+}
+
+function renderResults() {
+	results.hidden = matches.length === 0;
+	results.innerHTML = matches.map(({ i, hits }, n) => {
+		const name = Array.from(players[i].name)
+			.map((ch, k) => hits.includes(k) ? `<mark>${ch}</mark>` : ch).join('');
+		return `<li data-n="${n}" class="${n === active ? 'active' : ''}">
+			<span>${name}</span><span class="meta">${players[i].team} · ${players[i].pos_listed}</span></li>`;
+	}).join('');
+}
+
+search.addEventListener('input', () => {
+	const q = fold(search.value.trim());
+	matches = q ? players.map((p, i) => ({ i, ...fuzzy(q, folded[i]) }))
+		.filter(m => m.hits)
+		.sort((a, b) => b.score - a.score || players[b.i].mp - players[a.i].mp)
+		.slice(0, 8) : [];
+	active = 0;
+	renderResults();
+});
+
+search.addEventListener('keydown', e => {
+	if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+		e.preventDefault();
+		if (!matches.length) return;
+		active = (active + (e.key === 'ArrowDown' ? 1 : -1) + matches.length) % matches.length;
+		renderResults();
+	} else if (e.key === 'Enter' && matches.length) {
+		selectPlayer(matches[active].i);
+	} else if (e.key === 'Escape') {
+		results.hidden = true;
+	}
+});
+
+// mousedown (not click) so the choice lands before the input loses focus
+results.addEventListener('mousedown', e => {
+	const li = e.target.closest('li');
+	if (li) {
+		e.preventDefault();
+		selectPlayer(matches[+li.dataset.n].i);
+	}
+});
+search.addEventListener('blur', () => { results.hidden = true; });
+search.addEventListener('focus', () => { if (matches.length) results.hidden = false; });
 
 function renderLegend() {
 	const cm = COLOR_MODES[colorBy];

@@ -93,6 +93,63 @@ select { background: #181818; color: #ddd; border: 1px solid #333; border-radius
 	white-space: nowrap;
 }
 
+.stack { flex: 1 1 auto; min-width: 0; }
+
+/* Player search (fuzzy find) */
+.search { position: relative; margin-top: 12px; }
+#player-search {
+	width: 100%;
+	padding: 10px 14px;
+	border: 1px solid #333;
+	border-radius: 8px;
+	background: #181818;
+	color: #ddd;
+	font-size: 0.95rem;
+}
+#player-search:focus { outline: none; border-color: #666; }
+#search-results {
+	position: absolute;
+	z-index: 10;
+	left: 0; right: 0;
+	margin-top: 4px;
+	list-style: none;
+	border: 1px solid #333;
+	border-radius: 8px;
+	background: #181818;
+	overflow: hidden;
+}
+#search-results li {
+	display: flex;
+	justify-content: space-between;
+	padding: 8px 14px;
+	cursor: pointer;
+}
+#search-results li.active, #search-results li:hover { background: #262626; }
+#search-results mark { background: none; color: #ffcc00; font-weight: bold; }
+#search-results .meta { color: #888; font-size: 0.85rem; }
+
+#player-data-card {
+	margin-top: 10px;
+	border: 2px solid gray;
+	border-radius: 10px;
+	padding: 10px;
+	max-width: 800px;
+}
+
+table {
+	display: inline-block;
+	width: 70%;
+}
+tr:first-child {
+	width: 70%;
+}
+
+#headshot {
+	display: inline-block;
+	text-align: center;
+	width: 26%;
+}
+
 /* Scrollbar */
 html { scrollbar-color: #333 transparent; }                  /* Firefox */
 ::-webkit-scrollbar { width: 10px; background: transparent; }   /* Chrome / Safari / Edge */
