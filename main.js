@@ -237,7 +237,7 @@ function selectPlayer(i) {
 	draw();   // draw() colours the selected dot red and enlarges it
 }
 
-// Player search: fuzzy find on names (accents ignored, e.g. "doncic" finds Dončić)
+// Player search: fuzzy find on names (accents ignored, like "doncic" finds Dončić)
 const search = document.getElementById('player-search');
 const results = document.getElementById('search-results');
 const fold = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
